@@ -9,9 +9,9 @@ class Counter extends Component {
   }
 
   tick() {
-    this.setState({
+    this.setState((state) => ({
       currentDate: Date.now(),
-    });
+    }));
   }
 
   componentDidMount() {

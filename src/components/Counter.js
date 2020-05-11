@@ -1,7 +1,30 @@
-import React from "react";
+import React, { Component } from "react";
 
-import { eventLocation, evantDate, polishMonths } from "../constans/Const";
+import "./Counter.css";
 
-const Counter = () => <div></div>;
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { eventDate: props.eventDate, currentDate: Date.now() };
+  }
+
+  tick() {
+    this.setState({
+      currentDate: Date.now(),
+    });
+  }
+
+  componentDidMount() {
+    this.interval = setInterval(() => this.tick(), 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
+  render() {
+    return <div className="counter text-center">{this.state.currentDate}</div>;
+  }
+}
 
 export default Counter;

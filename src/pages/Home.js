@@ -3,11 +3,12 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
-import { eventLocation, evantDate, polishMonths } from "../constans/Const";
+import Counter from "../components/Counter";
 
 import "./Home.css";
 
-function Home() {
+function Home(props) {
+  const { date, location, months } = props;
   return (
     <div className="home">
       <section className="home-top">
@@ -18,17 +19,18 @@ function Home() {
               <span className="d-block">Ochrony Informacji Niejawnych,</span>
               <span className="d-block">Biznesowych i Danych Osobowych</span>
             </h1>
-            <p className="text-center location">{eventLocation.address.city}</p>
+            <p className="text-center location">{location.address.city}</p>
             <p className="text-center date">
-              {`${evantDate.start.getDate()} ${
-                evantDate.start.getMonth() !== evantDate.end.getMonth()
-                  ? polishMonths[evantDate.start.getMonth]
+              {`${date.start.getDate()} ${
+                date.start.getMonth() !== date.end.getMonth()
+                  ? months[date.start.getMonth]
                   : ""
-              } - ${evantDate.end.getDate()} ${
-                polishMonths[evantDate.end.getMonth()]
-              } ${evantDate.end.getFullYear()}`}
+              } - ${date.end.getDate()} ${
+                months[date.end.getMonth()]
+              } ${date.end.getFullYear()}`}
             </p>
           </Container>
+          <Counter eventDate={date} />
         </Jumbotron>
         <div className="container">
           <div className="row align-items-center my-5">

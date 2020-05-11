@@ -12,24 +12,40 @@ import Speakers from "../pages/Speakers";
 import Admin from "../pages/Admin";
 import GenericNotFound from "../pages/GenericNotFound";
 
-import { menuItems } from "../constans/Const";
+import {
+  menuItems,
+  eventLocation,
+  eventDate,
+  polishMonths,
+} from "../constans/Const";
 
 import "./App.css";
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { menu: menuItems };
+    this.state = { menu: menuItems, eventDate, eventLocation, polishMonths };
   }
   render() {
-    const { menu } = this.state;
+    const { menu, eventDate, eventLocation, polishMonths } = this.state;
 
     return (
       <div className="App">
         <Router>
           <Navigation menuItems={menu} />
           <Switch>
-            <Route path="/" exact component={Home} />
+            {/* Another way is to pass render prop instaed of component prop for better performance, beacouse Home is functional component */}
+            <Route
+              path="/"
+              exact
+              component={() => (
+                <Home
+                  date={eventDate}
+                  location={eventLocation}
+                  months={polishMonths}
+                />
+              )}
+            />
             <Route path="/tematyka" exact component={Agenda} />
             <Route path="/prelegenci" exact component={Speakers} />
             <Route path="/atrakcje" />

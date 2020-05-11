@@ -18,7 +18,7 @@ export const eventLocation = {
     city: "Bukowina Tatrzańska",
   },
 };
-export const evantDate = {
+export const eventDate = {
   start: new Date(2020, 5, 23, 12, 0),
   end: new Date(2020, 5, 25, 15, 0),
 };

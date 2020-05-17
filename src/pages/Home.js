@@ -23,7 +23,7 @@ function Home(props) {
             <p className="text-center date">
               {`${date.start.getDate()} ${
                 date.start.getMonth() !== date.end.getMonth()
-                  ? months[date.start.getMonth]
+                  ? months[date.start.getMonth()]
                   : ""
               } - ${date.end.getDate()} ${
                 months[date.end.getMonth()]

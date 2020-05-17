@@ -10,6 +10,7 @@
   font-family: "Unica One", cursive;
   color: #fff;
   margin-bottom: 4rem;
+  text-shadow: 0 0 0.125rem #000;
 }
 @media (max-width: 992px) {
   .home h1 {

@@ -1,4 +1,18 @@
 .counter {
-  font-size: 2rem;
   color: #ffffff;
+  text-shadow: 0 0 0.125rem #000;
+}
+.counter .countdown {
+  background: url(/assets/ribbon-big.png) top center no-repeat;
+  padding: 2.9rem 1rem 2.8rem;
+}
+.counter .digit {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 0.1rem;
+}
+.counter .invitation {
+  font-size: 1.7rem;
+  padding-top: 3.9rem;
+  padding-bottom: 3.4rem;
 }

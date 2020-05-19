@@ -6,12 +6,12 @@ import Col from "react-bootstrap/Col";
 import "./Independence.css";
 
 const Independence = () => (
-  <Row className="independence">
-    <Col className="text-right">
+  <Row className="independance justify-content-md-center align-items-center">
+    <Col xs="12" md="auto">
       <img src="assets/logo_pl_alternatywny.png" alt="logo Niepodległa" />
     </Col>
-    <Col>
-      <p class="">
+    <Col xs="12" lg="5">
+      <p>
         Projekt realizowany w ramach obchodów stulecia odzyskania niepodległości
         oraz dbudowy polskiej państwowości
       </p>

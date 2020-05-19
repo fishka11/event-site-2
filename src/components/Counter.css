@@ -1,6 +1,7 @@
 .counter {
   color: #ffffff;
   text-shadow: 0 0 0.125rem #000;
+  margin-bottom: 3rem;
 }
 .counter .countdown {
   background: url(/assets/ribbon-big.png) top center no-repeat;

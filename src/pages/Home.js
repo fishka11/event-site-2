@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
 import Counter from "../components/Counter";
+import Independence from "../components/Indepenence";
 
 import "./Home.css";
 
@@ -29,8 +30,9 @@ function Home(props) {
                 months[date.end.getMonth()]
               } ${date.end.getFullYear()}`}
             </p>
+            <Counter eventDate={date} />
+            <Independence />
           </Container>
-          <Counter eventDate={date} />
         </Jumbotron>
         <div className="container">
           <div className="row align-items-center my-5">

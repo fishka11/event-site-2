@@ -12,6 +12,8 @@ class Counter extends Component {
       mins: 0,
       secs: 0,
     };
+
+    this.tick = this.tick.bind(this);
   }
 
   tick() {

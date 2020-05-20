@@ -43,7 +43,9 @@ const Navigation = (props) => {
                   </Nav.Link>
                 ))}
             </Nav>
-            <Button href="/rejestracja">Zarejestruj się</Button>
+            <Button size="sm" href="/rejestracja">
+              Zarejestruj się
+            </Button>
           </Navbar.Collapse>
         </Container>
       </Navbar>

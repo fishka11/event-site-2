@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col";
 import "./Independence.css";
 
 const Independence = () => (
-  <Row className="independance justify-content-md-center align-items-center">
+  <Row className="independance justify-content-sm-center align-items-center">
     <Col xs="12" md="auto">
       <img src="assets/logo_pl_alternatywny.png" alt="logo Niepodległa" />
     </Col>

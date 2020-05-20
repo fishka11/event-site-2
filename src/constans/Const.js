@@ -36,3 +36,27 @@ export const polishMonths = [
   "listopad",
   "grudzień",
 ];
+export const organizersList = [
+  {
+    name: "Krajowe Stowarzyszenie Ochrony Informacji Niejawnych",
+    logoFilename: "logo-ksoin.png",
+    url: "www.ksoin.pl",
+  },
+  {
+    name: "Stowarzyszenie Wspierania Bezpieczeństwa Narodowego",
+    logoFilename: "logo-swbn.png",
+    url: "www.swbn.pl",
+  },
+  {
+    name: "Komitet Bezpieczeństwa Biznesu Krajowej Izby Gospodarczej",
+    logoFilename: "logo-kig-30-lat.png",
+  },
+  {
+    name: "Stowarzyszenie Wspierania Bezpieczeństwa Narodowego",
+    logoFilename: "logo-swbn.png",
+  },
+  {
+    name: "Stowarzyszenie Wspierania Bezpieczeństwa Narodowego",
+    logoFilename: "logo-swbn.png",
+  },
+];

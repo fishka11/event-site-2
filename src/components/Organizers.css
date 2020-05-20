@@ -1,0 +1,21 @@
+.organizers {
+  padding: 3rem 0 2rem;
+}
+.organizers {
+  background: url("/assets/logos-bg.jpg") top center no-repeat;
+  background-size: cover;
+}
+.organizers .section-title {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.organizers .organizer-logo {
+  margin-bottom: 1rem;
+}
+.organizers .organizer-logo img {
+  max-width: 100%;
+  max-height: 6rem;
+}
+.organizers .organizer-name {
+  margin-bottom: 2rem;
+}

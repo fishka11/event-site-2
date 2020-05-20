@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
 
 .home .jumbotron {
-  background: url(/assets/top-congress-bg.jpg) top center no-repeat;
+  background: url("/assets/top-congress-bg.jpg") top center no-repeat;
   background-size: cover;
   background-position: top center;
   margin-top: 50px;
+  margin-bottom: 0;
 }
 .home h1 {
   font-family: "Unica One", cursive;
@@ -32,4 +33,10 @@
   font-weight: bold;
   color: #fff;
   text-shadow: 0 0 0.125rem #000;
+}
+.home .register-btn {
+  margin-top: 4rem;
+}
+.home .btn-primary {
+  text-transform: uppercase;
 }

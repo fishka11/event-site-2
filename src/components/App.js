@@ -17,6 +17,7 @@ import {
   eventLocation,
   eventDate,
   polishMonths,
+  organizersList as organizers,
 } from "../constans/Const";
 
 import "./App.css";
@@ -24,10 +25,22 @@ import "./App.css";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { menu: menuItems, eventDate, eventLocation, polishMonths };
+    this.state = {
+      menu: menuItems,
+      eventDate,
+      eventLocation,
+      polishMonths,
+      organizers,
+    };
   }
   render() {
-    const { menu, eventDate, eventLocation, polishMonths } = this.state;
+    const {
+      menu,
+      eventDate,
+      eventLocation,
+      polishMonths,
+      organizers,
+    } = this.state;
 
     return (
       <div className="App">
@@ -43,6 +56,7 @@ class App extends Component {
                   date={eventDate}
                   location={eventLocation}
                   months={polishMonths}
+                  organizers={organizers}
                 />
               )}
             />

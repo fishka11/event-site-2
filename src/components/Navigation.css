@@ -13,11 +13,3 @@
 .navigation .navbar-light .navbar-nav .nav-link.active {
   color: #f7b267;
 }
-.navigation .btn-primary {
-  background-color: #f46036;
-  border-color: #f34d1e;
-}
-.navigation .btn-primary:hover {
-  background-color: #ea3e0d;
-  border-color: #c8350b;
-}

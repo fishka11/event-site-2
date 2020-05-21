@@ -7,11 +7,12 @@ import Button from "react-bootstrap/Button";
 import Counter from "../components/Counter";
 import Independence from "../components/Indepenence";
 import Organizers from "../components/Organizers";
+import Intro from "../components/Intro";
 
 import "./Home.css";
 
 function Home(props) {
-  const { date, location, months, organizers } = props;
+  const { date, location, months, organizers, introText } = props;
   return (
     <div className="home">
       <section className="top">
@@ -45,6 +46,7 @@ function Home(props) {
         </Jumbotron>
       </section>
       <Organizers organizers={organizers} />
+      <Intro introText={introText} />
     </div>
   );
 }

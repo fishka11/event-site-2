@@ -40,3 +40,6 @@
 .home .btn-primary {
   text-transform: uppercase;
 }
+.home .intro {
+  padding: 3rem 0 2rem;
+}

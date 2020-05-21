@@ -18,6 +18,7 @@ const Organizers = (props) => {
         <Row className="justify-content-sm-center">
           {organizers.map((item) => (
             <Col
+              key={item.id}
               className="text-center"
               xs={12}
               sm={columns >= 6 ? columns : 6}
@@ -33,14 +34,14 @@ const Organizers = (props) => {
                     href={`http://${item.url}`}
                   >
                     <img
-                      fluid
+                      fluid="true"
                       src={`assets/${item.logoFilename}`}
                       alt={`logo ${item.name}`}
                     />
                   </a>
                 ) : (
                   <img
-                    fluid
+                    fluid="true"
                     src={`assets/${item.logoFilename}`}
                     alt={`logo ${item.name}`}
                   />

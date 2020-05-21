@@ -18,6 +18,7 @@ import {
   eventDate,
   polishMonths,
   organizersList as organizers,
+  introText,
 } from "../constans/Const";
 
 import "./App.css";
@@ -31,6 +32,7 @@ class App extends Component {
       eventLocation,
       polishMonths,
       organizers,
+      introText,
     };
   }
   render() {
@@ -40,6 +42,7 @@ class App extends Component {
       eventLocation,
       polishMonths,
       organizers,
+      introText,
     } = this.state;
 
     return (
@@ -57,6 +60,7 @@ class App extends Component {
                   location={eventLocation}
                   months={polishMonths}
                   organizers={organizers}
+                  introText={introText}
                 />
               )}
             />

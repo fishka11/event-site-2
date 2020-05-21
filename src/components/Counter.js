@@ -20,7 +20,6 @@ class Counter extends Component {
     let diffrence = Math.abs(
       Math.floor((this.state.eventDate.start - Date.now()) / 1000)
     );
-    console.log(diffrence);
     let days = Math.floor(diffrence / (24 * 60 * 60));
     let secsLeft = diffrence - days * 24 * 60 * 60;
     let hours = Math.floor(secsLeft / (60 * 60));

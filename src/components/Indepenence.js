@@ -13,7 +13,7 @@ const Independence = () => (
     <Col xs="12" lg="5">
       <p>
         Projekt realizowany w ramach obchodów stulecia odzyskania niepodległości
-        oraz dbudowy polskiej państwowości
+        oraz odbudowy polskiej państwowości
       </p>
     </Col>
   </Row>

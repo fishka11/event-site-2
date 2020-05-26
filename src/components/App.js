@@ -6,6 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import Navigation from "./Navigation";
+import Footer from "./Footer";
 import Home from "../pages/Home";
 import Agenda from "../pages/Agenda";
 import Speakers from "../pages/Speakers";
@@ -19,6 +20,7 @@ import {
   polishMonths,
   organizersList as organizers,
   introText,
+  picturesStrap,
 } from "../constans/Const";
 
 import "./App.css";
@@ -33,6 +35,7 @@ class App extends Component {
       polishMonths,
       organizers,
       introText,
+      picturesStrap,
     };
   }
   render() {
@@ -43,7 +46,10 @@ class App extends Component {
       polishMonths,
       organizers,
       introText,
+      picturesStrap,
     } = this.state;
+
+    const mainOrganizer = organizers.find((item) => item.mainOrganizer);
 
     return (
       <div className="App">
@@ -61,6 +67,7 @@ class App extends Component {
                   months={polishMonths}
                   organizers={organizers}
                   introText={introText}
+                  pictures={picturesStrap}
                 />
               )}
             />
@@ -76,6 +83,7 @@ class App extends Component {
             <Redirect to="/404" />
           </Switch>
         </Router>
+        <Footer mainOrganizer={mainOrganizer} />
       </div>
     );
   }

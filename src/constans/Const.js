@@ -39,9 +39,17 @@ export const polishMonths = [
 export const organizersList = [
   {
     id: 0,
+    mainOrganizer: true,
     name: "Krajowe Stowarzyszenie Ochrony Informacji Niejawnych",
+    shortName: "KSOIN",
     logoFilename: "logo-ksoin.png",
     url: "www.ksoin.pl",
+    address: "pl. Grunwaldzki 8-10",
+    zip: "40-127",
+    city: "Katowice",
+    phone: ["+48 32 206 46 00"],
+    fax: ["+48 32 206 46 01"],
+    email: ["biuro@ksoin.pl"],
   },
 ];
 
@@ -55,3 +63,24 @@ export const introText = {
   p4:
     "XVI Kongres będzie miał wyjątkowe znaczenie dla bezpieczeństwa gospodarczego z uwagi na poniesione straty z powodu pandemii i możliwość zwiększonych zagrożeń konkurencji, wrogich służ specjalnych i wyspecjalizowanych grup przestępczych.",
 };
+
+export const picturesStrap = [
+  { id: "1", picName: "pic-strap-01.jpg", picDesc: "Spotkanie biznesowe" },
+  {
+    id: "2",
+    picName: "pic-strap-02.jpg",
+    picDesc: "Biurko z arkuszami zestawień i wykresów",
+  },
+  { id: "3", picName: "pic-strap-03.jpg", picDesc: "Para pod parasolem" },
+  { id: "4", picName: "pic-strap-04.jpg", picDesc: "Kostki domina" },
+  {
+    id: "5",
+    picName: "pic-strap-05.jpg",
+    picDesc: "Arkusze zestawień i wykresów",
+  },
+  {
+    id: "6",
+    picName: "pic-strap-06.jpg",
+    picDesc: "Dyskusja nad zestawieniami biznesowymi",
+  },
+];

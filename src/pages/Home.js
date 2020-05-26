@@ -12,7 +12,7 @@ import Intro from "../components/Intro";
 import "./Home.css";
 
 function Home(props) {
-  const { date, location, months, organizers, introText } = props;
+  const { date, location, months, organizers, introText, pictures } = props;
   return (
     <div className="home">
       <section className="top">
@@ -46,7 +46,7 @@ function Home(props) {
         </Jumbotron>
       </section>
       <Organizers organizers={organizers} />
-      <Intro introText={introText} />
+      <Intro introText={introText} pictures={pictures} />
     </div>
   );
 }

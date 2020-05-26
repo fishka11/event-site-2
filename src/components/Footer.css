@@ -1,0 +1,9 @@
+.footer {
+  background-color: rgb(42, 81, 171);
+  padding: 5rem 0 3rem;
+  text-shadow: 0 0 0.125rem #000;
+}
+
+.footer a {
+  color: #eee;
+}

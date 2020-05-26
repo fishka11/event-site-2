@@ -1,15 +1,17 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 import React from "react";
 
+import "./Intro.css";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
-import "./Intro.css";
 import Button from "react-bootstrap/Button";
 
+import PicturesStrap from "../components/PicturesStrap";
+
 const Intro = (props) => {
-  const { introText } = props;
+  const { introText, pictures } = props;
   return (
     <section className="intro">
       <Container>
@@ -50,14 +52,15 @@ const Intro = (props) => {
               <iframe
                 className="embed-responsive-item"
                 src="https://www.youtube.com/embed/nS4hihsyn1Q"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </Col>
           </Row>
         </div>
       </Container>
+      <PicturesStrap pictures={pictures} />
     </section>
   );
 };

@@ -47,8 +47,8 @@ export const organizersList = [
     address: "pl. Grunwaldzki 8-10",
     zip: "40-127",
     city: "Katowice",
-    phone: ["+48 32 206 46 00"],
-    fax: ["+48 32 206 46 01"],
+    phone: [{ id: "1", tel: "+48 32 206 46 00" }],
+    fax: [{ id: "2", fax: "+48 32 206 46 01" }],
     email: ["biuro@ksoin.pl"],
   },
 ];

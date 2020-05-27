@@ -3,7 +3,23 @@
   padding: 5rem 0 3rem;
   text-shadow: 0 0 0.125rem #000;
 }
-
+.footer .organizer-logo {
+  margin-bottom: 2rem;
+}
+.footer,
 .footer a {
   color: #eee;
+}
+.footer address {
+  margin-bottom: 0;
+}
+.footer .address {
+  display: flex;
+  align-items: baseline;
+}
+.footer .address svg {
+  margin-right: 0.5rem;
+}
+.footer hr {
+  background-color: #fff;
 }

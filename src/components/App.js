@@ -25,6 +25,16 @@ import {
 
 import "./App.css";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faMapMarkerAlt,
+  faAt,
+  faPhone,
+  faFax,
+} from "@fortawesome/free-solid-svg-icons";
+
+library.add(faMapMarkerAlt, faAt, faPhone, faFax);
+
 class App extends Component {
   constructor(props) {
     super(props);

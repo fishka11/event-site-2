@@ -4,16 +4,19 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import "./Footer.css";
 
 const Footer = (props) => {
   const { mainOrganizer } = props;
+  console.log(mainOrganizer);
 
   return (
     <footer className="footer">
       <Container>
         <Row className="justify-content-sm-center">
-          <Col md={4}>
+          <Col md={4} className="organizer-logo">
             {!!mainOrganizer.url ? (
               <a
                 target="_blank"
@@ -38,21 +41,66 @@ const Footer = (props) => {
             <Row className="justify-content-sm-center">
               <Col md={6}>
                 <address>
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={`http://${mainOrganizer.url}`}
-                  >
-                    <strong>
-                      Krajowe Stowarzyszenie Ochrony Informacji Niejawnych
-                    </strong>
-                  </a>
+                  <p>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href={`http://${mainOrganizer.url}`}
+                    >
+                      <strong>{mainOrganizer.name}</strong>
+                    </a>
+                  </p>
+
+                  <div className="address">
+                    <FontAwesomeIcon icon="map-marker-alt" />
+                    <p>
+                      {mainOrganizer.address}
+                      <br />
+                      {`${mainOrganizer.zip} ${mainOrganizer.city}`}
+                    </p>
+                  </div>
                 </address>
               </Col>
-              <Col md={6}></Col>
+              <Col md={6}>
+                <address>
+                  <div className="address">
+                    <FontAwesomeIcon icon="at" />
+                    <p>
+                      e-mail:{" "}
+                      <a href={`mailto:${mainOrganizer.email}`}>
+                        {mainOrganizer.email}
+                      </a>
+                    </p>
+                  </div>
+                  {mainOrganizer.phone.map((item) => (
+                    <div key={item.id} className="address">
+                      <FontAwesomeIcon icon="phone" />
+                      <p>
+                        tel:{" "}
+                        <a href={`tel:${item.tel.replace(/\s+/g, "")}`}>
+                          {item.tel}
+                        </a>
+                      </p>
+                    </div>
+                  ))}
+                  {mainOrganizer.fax.map((item) => (
+                    <div key={item.id} className="address">
+                      <FontAwesomeIcon icon="fax" />
+                      <p>
+                        tel:{" "}
+                        <a href={`tel:${item.fax.replace(/\s+/g, "")}`}>
+                          {item.fax}
+                        </a>
+                      </p>
+                    </div>
+                  ))}
+                </address>
+              </Col>
             </Row>
           </Col>
         </Row>
+        <hr />
+        <p>© 2018 {mainOrganizer.shortName}</p>
       </Container>
     </footer>
   );

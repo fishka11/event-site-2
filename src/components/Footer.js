@@ -10,7 +10,6 @@ import "./Footer.css";
 
 const Footer = (props) => {
   const { mainOrganizer } = props;
-  console.log(mainOrganizer);
 
   return (
     <footer className="footer">
@@ -87,7 +86,7 @@ const Footer = (props) => {
                     <div key={item.id} className="address">
                       <FontAwesomeIcon icon="fax" />
                       <p>
-                        tel:{" "}
+                        fax:{" "}
                         <a href={`tel:${item.fax.replace(/\s+/g, "")}`}>
                           {item.fax}
                         </a>

@@ -15,12 +15,14 @@ import GenericNotFound from "../pages/GenericNotFound";
 
 import {
   menuItems,
+  eventName,
   eventLocation,
   eventDate,
   polishMonths,
   organizersList as organizers,
   introText,
   picturesStrap,
+  speakers,
 } from "../constans/Const";
 
 import "./App.css";
@@ -36,18 +38,46 @@ import {
 library.add(faMapMarkerAlt, faAt, faPhone, faFax);
 
 class App extends Component {
+  _isMounted = false;
   constructor(props) {
     super(props);
     this.state = {
       menu: menuItems,
+      eventName,
       eventDate,
       eventLocation,
       polishMonths,
       organizers,
       introText,
       picturesStrap,
+      eventSpeakers: [],
     };
+
+    this.fetchEventSpeakers = this.fetchEventSpeakers.bind(this);
+    this.setEventSpeakers = this.setEventSpeakers.bind(this);
   }
+
+  componentDidMount() {
+    this._isMounted = true;
+    this.fetchEventSpeakers(eventName);
+  }
+  componentWillUnmount() {
+    this._isMounted = false;
+  }
+
+  fetchEventSpeakers(eventName) {
+    const filteredSpeakers = speakers.filter(
+      (item) => item.events[1][eventName].presence === true
+    );
+    if (this._isMounted) {
+      this.setEventSpeakers(filteredSpeakers);
+    }
+  }
+
+  setEventSpeakers(filteredSpeakers) {
+    this.setState({ eventSpeakers: filteredSpeakers });
+  }
+
   render() {
     const {
       menu,
@@ -57,6 +87,7 @@ class App extends Component {
       organizers,
       introText,
       picturesStrap,
+      eventSpeakers,
     } = this.state;
 
     const mainOrganizer = organizers.find((item) => item.mainOrganizer);
@@ -82,7 +113,11 @@ class App extends Component {
               )}
             />
             <Route path="/tematyka" exact component={Agenda} />
-            <Route path="/prelegenci" exact component={Speakers} />
+            <Route
+              path="/prelegenci"
+              exact
+              component={() => <Speakers eventSpeakers={eventSpeakers} />}
+            />
             <Route path="/atrakcje" />
             <Route path="/patronat" />
             <Route path="/info" />

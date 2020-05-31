@@ -1,30 +1,34 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
-function Speakers() {
+const Speakers = (props) => {
+  const { eventSpeakers } = props;
+
   return (
-    <div className="contact">
-      <div className="container">
-        <div className="row align-items-center my-5">
-          <div className="col-lg-7">
-            <img
-              className="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
-              alt=""
-            />
-          </div>
-          <div className="col-lg-5">
-            <h1 className="font-weight-light">Contact</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div className="page speakers">
+      <section className="speakers-list">
+        <Container>
+          <h1>Prelegenci</h1>
+          <Row>
+            {eventSpeakers.map((item) => (
+              <Col key={item.id} md={4}>
+                <div>
+                  <img
+                    src={`assets/speakers/speaker-${item.picName}.jpg`}
+                    alt={`${item.title} ${item.firstName} ${item.lastName}`}
+                  />
+                  <h2>{`${item.title} ${item.firstName} ${item.lastName}`}</h2>
+                  <p>{item.description}</p>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </section>
     </div>
   );
-}
+};
 
 export default Speakers;

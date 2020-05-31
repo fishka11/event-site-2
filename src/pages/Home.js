@@ -11,7 +11,7 @@ import Intro from "../components/Intro";
 
 import "./Home.css";
 
-function Home(props) {
+const Home = (props) => {
   const { date, location, months, organizers, introText, pictures } = props;
   return (
     <div className="home">
@@ -49,6 +49,6 @@ function Home(props) {
       <Intro introText={introText} pictures={pictures} />
     </div>
   );
-}
+};
 
 export default Home;

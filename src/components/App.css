@@ -1,6 +1,24 @@
 body {
   background-color: rgb(245, 243, 245);
 }
+.page,
+.home {
+  margin-top: 5.2rem;
+}
+.page h1 {
+  text-transform: uppercase;
+  color: #2a51ab;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.page h1::before {
+  position: absolute;
+  content: "";
+  background: gray;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+}
 .btn-primary {
   background-color: #f46036;
   border-color: #f34d1e;

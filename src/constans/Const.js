@@ -492,7 +492,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -791,7 +791,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,

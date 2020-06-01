@@ -1,8 +1,7 @@
 body {
   background-color: rgb(245, 243, 245);
 }
-.page,
-.home {
+.page {
   margin-top: 5.2rem;
 }
 .page h1 {

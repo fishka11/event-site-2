@@ -1,0 +1,13 @@
+.speakers .speaker {
+  margin-top: 2rem;
+}
+.speakers .speaker img {
+  display: block;
+  max-width: 100%;
+}
+.speakers .speaker h2 {
+  font-size: 1.5rem;
+  margin: 1.3rem 0 1rem;
+}
+.speakers .speaker p {
+}

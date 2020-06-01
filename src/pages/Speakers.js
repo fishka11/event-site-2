@@ -3,6 +3,8 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import "./Speakers.css";
+
 const Speakers = (props) => {
   const { eventSpeakers } = props;
 
@@ -14,13 +16,15 @@ const Speakers = (props) => {
           <Row>
             {eventSpeakers.map((item) => (
               <Col key={item.id} md={4}>
-                <div>
+                <div className="speaker">
                   <img
+                    className="mx-auto"
+                    fluid
                     src={`assets/speakers/speaker-${item.picName}.jpg`}
                     alt={`${item.title} ${item.firstName} ${item.lastName}`}
                   />
-                  <h2>{`${item.title} ${item.firstName} ${item.lastName}`}</h2>
-                  <p>{item.description}</p>
+                  <h2 className="text-center">{`${item.title} ${item.firstName} ${item.lastName}`}</h2>
+                  <p className="text-center">{item.description}</p>
                 </div>
               </Col>
             ))}

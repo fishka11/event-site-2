@@ -66,8 +66,10 @@ class App extends Component {
   }
 
   fetchEventSpeakers(eventName) {
-    const filteredSpeakers = speakers.filter(
-      (item) => item.events[1][eventName].presence === true
+    const filteredSpeakers = speakers.filter((item) =>
+      item.events
+        .filter((item) => Object.keys(item).toString() === eventName.toString())
+        .find((e) => e[eventName].presence === true)
     );
     if (this._isMounted) {
       this.setEventSpeakers(filteredSpeakers);

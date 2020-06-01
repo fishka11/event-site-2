@@ -19,7 +19,7 @@ const Speakers = (props) => {
                 <div className="speaker">
                   <img
                     className="mx-auto"
-                    fluid
+                    fluid="true"
                     src={`assets/speakers/speaker-${item.picName}.jpg`}
                     alt={`${item.title} ${item.firstName} ${item.lastName}`}
                   />

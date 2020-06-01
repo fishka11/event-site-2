@@ -69,7 +69,7 @@ class App extends Component {
     const filteredSpeakers = speakers.filter((item) =>
       item.events
         .filter((item) => Object.keys(item).toString() === eventName.toString())
-        .find((e) => e[eventName].presence === true)
+        .find((item) => item[eventName].presence === true)
     );
     if (this._isMounted) {
       this.setEventSpeakers(filteredSpeakers);

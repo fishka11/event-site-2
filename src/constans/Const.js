@@ -1,13 +1,56 @@
-export const menuItems = [
-  { id: 0, path: "", displyName: "" },
-  { id: 1, path: "tematyka", displyName: "Tematyka & Program" },
-  { id: 2, path: "prelegenci", displyName: "Prelegenci" },
-  { id: 3, path: "atrakcje", displyName: "Atrakcje" },
-  { id: 4, path: "patronat", displyName: "Patronat" },
-  { id: 5, path: "info", displyName: "Inf. organizacyjne" },
-  { id: 6, path: "kontakt", displyName: "Kontakt" },
-  { id: 7, path: "admin", displyName: "" },
-  { id: 8, path: "404", displyName: "" },
+export const sitePages = [
+  {
+    id: 0,
+    path: "",
+    displyName: "",
+    title:
+      "Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
+    description:
+      "Kongres o istotnym znaczeniu i niebagatelnym wpływie na stan bezpieczeństwa państwa, firm, instytucji i obywateli, odbywający się nieprzerwanie od 2005 roku. Możliwość spotkania z wieloma wybitnymi gośćmi i ekspertami, a także okazja do dyskusji, bezpośredniej wymiany doświadczeń, kuluarowych spotkań, przekazania uwag i wyjaśnienia wątpliwości dotyczących organizacji i funkcjonowania pionów ochrony, obowiązków i zadań kierowników jednostek organizacyjnych, pełnomocników ochrony, administratorów bezpieczeństwa informacji/inspektorów ochrony danych osobowych oraz współpracy i podziału kompetencji między nimi.",
+  },
+  {
+    id: 1,
+    path: "tematyka",
+    displyName: "Tematyka & Program",
+    title:
+      "Tematy wystąpień na Kongresie Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
+    description:
+      "Teamtyka prelekcji obejmuje wiele aspektów ochrony informacji...",
+  },
+  {
+    id: 2,
+    path: "prelegenci",
+    displyName: "Prelegenci",
+    title:
+      "Prelegenci Kongresu Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
+    description:
+      "Prelegentami Kongresu są znakomite osobistości ze świata służb mundurowych, biznesu, administracji rządowej i smorządowej - specjaliści ochrony informacji",
+  },
+  {
+    id: 3,
+    path: "atrakcje",
+    displyName: "Atrakcje",
+    title: "",
+    description: "",
+  },
+  {
+    id: 4,
+    path: "patronat",
+    displyName: "Patronat",
+    title:
+      "Patroni i partnerzy Kongresu Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
+    description: "Nasi patroni i partnerzy, którzy wspierają idee Kongresu",
+  },
+  {
+    id: 5,
+    path: "info",
+    displyName: "Inf. organizacyjne",
+    title: "",
+    description: "",
+  },
+  { id: 6, path: "kontakt", displyName: "Kontakt", title: "", description: "" },
+  { id: 7, path: "admin", displyName: "", title: "", description: "" },
+  { id: 8, path: "404", displyName: "", title: "", description: "" },
 ];
 export const eventLocation = {
   name: "Centrum Rekreacji i Biznesu Grand Stasinda",
@@ -83,6 +126,108 @@ export const picturesStrap = [
     id: "6",
     picName: "pic-strap-06.jpg",
     picDesc: "Dyskusja nad zestawieniami biznesowymi",
+  },
+];
+
+export const agenda = [
+  {
+    id: "1",
+    title:
+      "21 lat Polski w NATO i nowych regulacji prawnych ochrony informacji niejawnych.",
+  },
+  {
+    id: "2",
+    title:
+      "Służby wywiadu i kontrwywiadu w systemie bezpieczeństwa informacji.",
+  },
+  {
+    id: "3",
+    title:
+      "Dlaczego jesteśmy podsłuchiwani/inwigilowani? Czy jesteśmy mniej czy bardziej bezpieczni?",
+  },
+  {
+    id: "4",
+    title:
+      "Informacje prawnie chronione w biznesie (tajemnica przedsiębiorstwa, handlowa i giełdowa).",
+  },
+  {
+    id: "5",
+    title:
+      "Piony ochrony informacji niejawnych w jednostkach organizacyjnych, ewoluowanie ich roli i zadań, stan faktyczny.",
+  },
+  {
+    id: "6",
+    title:
+      "Kancelarie tajne i niejawne w tym i zagraniczne – ich rola w obiegu dokumentów niejawnych.",
+  },
+  {
+    id: "7",
+    title:
+      "Debata na temat aktualnych i przyszłych zagrożeń ochrony informacji i danych osobowych.",
+  },
+  {
+    id: "8",
+    title:
+      "Dyrektywa Parlamentu Europejskiego i Rady (UE) ws.  zwalczanie nieuczciwej konkurencji w gospodarce rynkowej.",
+  },
+  {
+    id: "9",
+    title:
+      'Istota Zarządzania Ryzykiem wg. RODO. Kiedy "Ogólna Ocena Ryzyka" a kiedy "Ocena Skutków" dla ochrony przetwarzanych danych osobowych?',
+  },
+  {
+    id: "10",
+    title:
+      "Sesja tematyczna: Jak wdrożyliśmy/wdrażamy RODO w urzędach, instytucjach, firmach i organizacjach – podpowiedzi, uwagi i pierwsze doświadczenia.",
+  },
+  {
+    id: "11",
+    title:
+      "Bezpieczeństwo komunikacji w biznesie. Jak za pomocą szyfrowania chronić informacje i dane o organizacji.",
+  },
+  {
+    id: "12",
+    title:
+      "Czas po „światowym krachu gospodarczym” w kontekście zapewnienia bezpieczeństwa biznesu.",
+  },
+  {
+    id: "13",
+    title:
+      "Możliwości finansowania nowoczesnych technologii bezpieczeństwa biznesu.",
+  },
+  {
+    id: "14",
+    title: "Techniki i technologie zapewniające ochronę/zdobywanie informacji.",
+  },
+  {
+    id: "15",
+    title:
+      "Innowacyjność i nowe technologie Industry 4.0 i oczekiwane 5G w ochronie gospodarki i bezpieczeństwa biznesu.",
+  },
+  {
+    id: "16",
+    title:
+      "Krajowy System Cyberbezpieczeństwa - operatorzy usług kluczowych i dostawcy usług cyfrowych.",
+  },
+  {
+    id: "17",
+    title:
+      "Wojna w cyberprzestrzeni - jej reperkusje dla bezpieczeństwa narodowego i  gospodarczego kraju. Budowanie świadomości bezpieczeństwa cybernetycznego.",
+  },
+  {
+    id: "18",
+    title:
+      "Czy zagroził nam Blackout? Możliwy scenariusz chaosu społeczno- gospodarczego.",
+  },
+  {
+    id: "19",
+    title:
+      "Zarządzaniu bezpieczeństwem obiektów. Doświadczenia, podpowiedzi i praktyczne uwagi.",
+  },
+  {
+    id: "20",
+    title:
+      "Światowe i krajowe zagrożenia terrorystyczne. Ekozagrożenia bezpieczeństwa biznesu i terroryzm ekologiczny.",
   },
 ];
 
@@ -4876,5 +5021,160 @@ export const speakers = [
         },
       },
     ],
+  },
+];
+
+export const sponsors = [
+  {
+    id: "1",
+    name: "Remontowa Holding",
+    logoFilename: "remontowa.png",
+    kind: "patronat główny",
+  },
+  {
+    id: "2",
+    name: "Huawei",
+    logoFilename: "huawei.png",
+    kind: "patronat strategiczny",
+  },
+  {
+    id: "3",
+    name: "Krajowa Izba Gospodarcza",
+    logoFilename: "kig.png",
+    kind: "patronat",
+  },
+  {
+    id: "4",
+    name: "Regionalna Izba Gospodarcza w Katowicach",
+    logoFilename: "rig-katowice.png",
+    kind: "patronat",
+  },
+  {
+    id: "5",
+    name: "Regionalna Izba Przemysłowo-Handlowa w Gliwicach",
+    logoFilename: "riph.png",
+    kind: "patronat",
+  },
+  {
+    id: "6",
+    name: "Klub Integracji Europejskiej",
+    logoFilename: "kie.png",
+    kind: "patronat",
+  },
+  {
+    id: "7",
+    name: "Stowarzyszenie Dostawców na rzecz Służb Mundurowych",
+    logoFilename: "sdsm.png",
+    kind: "patronat",
+  },
+  {
+    id: "8",
+    name: "Grupa Amber",
+    logoFilename: "amber-grupa.png",
+    kind: "patronat",
+  },
+  {
+    id: "9",
+    name: "Międzynarodowe Targi Poznańskie",
+    logoFilename: "mtp.png",
+    kind: "patronat",
+  },
+  {
+    id: "10",
+    name: "Śląskie Stowarzyszenie Menedżerów",
+    logoFilename: "ssm.png",
+    kind: "partnerzy",
+  },
+  { id: "11", name: "Amber IT", logoFilename: "Amber IT", kind: "partnerzy" },
+  {
+    id: "12",
+    name: "Międzynarodowe Targi Zabezpieczeń SECUREX",
+    logoFilename: "securex.png",
+    kind: "partnerzy",
+  },
+  {
+    id: "13",
+    name: "Cloud Community Europe",
+    logoFilename: "cloud-community.png",
+    kind: "partnerzy",
+  },
+  { id: "14", name: "Zipp", logoFilename: "zipp.png", kind: "partnerzy" },
+  {
+    id: "15",
+    name: "Instytut Łączności - Państwowy Instytut Badawczy",
+    logoFilename: "il-pib.png",
+    kind: "partnerzy",
+  },
+  {
+    id: "16",
+    name: "Coders House",
+    logoFilename: "coders-house.png",
+    kind: "partnerzy",
+  },
+  {
+    id: "17",
+    name: "Hasco-Lek Polska",
+    logoFilename: "hasco-lek-polska.png",
+    kind: "partnerzy",
+  },
+  {
+    id: "18",
+    name: "Przedsiębiorcy@eu – telewizja i magazyn ludzi biznesu",
+    logoFilename: "przedsiebiorcyeu.png",
+    kind: "patronat medialny",
+  },
+  {
+    id: "19",
+    name: "Miesięcznik Europerspektywy",
+    logoFilename: "europerspektywy.png",
+    kind: "patronat medialny",
+  },
+  {
+    id: "20",
+    name: "Portal Ochrony",
+    logoFilename: "portalochrony.png",
+    kind: "patronat medialny",
+  },
+  {
+    id: "21",
+    name: "TV Silesia",
+    logoFilename: "tvsilesia.png",
+    kind: "patronat medialny",
+  },
+  {
+    id: "22",
+    name: "Telewizja ATV",
+    logoFilename: "atv.png",
+    kind: "patronat medialny",
+  },
+  {
+    id: "23",
+    name: "Ochrona i Bezpieczeństwo Obiektów i Biznesu",
+    logoFilename: "ochrona-i-bezpieczenstwo.png",
+    kind: "patronat medialny",
+  },
+  {
+    id: "24",
+    name: "Portal munurowy",
+    logoFilename: "portalmundurowy.png",
+    kind: "patronat medialny",
+  },
+  {
+    id: "25",
+    name: "Magazyn VIP",
+    logoFilename: "vip.png",
+    kind: "patronat medialny",
+  },
+  {
+    id: "26",
+    name: "Magazyn VIP Defence",
+    logoFilename: "vip-defence.png",
+    kind: "patronat medialny",
+  },
+  {
+    id: "27",
+    name: "Europejska Firma",
+    logoFilename: "europejska-firma.png",
+    kind: "patronat medialny",
   },
 ];

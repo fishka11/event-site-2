@@ -1,4 +1,6 @@
 import React from "react";
+import { Helmet } from "react-helmet";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -6,10 +8,14 @@ import Col from "react-bootstrap/Col";
 import "./Speakers.css";
 
 const Speakers = (props) => {
-  const { eventSpeakers } = props;
+  const { meta, eventSpeakers } = props;
 
   return (
     <div className="page speakers">
+      <Helmet>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description}></meta>
+      </Helmet>
       <section className="speakers-list">
         <Container>
           <h1>Prelegenci</h1>

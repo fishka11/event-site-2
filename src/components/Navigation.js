@@ -9,8 +9,6 @@ import Button from "react-bootstrap/Button";
 
 import { withRouter } from "react-router-dom";
 
-// import { menuItems } from "../constans/Const";
-
 const Navigation = (props) => {
   const { menuItems, location } = props;
   return (

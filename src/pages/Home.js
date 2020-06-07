@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 
 import Container from "react-bootstrap/Container";
 import Jumbotron from "react-bootstrap/Jumbotron";
@@ -12,9 +13,22 @@ import Intro from "../components/Intro";
 import "./Home.css";
 
 const Home = (props) => {
-  const { date, location, months, organizers, introText, pictures } = props;
+  const {
+    meta,
+    date,
+    location,
+    months,
+    organizers,
+    introText,
+    pictures,
+  } = props;
+
   return (
     <div className="home">
+      <Helmet>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description}></meta>
+      </Helmet>
       <section className="top">
         <Jumbotron fluid>
           <Container>

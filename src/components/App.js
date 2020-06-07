@@ -14,7 +14,7 @@ import Admin from "../pages/Admin";
 import GenericNotFound from "../pages/GenericNotFound";
 
 import {
-  menuItems,
+  sitePages,
   eventName,
   eventLocation,
   eventDate,
@@ -23,6 +23,8 @@ import {
   introText,
   picturesStrap,
   speakers,
+  agenda,
+  sponsors,
 } from "../constans/Const";
 
 import "./App.css";
@@ -34,6 +36,7 @@ import {
   faPhone,
   faFax,
 } from "@fortawesome/free-solid-svg-icons";
+import Sponsors from "../pages/Sponsors";
 
 library.add(faMapMarkerAlt, faAt, faPhone, faFax);
 
@@ -42,7 +45,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      menu: menuItems,
+      sites: sitePages,
       eventName,
       eventDate,
       eventLocation,
@@ -51,15 +54,21 @@ class App extends Component {
       introText,
       picturesStrap,
       eventSpeakers: [],
+      agenda,
+      sponsors,
+      sponsorKinds: [],
     };
 
     this.fetchEventSpeakers = this.fetchEventSpeakers.bind(this);
     this.setEventSpeakers = this.setEventSpeakers.bind(this);
+    this.setPageHead = this.setPageHead.bind(this);
+    this.setSponsorKinds = this.setSponsorKinds.bind(this);
   }
 
   componentDidMount() {
     this._isMounted = true;
     this.fetchEventSpeakers(eventName);
+    this.setSponsorKinds(this.state.sponsors);
   }
   componentWillUnmount() {
     this._isMounted = false;
@@ -80,9 +89,26 @@ class App extends Component {
     this.setState({ eventSpeakers: filteredSpeakers });
   }
 
+  setPageHead(sites, destinationPath) {
+    const pageMeta = sites.filter((item) => item.path === destinationPath)[0];
+    return pageMeta;
+  }
+
+  setSponsorKinds(sponsors) {
+    const sponsorKinds = [];
+    sponsors.forEach((item) => {
+      if (!sponsorKinds.some((el) => el.kind === item["kind"])) {
+        sponsorKinds.push({ kind: item["kind"], count: 1 });
+      } else {
+        sponsorKinds.find((el) => el.kind === item["kind"]).count += 1;
+      }
+    });
+    this.setState({ sponsorKinds: sponsorKinds });
+  }
+
   render() {
     const {
-      menu,
+      sites,
       eventDate,
       eventLocation,
       polishMonths,
@@ -90,6 +116,9 @@ class App extends Component {
       introText,
       picturesStrap,
       eventSpeakers,
+      agenda,
+      sponsors,
+      sponsorKinds,
     } = this.state;
 
     const mainOrganizer = organizers.find((item) => item.mainOrganizer);
@@ -97,7 +126,7 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Navigation menuItems={menu} />
+          <Navigation menuItems={sites} />
           <Switch>
             {/* Another way is to pass render prop instaed of component prop for better performance, beacouse Home is functional component */}
             <Route
@@ -105,6 +134,7 @@ class App extends Component {
               exact
               component={() => (
                 <Home
+                  meta={this.setPageHead(sites, "")}
                   date={eventDate}
                   location={eventLocation}
                   months={polishMonths}
@@ -114,14 +144,38 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/tematyka" exact component={Agenda} />
+            <Route
+              path="/tematyka"
+              exact
+              component={() => (
+                <Agenda
+                  meta={this.setPageHead(sites, "tematyka")}
+                  agenda={agenda}
+                />
+              )}
+            />
             <Route
               path="/prelegenci"
               exact
-              component={() => <Speakers eventSpeakers={eventSpeakers} />}
+              component={() => (
+                <Speakers
+                  meta={this.setPageHead(sites, "prelegenci")}
+                  eventSpeakers={eventSpeakers}
+                />
+              )}
             />
             <Route path="/atrakcje" />
-            <Route path="/patronat" />
+            <Route
+              path="/patronat"
+              exact
+              component={() => (
+                <Sponsors
+                  meta={this.setPageHead(sites, "patronat")}
+                  sponsors={sponsors}
+                  sponsorKinds={sponsorKinds}
+                />
+              )}
+            />
             <Route path="/info" />
             <Route path="/kontakt" />
             <Route path="/rejestracja" />

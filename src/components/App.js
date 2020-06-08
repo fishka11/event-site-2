@@ -57,18 +57,21 @@ class App extends Component {
       agenda,
       sponsors,
       sponsorKinds: [],
+      sponsorsByKinds: [],
     };
 
     this.fetchEventSpeakers = this.fetchEventSpeakers.bind(this);
     this.setEventSpeakers = this.setEventSpeakers.bind(this);
     this.setPageHead = this.setPageHead.bind(this);
     this.setSponsorKinds = this.setSponsorKinds.bind(this);
+    this.setSponsorsByKinds = this.setSponsorsByKinds.bind(this);
   }
 
   componentDidMount() {
     this._isMounted = true;
     this.fetchEventSpeakers(eventName);
-    this.setSponsorKinds(this.state.sponsors);
+    this.setSponsorKinds(sponsors);
+    this.setSponsorsByKinds(sponsors);
   }
   componentWillUnmount() {
     this._isMounted = false;
@@ -106,6 +109,20 @@ class App extends Component {
     this.setState({ sponsorKinds: sponsorKinds });
   }
 
+  setSponsorsByKinds(sponsors) {
+    const sponsorsByKinds = [];
+    sponsors.forEach((item) => {
+      if (!sponsorsByKinds.some((el) => el.kind === item["kind"])) {
+        sponsorsByKinds.push({ kind: item["kind"], sponsors: [] });
+      }
+    });
+    sponsors.forEach((item) => {
+      let kind = item.kind;
+      sponsorsByKinds.find((item) => item.kind === kind).sponsors.push(item);
+    });
+    this.setState({ sponsorsByKinds: sponsorsByKinds });
+  }
+
   render() {
     const {
       sites,
@@ -119,6 +136,7 @@ class App extends Component {
       agenda,
       sponsors,
       sponsorKinds,
+      sponsorsByKinds,
     } = this.state;
 
     const mainOrganizer = organizers.find((item) => item.mainOrganizer);
@@ -171,8 +189,7 @@ class App extends Component {
               component={() => (
                 <Sponsors
                   meta={this.setPageHead(sites, "patronat")}
-                  sponsors={sponsors}
-                  sponsorKinds={sponsorKinds}
+                  sponsorsByKinds={sponsorsByKinds}
                 />
               )}
             />

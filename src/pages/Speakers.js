@@ -9,6 +9,7 @@ import "./Speakers.css";
 
 const Speakers = (props) => {
   const { meta, eventSpeakers } = props;
+  console.log(eventSpeakers);
 
   return (
     <div className="page speakers">

@@ -18,6 +18,7 @@ import {
   eventName,
   eventLocation,
   eventDate,
+  eventSponsorsByKind,
   polishMonths,
   organizersList as organizers,
   introText,
@@ -56,22 +57,19 @@ class App extends Component {
       eventSpeakers: [],
       agenda,
       sponsors,
-      sponsorKinds: [],
-      sponsorsByKinds: [],
+      eventSponsorsByKind,
     };
 
     this.fetchEventSpeakers = this.fetchEventSpeakers.bind(this);
     this.setEventSpeakers = this.setEventSpeakers.bind(this);
     this.setPageHead = this.setPageHead.bind(this);
-    this.setSponsorKinds = this.setSponsorKinds.bind(this);
-    this.setSponsorsByKinds = this.setSponsorsByKinds.bind(this);
+    this.fetchEventSponsorsByKind = this.fetchEventSponsorsByKind.bind(this);
   }
 
   componentDidMount() {
     this._isMounted = true;
     this.fetchEventSpeakers(eventName);
-    this.setSponsorKinds(sponsors);
-    this.setSponsorsByKinds(sponsors);
+    // this.fetchEventSponsorsByKind(sponsors);
   }
   componentWillUnmount() {
     this._isMounted = false;
@@ -97,30 +95,22 @@ class App extends Component {
     return pageMeta;
   }
 
-  setSponsorKinds(sponsors) {
-    const sponsorKinds = [];
-    sponsors.forEach((item) => {
-      if (!sponsorKinds.some((el) => el.kind === item["kind"])) {
-        sponsorKinds.push({ kind: item["kind"], count: 1 });
-      } else {
-        sponsorKinds.find((el) => el.kind === item["kind"]).count += 1;
-      }
-    });
-    this.setState({ sponsorKinds: sponsorKinds });
+  fetchEventSponsorsByKind(sponsors) {
+    const filteredSponsers = sponsors.filter((item) =>
+      item.events
+        .filter(
+          (item) =>
+            Object.keys(item).toString() === eventSponsorsByKind.toString()
+        )
+        .find((item) => item[eventName].presence === true)
+    );
+    if (this._isMounted) {
+      this.setEventSponsorsByKind(filteredSponsers);
+    }
   }
 
-  setSponsorsByKinds(sponsors) {
-    const sponsorsByKinds = [];
-    sponsors.forEach((item) => {
-      if (!sponsorsByKinds.some((el) => el.kind === item["kind"])) {
-        sponsorsByKinds.push({ kind: item["kind"], sponsors: [] });
-      }
-    });
-    sponsors.forEach((item) => {
-      let kind = item.kind;
-      sponsorsByKinds.find((item) => item.kind === kind).sponsors.push(item);
-    });
-    this.setState({ sponsorsByKinds: sponsorsByKinds });
+  setEventSponsorsByKind(filteredSponsers) {
+    this.setState({ eventSponsorsByKind: filteredSponsers });
   }
 
   render() {

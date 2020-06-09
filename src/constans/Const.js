@@ -66,6 +66,13 @@ export const eventDate = {
   end: new Date(2020, 5, 25, 15, 0),
 };
 export const eventName = "koin";
+export const eventSponsorsByKind = {
+  "patronat główny": [],
+  "patronat strategiczny": [],
+  patronat: [],
+  partnerzy: [],
+  "patronat medialny": [],
+};
 export const polishMonths = [
   "styczeń",
   "luty",
@@ -5026,164 +5033,937 @@ export const speakers = [
 
 export const sponsors = [
   {
-    id: 1,
-    kind: "patronat główny",
-    priority: 1,
-    sponsors: [
+    id: "1",
+    name: "Remontowa Holding",
+    logoFilename: "remontowa.png",
+    events: [
       {
-        id: 1,
-        name: "Remontowa Holding",
-        logoFilename: "remontowa.png",
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat główny",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
     ],
   },
   {
-    id: 2,
-    kind: "patronat strategiczny",
-    priority: 2,
-    sponsors: [
+    id: "2",
+    name: "Huawei",
+    logoFilename: "huawei.png",
+    events: [
       {
-        id: 1,
-        name: "Huawei",
-        logoFilename: "huawei.png",
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat strategiczny",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
     ],
   },
   {
-    id: 3,
-    kind: "patronat",
-    priority: 3,
-    sponsors: [
+    id: "3",
+    name: "Krajowa Izba Gospodarcza",
+    logoFilename: "kig.png",
+    events: [
       {
-        id: 1,
-        name: "Krajowa Izba Gospodarcza",
-        logoFilename: "kig.png",
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
       {
-        id: 2,
-        name: "Regionalna Izba Gospodarcza w Katowicach",
-        logoFilename: "rig-katowice.png",
+        koin: {
+          presence: true,
+          kind: "patronat",
+          position: 0,
+        },
       },
       {
-        id: 3,
-        name: "Regionalna Izba Przemysłowo-Handlowa w Gliwicach",
-        logoFilename: "riph.png",
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
       {
-        id: 4,
-        name: "Klub Integracji Europejskiej",
-        logoFilename: "kie.png",
-      },
-      {
-        id: 5,
-        name: "Stowarzyszenie Dostawców na rzecz Służb Mundurowych",
-        logoFilename: "sdsm.png",
-      },
-      {
-        id: 6,
-        name: "Grupa Amber",
-        logoFilename: "amber-grupa.png",
-      },
-      {
-        id: 7,
-        name: "Międzynarodowe Targi Poznańskie",
-        logoFilename: "mtp.png",
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
     ],
   },
   {
-    id: 4,
-    kind: "partnerzy",
-    priority: 4,
-    sponsors: [
+    id: "4",
+    name: "Regionalna Izba Gospodarcza w Katowicach",
+    logoFilename: "rig-katowice.png",
+    events: [
       {
-        id: 1,
-        name: "Śląskie Stowarzyszenie Menedżerów",
-        logoFilename: "ssm.png",
-      },
-      { id: 2, name: "Amber IT", logoFilename: "Amber IT" },
-      {
-        id: 3,
-        name: "Międzynarodowe Targi Zabezpieczeń SECUREX",
-        logoFilename: "securex.png",
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
       {
-        id: 4,
-        name: "Cloud Community Europe",
-        logoFilename: "cloud-community.png",
-      },
-      { id: 5, name: "Zipp", logoFilename: "zipp.png" },
-      {
-        id: 6,
-        name: "Instytut Łączności - Państwowy Instytut Badawczy",
-        logoFilename: "il-pib.png",
+        koin: {
+          presence: true,
+          kind: "patronat",
+          position: 0,
+        },
       },
       {
-        id: 7,
-        name: "Coders House",
-        logoFilename: "coders-house.png",
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
       {
-        id: 8,
-        name: "Hasco-Lek Polska",
-        logoFilename: "hasco-lek-polska.png",
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
     ],
   },
   {
-    id: 5,
-    kind: "patronat medialny",
-    priority: 5,
-    sponsors: [
+    id: "5",
+    name: "Regionalna Izba Przemysłowo-Handlowa w Gliwicach",
+    logoFilename: "riph.png",
+    events: [
       {
-        id: 1,
-        name: "Przedsiębiorcy@eu – telewizja i magazyn ludzi biznesu",
-        logoFilename: "przedsiebiorcyeu.png",
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
       {
-        id: 2,
-        name: "Miesięcznik Europerspektywy",
-        logoFilename: "europerspektywy.png",
+        koin: {
+          presence: true,
+          kind: "patronat",
+          position: 0,
+        },
       },
       {
-        id: 3,
-        name: "Portal Ochrony",
-        logoFilename: "portalochrony.png",
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
       {
-        id: 4,
-        name: "TV Silesia",
-        logoFilename: "tvsilesia.png",
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "6",
+    name: "Klub Integracji Europejskiej",
+    logoFilename: "kie.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
       {
-        id: 5,
-        name: "Telewizja ATV",
-        logoFilename: "atv.png",
+        koin: {
+          presence: true,
+          kind: "patronat",
+          position: 0,
+        },
       },
       {
-        id: 6,
-        name: "Ochrona i Bezpieczeństwo Obiektów i Biznesu",
-        logoFilename: "ochrona-i-bezpieczenstwo.png",
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
       {
-        id: 7,
-        name: "Portal munurowy",
-        logoFilename: "portalmundurowy.png",
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "7",
+    name: "Stowarzyszenie Dostawców na rzecz Służb Mundurowych",
+    logoFilename: "sdsm.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
       {
-        id: 8,
-        name: "Magazyn VIP",
-        logoFilename: "vip.png",
+        koin: {
+          presence: true,
+          kind: "patronat",
+          position: 0,
+        },
       },
       {
-        id: 9,
-        name: "Magazyn VIP Defence",
-        logoFilename: "vip-defence.png",
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
       {
-        id: 10,
-        name: "Europejska Firma",
-        logoFilename: "europejska-firma.png",
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "8",
+    name: "Grupa Amber",
+    logoFilename: "amber-grupa.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "9",
+    name: "Międzynarodowe Targi Poznańskie",
+    logoFilename: "mtp.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "10",
+    name: "Śląskie Stowarzyszenie Menedżerów",
+    logoFilename: "ssm.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          events: [
+            {
+              kbb: {
+                presence: false,
+                kind: "",
+                position: 0,
+              },
+            },
+            {
+              koin: {
+                presence: true,
+                kind: "partnerzy",
+                position: 0,
+              },
+            },
+            {
+              kbn: {
+                presence: false,
+                kind: "",
+                position: 0,
+              },
+            },
+            {
+              zpo: {
+                presence: false,
+                kind: "",
+                position: 0,
+              },
+            },
+          ],
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  { id: "11", name: "Amber IT", logoFilename: "Amber IT", kind: "partnerzy" },
+  {
+    id: "12",
+    name: "Międzynarodowe Targi Zabezpieczeń SECUREX",
+    logoFilename: "securex.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "partnerzy",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "13",
+    name: "Cloud Community Europe",
+    logoFilename: "cloud-community.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "partnerzy",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  { id: "14", name: "Zipp", logoFilename: "zipp.png", kind: "partnerzy" },
+  {
+    id: "15",
+    name: "Instytut Łączności - Państwowy Instytut Badawczy",
+    logoFilename: "il-pib.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "partnerzy",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "16",
+    name: "Coders House",
+    logoFilename: "coders-house.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "partnerzy",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "17",
+    name: "Hasco-Lek Polska",
+    logoFilename: "hasco-lek-polska.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "partnerzy",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "18",
+    name: "Przedsiębiorcy@eu – telewizja i magazyn ludzi biznesu",
+    logoFilename: "przedsiebiorcyeu.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          events: [
+            {
+              kbb: {
+                presence: false,
+                kind: "",
+                position: 0,
+              },
+            },
+            {
+              koin: {
+                presence: true,
+                kind: "patronat medialny",
+                position: 0,
+              },
+            },
+            {
+              kbn: {
+                presence: false,
+                kind: "",
+                position: 0,
+              },
+            },
+            {
+              zpo: {
+                presence: false,
+                kind: "",
+                position: 0,
+              },
+            },
+          ],
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "19",
+    name: "Miesięcznik Europerspektywy",
+    logoFilename: "europerspektywy.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat medialny",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "20",
+    name: "Portal Ochrony",
+    logoFilename: "portalochrony.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat medialny",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "21",
+    name: "TV Silesia",
+    logoFilename: "tvsilesia.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat medialny",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "22",
+    name: "Telewizja ATV",
+    logoFilename: "atv.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat medialny",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "23",
+    name: "Ochrona i Bezpieczeństwo Obiektów i Biznesu",
+    logoFilename: "ochrona-i-bezpieczenstwo.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat medialny",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "24",
+    name: "Portal munurowy",
+    logoFilename: "portalmundurowy.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat medialny",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "25",
+    name: "Magazyn VIP",
+    logoFilename: "vip.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat medialny",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "26",
+    name: "Magazyn VIP Defence",
+    logoFilename: "vip-defence.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat medialny",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "27",
+    name: "Europejska Firma",
+    logoFilename: "europejska-firma.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "patronat medialny",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
       },
     ],
   },

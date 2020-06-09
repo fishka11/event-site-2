@@ -10,38 +10,17 @@ import "./Sponsors.css";
 const Sponsors = (props) => {
   const { meta, sponsorsByKinds } = props;
 
-  const setSponsorsSection = (currentKind) => {
-    const filteredSponsorsArray = sponsorsByKinds.filter(
-      (item) => item.kind.toLowerCase() === currentKind.toLowerCase()
-    );
+  const compare = (a, b) => {
+    const first = parseInt(a.priority);
+    const second = parseInt(b.priority);
 
-    const columns = 1;
+    let comparison = 0;
 
-    return (
-      <div>
-        <h3>{currentKind}</h3>
-        <Row className="justify-content-sm-center">
-          {filteredSponsorsArray[0].map((item) => (
-            <Col
-              key={item.id}
-              xs={12}
-              sm={columns >= 6 ? columns : 6}
-              md={columns >= 3 ? columns : 3}
-            >
-              <div className="sponsor">
-                <img
-                  className="mx-auto"
-                  fluid="true"
-                  src={`assets/sponsors/${item.logoFilename}`}
-                  alt={item.name}
-                />
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </div>
-    );
+    first > second ? (comparison = 1) : (comparison = -1);
+    return comparison;
   };
+
+  const sortedByPriority = sponsorsByKinds.sort(compare);
 
   return (
     <div className="page sponsors">
@@ -52,19 +31,13 @@ const Sponsors = (props) => {
 
       <Container>
         <h1>Patronat</h1>
-        <section className="main-sponsors">
-          {setSponsorsSection("patronat główny")}
-          {/* <h3>Patronat główny</h3>
-          <Row className="justify-content-sm-center">
-            {sponsors
-              .filter((item) => item.kind === "patronat główny")
-              .map((item) => (
-                <Col
-                  key={item.id}
-                  xs={12}
-                  sm={mainSponsorsCols >= 6 ? mainSponsorsCols : 6}
-                  md={mainSponsorsCols >= 3 ? mainSponsorsCols : 3}
-                >
+
+        {sortedByPriority.map((item) => (
+          <section key={item.priority} className="sponsors-list">
+            <h3>{item.kind.toUpperCase()}</h3>
+            <Row className="justify-content-sm-center">
+              {item.sponsors.map((item, array) => (
+                <Col key={item.id} xs={12} sm={6} lg={4}>
                   <div className="sponsor">
                     <img
                       className="mx-auto"
@@ -75,56 +48,9 @@ const Sponsors = (props) => {
                   </div>
                 </Col>
               ))}
-          </Row> */}
-        </section>
-        <section className="strategic-sponsors">
-          <h3>Patronat strategiczny</h3>
-          <Row className="justify-content-sm-center">
-            {/* {sponsors
-                .filter((item) => item.kind === "patronat strategiczny")
-                .map((item) => (
-                  <Col
-                    key={item.id}
-                    xs={12}
-                    sm={strategicSponsorsCols >= 6 ? strategicSponsorsCols : 6}
-                    md={strategicSponsorsCols >= 3 ? strategicSponsorsCols : 3}
-                  >
-                    <div className="sponsor">
-                      <img
-                        className="mx-auto"
-                        fluid="true"
-                        src={`assets/sponsors/${item.logoFilename}`}
-                        alt={item.name}
-                      />
-                    </div>
-                  </Col>
-                ))} */}
-          </Row>
-        </section>
-        <section className="sponsors">
-          <h3>Patronat</h3>
-          <Row className="justify-content-sm-center">
-            {/* {sponsors
-                .filter((item) => item.kind === "patronat")
-                .map((item) => (
-                  <Col
-                    key={item.id}
-                    xs={12}
-                    sm={commonSponsorsCols >= 6 ? commonSponsorsCols : 6}
-                    md={commonSponsorsCols >= 4 ? commonSponsorsCols : 4}
-                  >
-                    <div className="sponsor">
-                      <img
-                        className="mx-auto"
-                        fluid="true"
-                        src={`assets/sponsors/${item.logoFilename}`}
-                        alt={item.name}
-                      />
-                    </div>
-                  </Col>
-                ))} */}
-          </Row>
-        </section>
+            </Row>
+          </section>
+        ))}
       </Container>
     </div>
   );

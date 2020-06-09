@@ -66,13 +66,13 @@ export const eventDate = {
   end: new Date(2020, 5, 25, 15, 0),
 };
 export const eventName = "koin";
-export const eventSponsorsByKind = {
-  "patronat główny": [],
-  "patronat strategiczny": [],
-  patronat: [],
-  partnerzy: [],
-  "patronat medialny": [],
-};
+export const eventSponsorsByKind = [
+  { kind: "patronat główny", priority: 1, sponsors: [], count: 0 },
+  { kind: "patronat strategiczny", priority: 2, sponsors: [], count: 0 },
+  { kind: "patronat", priority: 3, sponsors: [], count: 0 },
+  { kind: "partnerzy", priority: 4, sponsors: [], count: 0 },
+  { kind: "patronat medialny", priority: 5, sponsors: [], count: 0 },
+];
 export const polishMonths = [
   "styczeń",
   "luty",
@@ -5362,36 +5362,7 @@ export const sponsors = [
       {
         koin: {
           presence: true,
-          events: [
-            {
-              kbb: {
-                presence: false,
-                kind: "",
-                position: 0,
-              },
-            },
-            {
-              koin: {
-                presence: true,
-                kind: "partnerzy",
-                position: 0,
-              },
-            },
-            {
-              kbn: {
-                presence: false,
-                kind: "",
-                position: 0,
-              },
-            },
-            {
-              zpo: {
-                presence: false,
-                kind: "",
-                position: 0,
-              },
-            },
-          ],
+          kind: "partnerzy",
           position: 0,
         },
       },
@@ -5411,7 +5382,41 @@ export const sponsors = [
       },
     ],
   },
-  { id: "11", name: "Amber IT", logoFilename: "Amber IT", kind: "partnerzy" },
+  {
+    id: "11",
+    name: "Amber IT",
+    logoFilename: "Amber IT",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "partnerzy",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
   {
     id: "12",
     name: "Międzynarodowe Targi Zabezpieczeń SECUREX",
@@ -5482,7 +5487,41 @@ export const sponsors = [
       },
     ],
   },
-  { id: "14", name: "Zipp", logoFilename: "zipp.png", kind: "partnerzy" },
+  {
+    id: "14",
+    name: "Zipp",
+    logoFilename: "zipp.png",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          kind: "partnerzy",
+          position: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          kind: "",
+          position: 0,
+        },
+      },
+    ],
+  },
   {
     id: "15",
     name: "Instytut Łączności - Państwowy Instytut Badawczy",
@@ -5603,36 +5642,7 @@ export const sponsors = [
       {
         koin: {
           presence: true,
-          events: [
-            {
-              kbb: {
-                presence: false,
-                kind: "",
-                position: 0,
-              },
-            },
-            {
-              koin: {
-                presence: true,
-                kind: "patronat medialny",
-                position: 0,
-              },
-            },
-            {
-              kbn: {
-                presence: false,
-                kind: "",
-                position: 0,
-              },
-            },
-            {
-              zpo: {
-                presence: false,
-                kind: "",
-                position: 0,
-              },
-            },
-          ],
+          kind: "patronat medialny",
           position: 0,
         },
       },

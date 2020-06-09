@@ -69,7 +69,7 @@ class App extends Component {
   componentDidMount() {
     this._isMounted = true;
     this.fetchEventSpeakers(eventName);
-    // this.fetchEventSponsorsByKind(sponsors);
+    this.fetchEventSponsorsByKind(sponsors, eventName);
   }
   componentWillUnmount() {
     this._isMounted = false;
@@ -95,17 +95,30 @@ class App extends Component {
     return pageMeta;
   }
 
-  fetchEventSponsorsByKind(sponsors) {
+  fetchEventSponsorsByKind(sponsors, eventName) {
     const filteredSponsers = sponsors.filter((item) =>
       item.events
-        .filter(
-          (item) =>
-            Object.keys(item).toString() === eventSponsorsByKind.toString()
-        )
+        .filter((item) => Object.keys(item).toString() === eventName.toString())
         .find((item) => item[eventName].presence === true)
     );
+
+    eventSponsorsByKind.forEach((item) => {
+      let currentKind = item.kind;
+      let currentGroup = filteredSponsers.filter((item) =>
+        item.events
+          .filter(
+            (item) => Object.keys(item).toString() === eventName.toString()
+          )
+          .find(
+            (item) =>
+              item[eventName].kind.toLowerCase() === currentKind.toLowerCase()
+          )
+      );
+      item.sponsors = currentGroup;
+    });
+
     if (this._isMounted) {
-      this.setEventSponsorsByKind(filteredSponsers);
+      this.setEventSponsorsByKind(eventSponsorsByKind);
     }
   }
 
@@ -124,9 +137,7 @@ class App extends Component {
       picturesStrap,
       eventSpeakers,
       agenda,
-      sponsors,
-      sponsorKinds,
-      sponsorsByKinds,
+      eventSponsorsByKind,
     } = this.state;
 
     const mainOrganizer = organizers.find((item) => item.mainOrganizer);
@@ -179,7 +190,7 @@ class App extends Component {
               component={() => (
                 <Sponsors
                   meta={this.setPageHead(sites, "patronat")}
-                  sponsorsByKinds={sponsorsByKinds}
+                  sponsorsByKinds={eventSponsorsByKind}
                 />
               )}
             />

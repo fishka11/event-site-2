@@ -5385,7 +5385,7 @@ export const sponsors = [
   {
     id: "11",
     name: "Amber IT",
-    logoFilename: "Amber IT",
+    logoFilename: "amber-it.png",
     events: [
       {
         kbb: {

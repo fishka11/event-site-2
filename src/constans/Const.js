@@ -48,10 +48,39 @@ export const sitePages = [
     title: "",
     description: "",
   },
-  { id: 6, path: "kontakt", displyName: "Kontakt", title: "", description: "" },
+  {
+    id: 6,
+    path: "kontakt",
+    displyName: "Kontakt",
+    title:
+      "Kontakt - Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
+    description:
+      "Kontakt do organizatora, dane adresowe i lokalizacja Kongresu Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
+  },
   { id: 7, path: "admin", displyName: "", title: "", description: "" },
   { id: 8, path: "404", displyName: "", title: "", description: "" },
 ];
+export const organizationalInfo = {};
+export const event = {
+  eventName: "koin",
+  eventDate: {
+    start: new Date(2020, 5, 23, 12, 0),
+    end: new Date(2020, 5, 25, 15, 0),
+  },
+  eventLocation: {
+    name: "Centrum Rekreacji i Biznesu Grand Stasinda",
+    www: "www.grandstasinda.pl",
+    address: {
+      street: "ul. Karpęciny 5a",
+      postCode: "34-530",
+      city: "Bukowina Tatrzańska",
+    },
+  },
+  eventPrices: {
+    singleRoomPrice: 2100,
+    doubleRoomPrice: 1900,
+  },
+};
 export const eventLocation = {
   name: "Centrum Rekreacji i Biznesu Grand Stasinda",
   www: "www.grandstasinda.pl",

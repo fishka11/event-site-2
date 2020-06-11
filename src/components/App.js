@@ -10,6 +10,7 @@ import Footer from "./Footer";
 import Home from "../pages/Home";
 import Agenda from "../pages/Agenda";
 import Speakers from "../pages/Speakers";
+import Contact from "../pages/Contact";
 import Admin from "../pages/Admin";
 import GenericNotFound from "../pages/GenericNotFound";
 
@@ -36,10 +37,11 @@ import {
   faAt,
   faPhone,
   faFax,
+  faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
 import Sponsors from "../pages/Sponsors";
 
-library.add(faMapMarkerAlt, faAt, faPhone, faFax);
+library.add(faMapMarkerAlt, faAt, faPhone, faFax, faGlobe);
 
 class App extends Component {
   _isMounted = false;
@@ -165,7 +167,6 @@ class App extends Component {
             />
             <Route
               path="/tematyka"
-              exact
               component={() => (
                 <Agenda
                   meta={this.setPageHead(sites, "tematyka")}
@@ -175,7 +176,6 @@ class App extends Component {
             />
             <Route
               path="/prelegenci"
-              exact
               component={() => (
                 <Speakers
                   meta={this.setPageHead(sites, "prelegenci")}
@@ -186,7 +186,6 @@ class App extends Component {
             <Route path="/atrakcje" />
             <Route
               path="/patronat"
-              exact
               component={() => (
                 <Sponsors
                   meta={this.setPageHead(sites, "patronat")}
@@ -195,7 +194,17 @@ class App extends Component {
               )}
             />
             <Route path="/info" />
-            <Route path="/kontakt" />
+            <Route
+              path="/kontakt"
+              component={() => (
+                <Contact
+                  meta={this.setPageHead(sites, "kontakt")}
+                  date={eventDate}
+                  location={eventLocation}
+                  organizers={organizers}
+                />
+              )}
+            />
             <Route path="/rejestracja" />
             <Route path="/admin" exact component={Admin} />
             <Route path="/404" component={GenericNotFound} />

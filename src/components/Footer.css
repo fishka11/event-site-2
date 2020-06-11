@@ -15,10 +15,10 @@
 }
 .footer .address {
   display: flex;
-  align-items: baseline;
 }
 .footer .address svg {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
+  margin-top: 0.4rem;
 }
 .footer hr {
   background-color: #fff;

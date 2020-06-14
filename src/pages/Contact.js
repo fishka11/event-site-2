@@ -9,18 +9,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Contact.css";
 
 function Contact(props) {
-  const { meta, date, location, organizers } = props;
+  const { meta, event, organizers } = props;
 
   let tense = "";
-  if (Date.now() < date.start) {
+  if (Date.now() < event.eventDate.start) {
     tense = "odbędzie się";
-  } else if (Date.now() >= date.start && Date.now() <= date.end) {
+  } else if (
+    Date.now() >= event.eventDate.start &&
+    Date.now() <= event.eventDate.end
+  ) {
     tense = "odbywa się";
   } else {
     tense = "odbył się";
   }
   const organizer = organizers.find((item) => item.mainOrganizer === true);
-  console.log(location);
 
   return (
     <div className="page contact">
@@ -82,23 +84,29 @@ function Contact(props) {
               </address>
             </Col>
             <Col className="right" xs={12} lg={6}>
-              <p className="lead">{`Kongres ${tense} w dniach ${date.start.getDate()}${
-                date.start.getMonth() !== date.end.getMonth()
-                  ? `.${(date.start.getMonth() + 1)
+              <p className="lead">{`Kongres ${tense} w dniach ${event.eventDate.start.getDate()}${
+                event.eventDate.start.getMonth() !==
+                event.eventDate.end.getMonth()
+                  ? `.${(event.eventDate.start.getMonth() + 1)
                       .toString()
                       .padStart(2, "0")}`
                   : ""
-              }-${date.end.getDate()}.${(date.end.getMonth() + 1)
+              }-${event.eventDate.end.getDate()}.${(
+                event.eventDate.end.getMonth() + 1
+              )
                 .toString()
-                .padStart(2, "0")}.${date.start.getFullYear()} w`}</p>
-              <h3>{location.name}</h3>
+                .padStart(
+                  2,
+                  "0"
+                )}.${event.eventDate.start.getFullYear()} w`}</p>
+              <h3>{event.eventLocation.name}</h3>
               <address>
                 <div className="address">
                   <FontAwesomeIcon icon="map-marker-alt" />
                   <p>
-                    {location.address.street}
+                    {event.eventLocation.address.street}
                     <br />
-                    {`${location.address.postCode} ${location.address.city}`}
+                    {`${event.eventLocation.address.postCode} ${event.eventLocation.address.city}`}
                   </p>
                 </div>
                 <div className="address">
@@ -107,9 +115,9 @@ function Contact(props) {
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
-                      href={`http://${location.www}`}
+                      href={`http://${event.eventLocation.www}`}
                     >
-                      {location.www}
+                      {event.eventLocation.www}
                     </a>
                   </p>
                 </div>

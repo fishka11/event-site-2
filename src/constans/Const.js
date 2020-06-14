@@ -81,20 +81,6 @@ export const event = {
     doubleRoomPrice: 1900,
   },
 };
-export const eventLocation = {
-  name: "Centrum Rekreacji i Biznesu Grand Stasinda",
-  www: "www.grandstasinda.pl",
-  address: {
-    street: "ul. Karpęciny 5a",
-    postCode: "34-530",
-    city: "Bukowina Tatrzańska",
-  },
-};
-export const eventDate = {
-  start: new Date(2020, 5, 23, 12, 0),
-  end: new Date(2020, 5, 25, 15, 0),
-};
-export const eventName = "koin";
 export const eventSponsorsByKind = [
   { kind: "patronat główny", priority: 1, sponsors: [], count: 0 },
   { kind: "patronat strategiczny", priority: 2, sponsors: [], count: 0 },

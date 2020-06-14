@@ -16,9 +16,7 @@ import GenericNotFound from "../pages/GenericNotFound";
 
 import {
   sitePages,
-  eventName,
-  eventLocation,
-  eventDate,
+  event,
   eventSponsorsByKind,
   polishMonths,
   organizersList as organizers,
@@ -49,9 +47,7 @@ class App extends Component {
     super(props);
     this.state = {
       sites: sitePages,
-      eventName,
-      eventDate,
-      eventLocation,
+      event,
       polishMonths,
       organizers,
       introText,
@@ -70,8 +66,8 @@ class App extends Component {
 
   componentDidMount() {
     this._isMounted = true;
-    this.fetchEventSpeakers(eventName);
-    this.fetchEventSponsorsByKind(sponsors, eventName);
+    this.fetchEventSpeakers(event.eventName);
+    this.fetchEventSponsorsByKind(sponsors, event.eventName);
   }
   componentWillUnmount() {
     this._isMounted = false;
@@ -131,8 +127,7 @@ class App extends Component {
   render() {
     const {
       sites,
-      eventDate,
-      eventLocation,
+      event,
       polishMonths,
       organizers,
       introText,
@@ -156,8 +151,7 @@ class App extends Component {
               component={() => (
                 <Home
                   meta={this.setPageHead(sites, "")}
-                  date={eventDate}
-                  location={eventLocation}
+                  event={event}
                   months={polishMonths}
                   organizers={organizers}
                   introText={introText}
@@ -199,8 +193,7 @@ class App extends Component {
               component={() => (
                 <Contact
                   meta={this.setPageHead(sites, "kontakt")}
-                  date={eventDate}
-                  location={eventLocation}
+                  event={event}
                   organizers={organizers}
                 />
               )}

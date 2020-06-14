@@ -13,15 +13,9 @@ import Intro from "../components/Intro";
 import "./Home.css";
 
 const Home = (props) => {
-  const {
-    meta,
-    date,
-    location,
-    months,
-    organizers,
-    introText,
-    pictures,
-  } = props;
+  const { meta, event, months, organizers, introText, pictures } = props;
+
+  console.log(event);
 
   return (
     <div className="home">
@@ -38,18 +32,21 @@ const Home = (props) => {
                 <span className="d-block">Ochrony Informacji Niejawnych,</span>
                 <span className="d-block">Biznesowych i Danych Osobowych</span>
               </h1>
-              <p className="text-center location">{location.address.city}</p>
+              <p className="text-center location">
+                {event.eventLocation.address.city}
+              </p>
               <p className="text-center date">
-                {`${date.start.getDate()} ${
-                  date.start.getMonth() !== date.end.getMonth()
-                    ? months[date.start.getMonth()]
+                {`${event.eventDate.start.getDate()} ${
+                  event.eventDate.start.getMonth() !==
+                  event.eventDate.end.getMonth()
+                    ? months[event.eventDate.start.getMonth()]
                     : ""
-                } - ${date.end.getDate()} ${
-                  months[date.end.getMonth()]
-                } ${date.end.getFullYear()}`}
+                } - ${event.eventDate.end.getDate()} ${
+                  months[event.eventDate.end.getMonth()]
+                } ${event.eventDate.end.getFullYear()}`}
               </p>
             </div>
-            <Counter eventDate={date} />
+            <Counter eventDate={event.eventDate} />
             <Independence />
             <div className="register-btn text-center">
               <Button size="lg" href="/rejestracja">

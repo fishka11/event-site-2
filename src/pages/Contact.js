@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
+import GoogleMap from "../components/GoogleMap";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -127,7 +129,9 @@ function Contact(props) {
         </section>
         <section className="google-map">
           <Row>
-            <Col xs={12}></Col>
+            <Col xs={12}>
+              <GoogleMap />
+            </Col>
           </Row>
         </section>
       </Container>

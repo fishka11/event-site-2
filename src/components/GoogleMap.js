@@ -1,17 +1,10 @@
-import React, { Component } from "react";
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from "google-maps-react";
+import React, { Component, createRef } from "react";
 
-export class MapContainer extends Component {
+import "./GoogleMap.css";
+
+export default class GoogleMap extends Component {
+  googleMapRef = createRef();
   render() {
-    return (
-      <Map
-        google={this.props.google}
-        zoom={14}
-        initialCenter={{ lat: 47.444, lng: -122.176 }}
-      ></Map>
-    );
+    return <div id="google-map" ref={this.googleMapRef}></div>;
   }
 }
-export default GoogleApiWrapper({
-  apiKey: "API KEY",
-})(MapContainer);

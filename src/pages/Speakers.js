@@ -9,7 +9,6 @@ import "./Speakers.css";
 
 const Speakers = (props) => {
   const { meta, eventSpeakers } = props;
-  console.log(eventSpeakers);
 
   return (
     <div className="page speakers">
@@ -17,9 +16,11 @@ const Speakers = (props) => {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description}></meta>
       </Helmet>
+      <Container>
+        <h1>Prelegenci</h1>
+      </Container>
       <section className="speakers-list">
         <Container>
-          <h1>Prelegenci</h1>
           <Row>
             {eventSpeakers.map((item) => (
               <Col key={item.id} md={4}>

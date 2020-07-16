@@ -10,7 +10,9 @@ import Footer from "./Footer";
 import Home from "../pages/Home";
 import Agenda from "../pages/Agenda";
 import Speakers from "../pages/Speakers";
+import Info from "../pages/Info";
 import Contact from "../pages/Contact";
+import Register from "../pages/Register";
 import Admin from "../pages/Admin";
 import GenericNotFound from "../pages/GenericNotFound";
 
@@ -187,7 +189,16 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/info" />
+            <Route
+              path="/info"
+              component={() => (
+                <Info
+                  meta={this.setPageHead(sites, "info")}
+                  event={event}
+                  organizers={organizers}
+                />
+              )}
+            />
             <Route
               path="/kontakt"
               component={() => (
@@ -198,9 +209,22 @@ class App extends Component {
                 />
               )}
             />
-            <Route path="/rejestracja" />
+            <Route
+              path="/rejestracja"
+              component={() => (
+                <Register meta={this.setPageHead(sites, "rejestracja")} />
+              )}
+            />
             <Route path="/admin" exact component={Admin} />
-            <Route path="/404" component={GenericNotFound} />
+            <Route
+              path="/404"
+              component={() => (
+                <GenericNotFound
+                  meta={this.setPageHead(sites, "404")}
+                  event={event}
+                />
+              )}
+            />
             <Redirect to="/404" />
           </Switch>
         </Router>

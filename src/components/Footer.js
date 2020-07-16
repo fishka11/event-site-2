@@ -66,12 +66,12 @@ const Footer = (props) => {
                     <FontAwesomeIcon icon="at" />
                     <p>
                       e-mail:{" "}
-                      <a href={`mailto:${mainOrganizer.email}`}>
-                        {mainOrganizer.email}
+                      <a href={`mailto:${mainOrganizer.emails[0].email}`}>
+                        {mainOrganizer.emails[0].email}
                       </a>
                     </p>
                   </div>
-                  {mainOrganizer.phone.map((item) => (
+                  {mainOrganizer.phones.map((item) => (
                     <div key={item.id} className="address">
                       <FontAwesomeIcon icon="phone" />
                       <p>
@@ -82,7 +82,7 @@ const Footer = (props) => {
                       </p>
                     </div>
                   ))}
-                  {mainOrganizer.fax.map((item) => (
+                  {mainOrganizer.faxes.map((item) => (
                     <div key={item.id} className="address">
                       <FontAwesomeIcon icon="fax" />
                       <p>

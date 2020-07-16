@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import GoogleMap from "../components/GoogleMap";
+import GoogleMap from "../components/EmbeddedGoogleMap";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./Contact.css";
 
-function Contact(props) {
+const Contact = (props) => {
   const { meta, event, organizers } = props;
 
   let tense = "";
@@ -34,7 +34,10 @@ function Contact(props) {
       </Helmet>
       <Container>
         <h1>Kontakt & Lokalizacja</h1>
-        <section className="contact-data">
+      </Container>
+
+      <section className="contact-data">
+        <Container>
           <Row>
             <Col className="left" xs={12} lg={6}>
               <p className="lead">Kontakt do organizatora</p>
@@ -49,7 +52,7 @@ function Contact(props) {
                   </p>
                 </div>
 
-                {organizer.phone.map((item) => (
+                {organizer.phones.map((item) => (
                   <div key={item.id} className="address">
                     <FontAwesomeIcon icon="phone" />
                     <p>
@@ -60,7 +63,7 @@ function Contact(props) {
                     </p>
                   </div>
                 ))}
-                {organizer.fax.map((item) => (
+                {organizer.faxes.map((item) => (
                   <div key={item.id} className="address">
                     <FontAwesomeIcon icon="fax" />
                     <p>
@@ -71,12 +74,15 @@ function Contact(props) {
                     </p>
                   </div>
                 ))}
-                <div className="address">
-                  <FontAwesomeIcon icon="at" />
-                  <p>
-                    <a href={`mailto:${organizer.email}`}>{organizer.email}</a>
-                  </p>
-                </div>
+                {organizer.emails.map((item) => (
+                  <div key={item.id} className="address">
+                    <FontAwesomeIcon icon="at" />
+                    <p>
+                      <a href={`mailto:${item.email}`}>{item.email}</a>
+                    </p>
+                  </div>
+                ))}
+
                 <div className="address">
                   <FontAwesomeIcon icon="globe" />
                   <p>
@@ -86,7 +92,11 @@ function Contact(props) {
               </address>
             </Col>
             <Col className="right" xs={12} lg={6}>
-              <p className="lead">{`Kongres ${tense} w dniach ${event.eventDate.start.getDate()}${
+              <p className="lead">{`${event.eventType
+                .charAt(0)
+                .toUpperCase()}${event.eventType.slice(
+                1
+              )} ${tense} w dniach ${event.eventDate.start.getDate()}${
                 event.eventDate.start.getMonth() !==
                 event.eventDate.end.getMonth()
                   ? `.${(event.eventDate.start.getMonth() + 1)
@@ -126,17 +136,19 @@ function Contact(props) {
               </address>
             </Col>
           </Row>
-        </section>
-        <section className="google-map">
+        </Container>
+      </section>
+      <section className="google-map">
+        <Container>
           <Row>
             <Col xs={12}>
-              <GoogleMap />
+              <GoogleMap event={event} />
             </Col>
           </Row>
-        </section>
-      </Container>
+        </Container>
+      </section>
     </div>
   );
-}
+};
 
 export default Contact;

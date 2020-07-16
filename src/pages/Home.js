@@ -15,8 +15,6 @@ import "./Home.css";
 const Home = (props) => {
   const { meta, event, months, organizers, introText, pictures } = props;
 
-  console.log(event);
-
   return (
     <div className="home">
       <Helmet>
@@ -28,9 +26,11 @@ const Home = (props) => {
           <Container>
             <div className="what-where-when">
               <h1 className="text-uppercase text-center">
-                <span className="d-block display-1">XVI Kongres</span>
-                <span className="d-block">Ochrony Informacji Niejawnych,</span>
-                <span className="d-block">Biznesowych i Danych Osobowych</span>
+                <span className="d-block display-1">
+                  {event.eventFullName.l1}
+                </span>
+                <span className="d-block">{event.eventFullName.l2}</span>
+                <span className="d-block">{event.eventFullName.l3}</span>
               </h1>
               <p className="text-center location">
                 {event.eventLocation.address.city}

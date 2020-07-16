@@ -1,11 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
+import { render } from "react-snapshot";
 import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 import App from "./components/App";
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(
+// ReactDOM.render(
+render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,

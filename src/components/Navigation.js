@@ -28,7 +28,7 @@ const Navigation = (props) => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               {menuItems
-                .filter((item) => !!item.displyName)
+                .filter((item) => !!item.inMenu)
                 .map((item) => (
                   <Nav.Link
                     key={item.id}

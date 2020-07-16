@@ -1,6 +1,7 @@
 export const sitePages = [
   {
     id: 0,
+    inMenu: false,
     path: "",
     displyName: "",
     title:
@@ -10,6 +11,7 @@ export const sitePages = [
   },
   {
     id: 1,
+    inMenu: true,
     path: "tematyka",
     displyName: "Tematyka & Program",
     title:
@@ -19,15 +21,17 @@ export const sitePages = [
   },
   {
     id: 2,
+    inMenu: true,
     path: "prelegenci",
     displyName: "Prelegenci",
     title:
       "Prelegenci Kongresu Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
     description:
-      "Prelegentami Kongresu są znakomite osobistości ze świata służb mundurowych, biznesu, administracji rządowej i smorządowej - specjaliści ochrony informacji",
+      "Znakomite osobistości ze świata służb mundurowych, biznesu, administracji rządowej i smorządowej - specjaliści ochrony informacji niejawnych, biznesowych i danych osobowych",
   },
   {
     id: 3,
+    inMenu: false,
     path: "atrakcje",
     displyName: "Atrakcje",
     title: "",
@@ -35,21 +39,27 @@ export const sitePages = [
   },
   {
     id: 4,
+    inMenu: true,
     path: "patronat",
     displyName: "Patronat",
     title:
       "Patroni i partnerzy Kongresu Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-    description: "Nasi patroni i partnerzy, którzy wspierają idee Kongresu",
+    description:
+      "Nasi patroni i partnerzy, którzy wspierają idee Kongresu Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
   },
   {
     id: 5,
+    inMenu: true,
     path: "info",
     displyName: "Inf. organizacyjne",
-    title: "",
-    description: "",
+    title:
+      "Informacje organizacyjne - Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
+    description:
+      "Informacje organizacyjne dla uczestników i chętnych do wzięcia udziału w Kongresie Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
   },
   {
     id: 6,
+    inMenu: true,
     path: "kontakt",
     displyName: "Kontakt",
     title:
@@ -57,15 +67,46 @@ export const sitePages = [
     description:
       "Kontakt do organizatora, dane adresowe i lokalizacja Kongresu Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
   },
-  { id: 7, path: "admin", displyName: "", title: "", description: "" },
-  { id: 8, path: "404", displyName: "", title: "", description: "" },
+  {
+    id: 7,
+    inMenu: false,
+    path: "rejestracja",
+    displyName: "Zarejestruj się",
+    title:
+      "Zarejestruj się na Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
+    description:
+      "Formularz rejestracji na a Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
+  },
+  {
+    id: 8,
+    inMenu: false,
+    path: "admin",
+    displyName: "",
+    title: "",
+    description: "",
+  },
+  {
+    id: 9,
+    inMenu: false,
+    path: "404",
+    displyName: "404",
+    title:
+      "404 - Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
+    description:
+      "Zapraszmy do uczestnictwa w Kongresie Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
+  },
 ];
-export const organizationalInfo = {};
 export const event = {
   eventName: "koin",
+  eventType: "kongres",
+  eventFullName: {
+    l1: "XVI Kongres",
+    l2: "Ochrony Informacji Niejawnych,",
+    l3: "Biznesowych i Danych Osobowych",
+  },
   eventDate: {
-    start: new Date(2020, 5, 23, 12, 0),
-    end: new Date(2020, 5, 25, 15, 0),
+    start: new Date(2020, 5, 23, 14, 0),
+    end: new Date(2020, 5, 25, 14, 0),
   },
   eventLocation: {
     name: "Centrum Rekreacji i Biznesu Grand Stasinda",
@@ -75,10 +116,62 @@ export const event = {
       postCode: "34-530",
       city: "Bukowina Tatrzańska",
     },
+    googleMapSrc:
+      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d83215.81730633657!2d20.107676!3d49.32386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xea667193922ad434!2sCentrum%20Rekreacji%20I%20Biznesu%20GRAND%20Stasinda!5e0!3m2!1spl!2spl!4v1594747002600!5m2!1spl!2spl",
   },
   eventPrices: {
     singleRoomPrice: 2100,
     doubleRoomPrice: 1900,
+  },
+  eventDiscounts: [
+    { id: "1", name: "członkowie KSOIN", discount: "5%" },
+    { id: "2", name: "uczestnicy szkoleń", discount: "5%" },
+    { id: "3", name: "uczestnictwo 2 osób z jednej firmy", discount: "10%" },
+    {
+      id: "4",
+      name: "uczestnictwo 3 i więcej osób z jednej firmy",
+      discount: "15%",
+    },
+  ],
+  get genitiveDeclinedEventType() {
+    let declinedEventType = "";
+    switch (this.eventType) {
+      case "kongres":
+        declinedEventType = "Kongresu";
+        break;
+      case "konferencja":
+        declinedEventType = "Konferencji";
+        break;
+      case "forum":
+        declinedEventType = "Forum";
+        break;
+      case "zjazd":
+        declinedEventType = "Zjazdu";
+        break;
+      default:
+        declinedEventType = "Kongresu";
+    }
+    return declinedEventType;
+  },
+  get locativeDeclinedEventType() {
+    let declinedEventType = "";
+    switch (this.eventType) {
+      case "kongres":
+        declinedEventType = "Kongresie";
+        break;
+      case "konferencja":
+        declinedEventType = "Konferencji";
+        break;
+      case "forum":
+        declinedEventType = "Forum";
+        break;
+      case "zjazd":
+        declinedEventType = "Zjeździe";
+        break;
+      default:
+        declinedEventType = "Kongresie";
+    }
+    return declinedEventType;
   },
 };
 export const eventSponsorsByKind = [
@@ -113,9 +206,13 @@ export const organizersList = [
     address: "pl. Grunwaldzki 8-10",
     zip: "40-127",
     city: "Katowice",
-    phone: [{ id: "1", tel: "+48 32 206 46 00" }],
-    fax: [{ id: "2", fax: "+48 32 206 46 01" }],
-    email: ["biuro@ksoin.pl"],
+    phones: [{ id: "1", tel: "+48 32 206 46 00" }],
+    faxes: [{ id: "1", fax: "+48 32 206 46 00" }],
+    emails: [{ id: "1", email: "biuro@ksoin.pl" }],
+    bankName: "PEKAO SA I Oddział w Katowicach",
+    bankAccount: "55 1240 1330 1111 0010 2402 9927",
+    nip: "634-25-59-104",
+    regon: "278336546",
   },
 ];
 

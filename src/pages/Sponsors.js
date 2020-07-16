@@ -28,12 +28,12 @@ const Sponsors = (props) => {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description}></meta>
       </Helmet>
-
       <Container>
         <h1>Patronat</h1>
-
-        {sortedByPriority.map((item) => (
-          <section key={item.priority} className="sponsors-list">
+      </Container>
+      {sortedByPriority.map((item) => (
+        <section key={item.priority} className="sponsors-list">
+          <Container>
             <h3>{item.kind.toUpperCase()}</h3>
             <Row className="justify-content-sm-center">
               {item.sponsors.map((item, array) => (
@@ -49,9 +49,9 @@ const Sponsors = (props) => {
                 </Col>
               ))}
             </Row>
-          </section>
-        ))}
-      </Container>
+          </Container>
+        </section>
+      ))}
     </div>
   );
 };

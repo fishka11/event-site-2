@@ -16,9 +16,11 @@ function Agenda(props) {
         <title>{meta.title}</title>
         <meta name="description" content={meta.description}></meta>
       </Helmet>
+      <Container>
+        <h1>Tematyka i Program</h1>
+      </Container>
       <section className="agenda-all">
         <Container>
-          <h1>Tematyka i Program</h1>
           <div className="agenda-list">
             {agenda.map((item) => (
               <Row key={item.id} className="agenda-item">

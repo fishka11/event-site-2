@@ -1,0 +1,35 @@
+.the404 .container {
+  padding: 8rem 0;
+}
+.the404 h1,
+.the404 h2 {
+  text-align: center;
+  font-weight: bold;
+  color: #7791ce;
+}
+.the404 h1 {
+  font-size: 9rem;
+}
+.page.the404 h1 {
+  margin-bottom: 0.5rem;
+}
+.the404 h1::before {
+  display: none;
+}
+.the404 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.the404 p {
+  color: #7791ce;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.the404 a {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #2a51ab;
+}

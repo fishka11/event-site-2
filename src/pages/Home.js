@@ -6,14 +6,26 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
 
 import Counter from "../components/Counter";
+import KOINIntro from "../components/KOINIntro";
+import KBNIntro from "../components/KBNIntro";
 import Independence from "../components/Indepenence";
 import Organizers from "../components/Organizers";
-import Intro from "../components/Intro";
 
 import "./Home.css";
 
 const Home = (props) => {
-  const { meta, event, months, organizers, introText, pictures } = props;
+  const { meta, event, months, currentEvent } = props;
+
+  const eventSwitch = () => {
+    switch (currentEvent) {
+      case "koin":
+        return <KOINIntro pictures={event.picturesStrap} />;
+      case "kbn":
+        return <KBNIntro pictures={event.picturesStrap} />;
+      default:
+        return null;
+    }
+  };
 
   return (
     <div className="home">
@@ -25,6 +37,14 @@ const Home = (props) => {
         <Jumbotron fluid>
           <Container>
             <div className="what-where-when">
+              {event.cite ? (
+                <p className="cite">
+                  "Ojczyzna to wielki zbiorowy obowiązek"
+                  <br />
+                  <span className="author">Cyprian Kamil Norwid</span>
+                </p>
+              ) : null}
+
               <h1 className="text-uppercase text-center">
                 <span className="d-block display-1">
                   {event.eventFullName.l1}
@@ -56,8 +76,8 @@ const Home = (props) => {
           </Container>
         </Jumbotron>
       </section>
-      <Organizers organizers={organizers} />
-      <Intro introText={introText} pictures={pictures} />
+      <Organizers organizers={event.organizersList} />
+      {eventSwitch()}
     </div>
   );
 };

@@ -7,9 +7,14 @@ body {
 }
 .page h1 {
   text-transform: uppercase;
-  color: #2a51ab;
   position: relative;
   margin-bottom: 3rem;
+}
+.koin .page h1 {
+  color: #2a51ab;
+}
+.kbn .page h1 {
+  color: #ae0808;
 }
 .page h1::before {
   position: absolute;
@@ -19,11 +24,22 @@ body {
   height: 1px;
   bottom: 0;
 }
-.btn-primary {
+.koin .btn-primary {
   background-color: #f46036;
   border-color: #f34d1e;
 }
-.btn-primary:hover {
+.kbn .btn-primary {
+  background-color: #0952b0;
+  border-color: #0749a0;
+}
+.koin .btn-primary:hover {
   background-color: #ea3e0d;
   border-color: #c8350b;
+}
+.kbn .btn-primary:hover {
+  background-color: #1768d1;
+  border-color: #0749a0;
+}
+.CookieConsent a {
+  color: rgb(255, 253, 253);
 }

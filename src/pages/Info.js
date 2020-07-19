@@ -13,8 +13,10 @@ import GoogleMap from "../components/EmbeddedGoogleMap";
 import "./Info.css";
 
 const Info = (props) => {
-  const { meta, event, organizers } = props;
-  const organizer = organizers.find((item) => item.mainOrganizer === true);
+  const { meta, event } = props;
+  const organizer = event.organizersList.find(
+    (item) => item.mainOrganizer === true
+  );
   let tense = "";
   if (Date.now() < event.eventDate.start) {
     tense = "Spotkamy się";

@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Contact.css";
 
 const Contact = (props) => {
-  const { meta, event, organizers } = props;
+  const { meta, event } = props;
 
   let tense = "";
   if (Date.now() < event.eventDate.start) {
@@ -24,7 +24,9 @@ const Contact = (props) => {
   } else {
     tense = "odbył się";
   }
-  const organizer = organizers.find((item) => item.mainOrganizer === true);
+  const organizer = event.organizersList.find(
+    (item) => item.mainOrganizer === true
+  );
 
   return (
     <div className="page contact">

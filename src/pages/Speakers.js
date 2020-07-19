@@ -10,6 +10,14 @@ import "./Speakers.css";
 const Speakers = (props) => {
   const { meta, eventSpeakers } = props;
 
+  const collator = new Intl.Collator("pl", {
+    numeric: true,
+    sensitivity: "base",
+  });
+  const sortedEventSpeakers = eventSpeakers.sort((a, b) =>
+    collator.compare(a.lastName, b.lastName)
+  );
+
   return (
     <div className="page speakers">
       <Helmet>
@@ -22,7 +30,7 @@ const Speakers = (props) => {
       <section className="speakers-list">
         <Container>
           <Row>
-            {eventSpeakers.map((item) => (
+            {sortedEventSpeakers.map((item) => (
               <Col key={item.id} md={4}>
                 <div className="speaker">
                   <img

@@ -1,355 +1,3 @@
-export const sitePages = [
-  {
-    id: 0,
-    inMenu: false,
-    path: "",
-    displyName: "",
-    title:
-      "Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-    description:
-      "Kongres o istotnym znaczeniu i niebagatelnym wpływie na stan bezpieczeństwa państwa, firm, instytucji i obywateli, odbywający się nieprzerwanie od 2005 roku. Możliwość spotkania z wieloma wybitnymi gośćmi i ekspertami, a także okazja do dyskusji, bezpośredniej wymiany doświadczeń, kuluarowych spotkań, przekazania uwag i wyjaśnienia wątpliwości dotyczących organizacji i funkcjonowania pionów ochrony, obowiązków i zadań kierowników jednostek organizacyjnych, pełnomocników ochrony, administratorów bezpieczeństwa informacji/inspektorów ochrony danych osobowych oraz współpracy i podziału kompetencji między nimi.",
-  },
-  {
-    id: 1,
-    inMenu: true,
-    path: "tematyka",
-    displyName: "Tematyka & Program",
-    title:
-      "Tematy wystąpień na Kongresie Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-    description:
-      "Teamtyka prelekcji obejmuje wiele aspektów ochrony informacji...",
-  },
-  {
-    id: 2,
-    inMenu: true,
-    path: "prelegenci",
-    displyName: "Prelegenci",
-    title:
-      "Prelegenci Kongresu Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-    description:
-      "Znakomite osobistości ze świata służb mundurowych, biznesu, administracji rządowej i smorządowej - specjaliści ochrony informacji niejawnych, biznesowych i danych osobowych",
-  },
-  {
-    id: 3,
-    inMenu: false,
-    path: "atrakcje",
-    displyName: "Atrakcje",
-    title: "",
-    description: "",
-  },
-  {
-    id: 4,
-    inMenu: true,
-    path: "patronat",
-    displyName: "Patronat",
-    title:
-      "Patroni i partnerzy Kongresu Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-    description:
-      "Nasi patroni i partnerzy, którzy wspierają idee Kongresu Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-  },
-  {
-    id: 5,
-    inMenu: true,
-    path: "info",
-    displyName: "Inf. organizacyjne",
-    title:
-      "Informacje organizacyjne - Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-    description:
-      "Informacje organizacyjne dla uczestników i chętnych do wzięcia udziału w Kongresie Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-  },
-  {
-    id: 6,
-    inMenu: true,
-    path: "kontakt",
-    displyName: "Kontakt",
-    title:
-      "Kontakt - Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-    description:
-      "Kontakt do organizatora, dane adresowe i lokalizacja Kongresu Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-  },
-  {
-    id: 7,
-    inMenu: false,
-    path: "rejestracja",
-    displyName: "Zarejestruj się",
-    title:
-      "Zarejestruj się na Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-    description:
-      "Formularz rejestracji na a Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-  },
-  {
-    id: 8,
-    inMenu: false,
-    path: "admin",
-    displyName: "",
-    title: "",
-    description: "",
-  },
-  {
-    id: 9,
-    inMenu: false,
-    path: "404",
-    displyName: "404",
-    title:
-      "404 - Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-    description:
-      "Zapraszmy do uczestnictwa w Kongresie Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych",
-  },
-];
-export const event = {
-  eventName: "koin",
-  eventType: "kongres",
-  eventFullName: {
-    l1: "XVI Kongres",
-    l2: "Ochrony Informacji Niejawnych,",
-    l3: "Biznesowych i Danych Osobowych",
-  },
-  eventDate: {
-    start: new Date(2020, 5, 23, 14, 0),
-    end: new Date(2020, 5, 25, 14, 0),
-  },
-  eventLocation: {
-    name: "Centrum Rekreacji i Biznesu Grand Stasinda",
-    www: "www.grandstasinda.pl",
-    address: {
-      street: "ul. Karpęciny 5a",
-      postCode: "34-530",
-      city: "Bukowina Tatrzańska",
-    },
-    googleMapSrc:
-      "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d83215.81730633657!2d20.107676!3d49.32386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xea667193922ad434!2sCentrum%20Rekreacji%20I%20Biznesu%20GRAND%20Stasinda!5e0!3m2!1spl!2spl!4v1594747002600!5m2!1spl!2spl",
-  },
-  eventPrices: {
-    singleRoomPrice: 2100,
-    doubleRoomPrice: 1900,
-  },
-  eventDiscounts: [
-    { id: "1", name: "członkowie KSOIN", discount: "5%" },
-    { id: "2", name: "uczestnicy szkoleń", discount: "5%" },
-    { id: "3", name: "uczestnictwo 2 osób z jednej firmy", discount: "10%" },
-    {
-      id: "4",
-      name: "uczestnictwo 3 i więcej osób z jednej firmy",
-      discount: "15%",
-    },
-  ],
-  get genitiveDeclinedEventType() {
-    let declinedEventType = "";
-    switch (this.eventType) {
-      case "kongres":
-        declinedEventType = "Kongresu";
-        break;
-      case "konferencja":
-        declinedEventType = "Konferencji";
-        break;
-      case "forum":
-        declinedEventType = "Forum";
-        break;
-      case "zjazd":
-        declinedEventType = "Zjazdu";
-        break;
-      default:
-        declinedEventType = "Kongresu";
-    }
-    return declinedEventType;
-  },
-  get locativeDeclinedEventType() {
-    let declinedEventType = "";
-    switch (this.eventType) {
-      case "kongres":
-        declinedEventType = "Kongresie";
-        break;
-      case "konferencja":
-        declinedEventType = "Konferencji";
-        break;
-      case "forum":
-        declinedEventType = "Forum";
-        break;
-      case "zjazd":
-        declinedEventType = "Zjeździe";
-        break;
-      default:
-        declinedEventType = "Kongresie";
-    }
-    return declinedEventType;
-  },
-};
-export const eventSponsorsByKind = [
-  { kind: "patronat główny", priority: 1, sponsors: [], count: 0 },
-  { kind: "patronat strategiczny", priority: 2, sponsors: [], count: 0 },
-  { kind: "patronat", priority: 3, sponsors: [], count: 0 },
-  { kind: "partnerzy", priority: 4, sponsors: [], count: 0 },
-  { kind: "patronat medialny", priority: 5, sponsors: [], count: 0 },
-];
-export const polishMonths = [
-  "styczeń",
-  "luty",
-  "marzec",
-  "kwieceń",
-  "maj",
-  "czerwiec",
-  "lipiec",
-  "sierpień",
-  "wrzesień",
-  "październik",
-  "listopad",
-  "grudzień",
-];
-export const organizersList = [
-  {
-    id: 0,
-    mainOrganizer: true,
-    name: "Krajowe Stowarzyszenie Ochrony Informacji Niejawnych",
-    shortName: "KSOIN",
-    logoFilename: "logo-ksoin.png",
-    url: "www.ksoin.pl",
-    address: "pl. Grunwaldzki 8-10",
-    zip: "40-127",
-    city: "Katowice",
-    phones: [{ id: "1", tel: "+48 32 206 46 00" }],
-    faxes: [{ id: "1", fax: "+48 32 206 46 00" }],
-    emails: [{ id: "1", email: "biuro@ksoin.pl" }],
-    bankName: "PEKAO SA I Oddział w Katowicach",
-    bankAccount: "55 1240 1330 1111 0010 2402 9927",
-    nip: "634-25-59-104",
-    regon: "278336546",
-  },
-];
-
-export const introText = {
-  p1:
-    "Kongres jest najważniejszym i najbardziej prestiżowym przedsięwzięciem w Polsce odbywającym się nieprzerwanie od 2005 roku, mającym istotne znaczenie i wpływ na stan bezpieczeństwa państwa, firm, instytucji i obywateli.",
-  p2:
-    "XVI Kongres to możliwość spotkania z wieloma wybitnymi gośćmi i ekspertami z zakresu ochrony informacji niejawnych, biznesowych i danych osobowych, a także okazja do dyskusji, bezpośredniej wymiany doświadczeń, kuluarowych spotkań, przekazania uwag i wyjaśnienia wątpliwości dotyczących organizacji i funkcjonowania pionów ochrony, obowiązków i zadań kierowników jednostek organizacyjnych, pełnomocników ochrony, administratorów bezpieczeństwa informacji, inspektorów ochrony danych osobowych oraz współpracy i podziału kompetencji między nimi.",
-  p3:
-    "Obrady Kongresu kierujemy do kierowników jednostek organizacyjnych, prezesów, dyrektorów, właścicieli firm, przedstawicieli organów administracji publicznej, pełnomocników i pracowników pionów ochrony, ABI/inspektorów, dyrektorów i pracowników pionów bezpieczeństwa, infrastruktury krytycznej i działów IT, a także innych osób interesujących się tą tematyką.",
-  p4:
-    "XVI Kongres będzie miał wyjątkowe znaczenie dla bezpieczeństwa gospodarczego z uwagi na poniesione straty z powodu pandemii i możliwość zwiększonych zagrożeń konkurencji, wrogich służ specjalnych i wyspecjalizowanych grup przestępczych.",
-};
-
-export const picturesStrap = [
-  { id: "1", picName: "pic-strap-01.jpg", picDesc: "Spotkanie biznesowe" },
-  {
-    id: "2",
-    picName: "pic-strap-02.jpg",
-    picDesc: "Biurko z arkuszami zestawień i wykresów",
-  },
-  { id: "3", picName: "pic-strap-03.jpg", picDesc: "Para pod parasolem" },
-  { id: "4", picName: "pic-strap-04.jpg", picDesc: "Kostki domina" },
-  {
-    id: "5",
-    picName: "pic-strap-05.jpg",
-    picDesc: "Arkusze zestawień i wykresów",
-  },
-  {
-    id: "6",
-    picName: "pic-strap-06.jpg",
-    picDesc: "Dyskusja nad zestawieniami biznesowymi",
-  },
-];
-
-export const agenda = [
-  {
-    id: "1",
-    title:
-      "21 lat Polski w NATO i nowych regulacji prawnych ochrony informacji niejawnych.",
-  },
-  {
-    id: "2",
-    title:
-      "Służby wywiadu i kontrwywiadu w systemie bezpieczeństwa informacji.",
-  },
-  {
-    id: "3",
-    title:
-      "Dlaczego jesteśmy podsłuchiwani/inwigilowani? Czy jesteśmy mniej czy bardziej bezpieczni?",
-  },
-  {
-    id: "4",
-    title:
-      "Informacje prawnie chronione w biznesie (tajemnica przedsiębiorstwa, handlowa i giełdowa).",
-  },
-  {
-    id: "5",
-    title:
-      "Piony ochrony informacji niejawnych w jednostkach organizacyjnych, ewoluowanie ich roli i zadań, stan faktyczny.",
-  },
-  {
-    id: "6",
-    title:
-      "Kancelarie tajne i niejawne w tym i zagraniczne – ich rola w obiegu dokumentów niejawnych.",
-  },
-  {
-    id: "7",
-    title:
-      "Debata na temat aktualnych i przyszłych zagrożeń ochrony informacji i danych osobowych.",
-  },
-  {
-    id: "8",
-    title:
-      "Dyrektywa Parlamentu Europejskiego i Rady (UE) ws.  zwalczanie nieuczciwej konkurencji w gospodarce rynkowej.",
-  },
-  {
-    id: "9",
-    title:
-      'Istota Zarządzania Ryzykiem wg. RODO. Kiedy "Ogólna Ocena Ryzyka" a kiedy "Ocena Skutków" dla ochrony przetwarzanych danych osobowych?',
-  },
-  {
-    id: "10",
-    title:
-      "Sesja tematyczna: Jak wdrożyliśmy/wdrażamy RODO w urzędach, instytucjach, firmach i organizacjach – podpowiedzi, uwagi i pierwsze doświadczenia.",
-  },
-  {
-    id: "11",
-    title:
-      "Bezpieczeństwo komunikacji w biznesie. Jak za pomocą szyfrowania chronić informacje i dane o organizacji.",
-  },
-  {
-    id: "12",
-    title:
-      "Czas po „światowym krachu gospodarczym” w kontekście zapewnienia bezpieczeństwa biznesu.",
-  },
-  {
-    id: "13",
-    title:
-      "Możliwości finansowania nowoczesnych technologii bezpieczeństwa biznesu.",
-  },
-  {
-    id: "14",
-    title: "Techniki i technologie zapewniające ochronę/zdobywanie informacji.",
-  },
-  {
-    id: "15",
-    title:
-      "Innowacyjność i nowe technologie Industry 4.0 i oczekiwane 5G w ochronie gospodarki i bezpieczeństwa biznesu.",
-  },
-  {
-    id: "16",
-    title:
-      "Krajowy System Cyberbezpieczeństwa - operatorzy usług kluczowych i dostawcy usług cyfrowych.",
-  },
-  {
-    id: "17",
-    title:
-      "Wojna w cyberprzestrzeni - jej reperkusje dla bezpieczeństwa narodowego i  gospodarczego kraju. Budowanie świadomości bezpieczeństwa cybernetycznego.",
-  },
-  {
-    id: "18",
-    title:
-      "Czy zagroził nam Blackout? Możliwy scenariusz chaosu społeczno- gospodarczego.",
-  },
-  {
-    id: "19",
-    title:
-      "Zarządzaniu bezpieczeństwem obiektów. Doświadczenia, podpowiedzi i praktyczne uwagi.",
-  },
-  {
-    id: "20",
-    title:
-      "Światowe i krajowe zagrożenia terrorystyczne. Ekozagrożenia bezpieczeństwa biznesu i terroryzm ekologiczny.",
-  },
-];
-
 export const speakers = [
   {
     id: "1",
@@ -806,7 +454,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -1105,7 +753,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -1490,7 +1138,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -1639,7 +1287,8 @@ export const speakers = [
     title: "",
     firstName: "Andrzej",
     lastName: "Góralski",
-    description: "Agtes Serwis Sp. z o.o.",
+    description:
+      "Prezes Zarządu firmy AGTES Serwis Sp. z o.o. z Warszawy, której głównym obszarem działalności jest projektowanie i wdrażanie obiektowych technicznych systemów przeciwdziałania inwigilacji, w aplikacjach ochrony informacji niejawnych związanych z tajemnicą państwową, firmową oraz prywatną.",
     picName: "goralski-andrzej",
     events: [
       {
@@ -1660,7 +1309,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -1874,7 +1523,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -2432,7 +2081,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -2517,7 +2166,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -3075,7 +2724,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -3096,7 +2745,8 @@ export const speakers = [
     title: "prof. dr hab. inż.",
     firstName: "Aleksander",
     lastName: "Nawrat",
-    description: "b. Zastępca Dyrektora Narodowego Centrum Badań i Rozwoju.",
+    description:
+      "b. Zastępca Dyrektora Narodowego Centrum Badań i Rozwoju, ekspert w dziedzinie badań i rozwoju dla nauki, przemysłu zbrojeniowego oraz agencji rządowych.",
     picName: "nawrat-aleksander",
     events: [
       {
@@ -3117,7 +2767,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -3139,7 +2789,7 @@ export const speakers = [
     firstName: "Adam",
     lastName: "Niemczyk",
     description:
-      "Prezes Zarządu i wspólnik Agtes Serwis sp. z o.o.; ekspert ds. bezpieczeństwa. Głównym obszarem działalności firmy Agtes Serwis jest projektowanie i wdrażanie systemów przeciwdziałania inwigilacji.",
+      "Prezes Zarządu i wspólnik Agtes Serwis sp. z o.o., ekspert ds. bezpieczeństwa.",
     picName: "niemczyk-adam",
     events: [
       {
@@ -3160,7 +2810,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -3331,7 +2981,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -3502,7 +3152,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -3759,7 +3409,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -3928,7 +3578,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -4268,7 +3918,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -4311,7 +3961,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -4354,7 +4004,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -4996,7 +4646,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -5141,950 +4791,303 @@ export const speakers = [
       },
     ],
   },
-];
-
-export const sponsors = [
   {
-    id: "1",
-    name: "Remontowa Holding",
-    logoFilename: "remontowa.png",
+    id: "113",
+    title: "płk prof. dr hab.",
+    firstName: "Ryszard",
+    lastName: "Jakubczak",
+    description:
+      "Współtwórca Instytutu Bezpieczeństwa Narodowego w Akademii Obrony Narodowej, ekspert Sejmowej i Senackiej Komisji Obrony Narodowej, autor ponad 500 prac naukowo-badawczych z zakresu bezpieczeństwa narodowego, obronności, terroryzmu, obrony terytorialnej, działań nieregularnych.",
+    picName: "jakubczak-ryszard",
     events: [
       {
         kbb: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         koin: {
-          presence: true,
-          kind: "patronat główny",
+          presence: false,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         kbn: {
-          presence: false,
-          kind: "",
+          presence: true,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         zpo: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
     ],
   },
   {
-    id: "2",
-    name: "Huawei",
-    logoFilename: "huawei.png",
+    id: "114",
+    title: "prof. dr hab. inż.",
+    firstName: "Michał",
+    lastName: "Kleiber",
+    description:
+      "b. minister nauki, b. prezes i aktualny członek rzeczywisty PAN, ambasador Komisji Europejskiej ds. nowej narracji europejskiej, prezydent The European Community on Computational Methods in Applied Sciences (ECCOMAS), kawaler i członek Kapituły Orderu Orła Białego.",
+    picName: "kleiber-michal",
     events: [
       {
         kbb: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         koin: {
-          presence: true,
-          kind: "patronat strategiczny",
+          presence: false,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         kbn: {
-          presence: false,
-          kind: "",
+          presence: true,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         zpo: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
     ],
   },
   {
-    id: "3",
-    name: "Krajowa Izba Gospodarcza",
-    logoFilename: "kig.png",
+    id: "115",
+    title: "prof. dr inż.",
+    firstName: "Artur",
+    lastName: "Kozłowski",
+    description:
+      "Dyrektor Sieci Badawczej Łukasiewicz - Instytutu Technik Innowacyjnych EMAG. Autor i współautor kilkudziesięciu artykułów opublikowanych w krajowych i zagranicznych czasopismach technicznych oraz referatów wygłoszonych na krajowych i międzynarodowych konferencjach naukowych.",
+    picName: "kozlowski-artur",
     events: [
       {
         kbb: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         koin: {
-          presence: true,
-          kind: "patronat",
+          presence: false,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         kbn: {
-          presence: false,
-          kind: "",
+          presence: true,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         zpo: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
     ],
   },
   {
-    id: "4",
-    name: "Regionalna Izba Gospodarcza w Katowicach",
-    logoFilename: "rig-katowice.png",
+    id: "116",
+    title: "dr",
+    firstName: "Arwid",
+    lastName: "Mednis",
+    description:
+      "Starszy wykładowca w Instytucie Nauk Prawno-Administracyjnych Wydziału Prawa i Administracji Uniwersytetu Warszawskiego. Współtwórca ustaw o ochronie danych osobowych, o udostępnianiu informacji gospodarczych oraz o partnerstwie publiczno-prywatnym.",
+    picName: "mednis-arwid",
     events: [
       {
         kbb: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         koin: {
-          presence: true,
-          kind: "patronat",
+          presence: false,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         kbn: {
-          presence: false,
-          kind: "",
+          presence: true,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         zpo: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
     ],
   },
   {
-    id: "5",
-    name: "Regionalna Izba Przemysłowo-Handlowa w Gliwicach",
-    logoFilename: "riph.png",
+    id: "117",
+    title: "dr",
+    firstName: "Janusz",
+    lastName: "Onyszkiewicz",
+    description:
+      "Polityk, matematyk, alpinista, himalaista i speleolog, dwukrotny minister obrony narodowej (w latach 1992–1993 i 1997–2000), od 2004 do 2007 wiceprzewodniczący PE",
+    picName: "onyszkiewicz-janusz",
     events: [
       {
         kbb: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         koin: {
-          presence: true,
-          kind: "patronat",
+          presence: false,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         kbn: {
-          presence: false,
-          kind: "",
+          presence: true,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         zpo: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
     ],
   },
   {
-    id: "6",
-    name: "Klub Integracji Europejskiej",
-    logoFilename: "kie.png",
+    id: "118",
+    title: "prof. dr hab.",
+    firstName: "Bogdan",
+    lastName: "Szulc",
+    description:
+      "Pracownik naukowo-dydaktyczny Katedry Zarządzania Zasobami Ludzkimi Akademii Sztuki Wojennej, ekspert z zakresu zarządzania zasobami ludzkimi w obszarze bezpieczeństwa.",
+    picName: "szulc-bogdan",
     events: [
       {
         kbb: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         koin: {
-          presence: true,
-          kind: "patronat",
+          presence: false,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         kbn: {
-          presence: false,
-          kind: "",
+          presence: true,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         zpo: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
     ],
   },
   {
-    id: "7",
-    name: "Stowarzyszenie Dostawców na rzecz Służb Mundurowych",
-    logoFilename: "sdsm.png",
+    id: "119",
+    title: "dr inż.",
+    firstName: "Janusz",
+    lastName: "Jabłoński",
+    description:
+      "Adiunkt na Uniwersytecie Zielonogórskim. Autor zgłoszeń Patentowych i Patentów z obszaru Kryptologii. Laureat XVII edycji konkursu Polski Produkt Przyszłości za „System Kryptograficzny”. Członek Rady do Spraw Cyfryzacji kadencji 2016 – 2018. Kierownik merytoryczny projektu „CryptONE – bezwzględnie bezpieczny krypto procesor”.",
+    picName: "jablonski-janusz",
     events: [
       {
         kbb: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         koin: {
-          presence: true,
-          kind: "patronat",
+          presence: false,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         kbn: {
-          presence: false,
-          kind: "",
+          presence: true,
+          status: "speaker",
           position: 0,
+          featPosition: 0,
         },
       },
       {
         zpo: {
           presence: false,
-          kind: "",
+          status: "speaker",
           position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "8",
-    name: "Grupa Amber",
-    logoFilename: "amber-grupa.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "patronat",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "9",
-    name: "Międzynarodowe Targi Poznańskie",
-    logoFilename: "mtp.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "patronat",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "10",
-    name: "Śląskie Stowarzyszenie Menedżerów",
-    logoFilename: "ssm.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "partnerzy",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "11",
-    name: "Amber IT",
-    logoFilename: "amber-it.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "partnerzy",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "12",
-    name: "Międzynarodowe Targi Zabezpieczeń SECUREX",
-    logoFilename: "securex.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "partnerzy",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "13",
-    name: "Cloud Community Europe",
-    logoFilename: "cloud-community.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "partnerzy",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "14",
-    name: "Zipp",
-    logoFilename: "zipp.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "partnerzy",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "15",
-    name: "Instytut Łączności - Państwowy Instytut Badawczy",
-    logoFilename: "il-pib.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "partnerzy",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "16",
-    name: "Coders House",
-    logoFilename: "coders-house.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "partnerzy",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "17",
-    name: "Hasco-Lek Polska",
-    logoFilename: "hasco-lek-polska.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "partnerzy",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "18",
-    name: "Przedsiębiorcy@eu – telewizja i magazyn ludzi biznesu",
-    logoFilename: "przedsiebiorcyeu.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "patronat medialny",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "19",
-    name: "Miesięcznik Europerspektywy",
-    logoFilename: "europerspektywy.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "patronat medialny",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "20",
-    name: "Portal Ochrony",
-    logoFilename: "portalochrony.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "patronat medialny",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "21",
-    name: "TV Silesia",
-    logoFilename: "tvsilesia.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "patronat medialny",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "22",
-    name: "Telewizja ATV",
-    logoFilename: "atv.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "patronat medialny",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "23",
-    name: "Ochrona i Bezpieczeństwo Obiektów i Biznesu",
-    logoFilename: "ochrona-i-bezpieczenstwo.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "patronat medialny",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "24",
-    name: "Portal munurowy",
-    logoFilename: "portalmundurowy.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "patronat medialny",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "25",
-    name: "Magazyn VIP",
-    logoFilename: "vip.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "patronat medialny",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "26",
-    name: "Magazyn VIP Defence",
-    logoFilename: "vip-defence.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "patronat medialny",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "27",
-    name: "Europejska Firma",
-    logoFilename: "europejska-firma.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: true,
-          kind: "patronat medialny",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
+          featPosition: 0,
         },
       },
     ],

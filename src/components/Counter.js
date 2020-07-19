@@ -50,7 +50,7 @@ class Counter extends Component {
       <div className="counter text-center">
         {this.state.eventDate.start < Date.now() ? (
           <p className="countdown invitation">
-            Zapraszamy w {eventDate.start.getFullYear() + 1} roku{" "}
+            Zapraszamy ponownie w {eventDate.start.getFullYear() + 1} roku{" "}
           </p>
         ) : (
           <p className="countdown">

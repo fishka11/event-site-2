@@ -5,6 +5,9 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+
+import CookieConsent from "react-cookie-consent";
+
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import Home from "../pages/Home";
@@ -16,18 +19,10 @@ import Register from "../pages/Register";
 import Admin from "../pages/Admin";
 import GenericNotFound from "../pages/GenericNotFound";
 
-import {
-  sitePages,
-  event,
-  eventSponsorsByKind,
-  polishMonths,
-  organizersList as organizers,
-  introText,
-  picturesStrap,
-  speakers,
-  agenda,
-  sponsors,
-} from "../constans/Const";
+import { polishMonths, currentEvent } from "../data/Const";
+import eventsList from "../data/EventsData";
+import { speakers } from "../data/Speakers";
+import { eventSponsorsByKind, sponsors } from "../data/Sponsors";
 
 import "./App.css";
 
@@ -45,17 +40,14 @@ library.add(faMapMarkerAlt, faAt, faPhone, faFax, faGlobe);
 
 class App extends Component {
   _isMounted = false;
+
   constructor(props) {
     super(props);
     this.state = {
-      sites: sitePages,
-      event,
+      currentEvent,
+      eventsList,
       polishMonths,
-      organizers,
-      introText,
-      picturesStrap,
       eventSpeakers: [],
-      agenda,
       sponsors,
       eventSponsorsByKind,
     };
@@ -68,13 +60,18 @@ class App extends Component {
 
   componentDidMount() {
     this._isMounted = true;
-    this.fetchEventSpeakers(event.eventName);
-    this.fetchEventSponsorsByKind(sponsors, event.eventName);
+    this.fetchEventSpeakers(currentEvent);
+    this.fetchEventSponsorsByKind(sponsors, currentEvent);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.state.eventData !== prevProps.eventData) {
+      this.fetchData(this.props.userID);
+    }
   }
   componentWillUnmount() {
     this._isMounted = false;
   }
-
   fetchEventSpeakers(eventName) {
     const filteredSpeakers = speakers.filter((item) =>
       item.events
@@ -85,11 +82,9 @@ class App extends Component {
       this.setEventSpeakers(filteredSpeakers);
     }
   }
-
   setEventSpeakers(filteredSpeakers) {
     this.setState({ eventSpeakers: filteredSpeakers });
   }
-
   setPageHead(sites, destinationPath) {
     const pageMeta = sites.filter((item) => item.path === destinationPath)[0];
     return pageMeta;
@@ -128,23 +123,23 @@ class App extends Component {
 
   render() {
     const {
-      sites,
-      event,
+      currentEvent,
+      eventsList,
       polishMonths,
-      organizers,
-      introText,
-      picturesStrap,
       eventSpeakers,
-      agenda,
       eventSponsorsByKind,
     } = this.state;
 
-    const mainOrganizer = organizers.find((item) => item.mainOrganizer);
-
+    const event = eventsList.filter(
+      (item) => item.eventName === currentEvent
+    )[0];
+    const organizers = event.organizersList;
+    const mainOrganizer = organizers.filter((item) => item.mainOrganizer)[0];
+    const sites = event.sitePages;
     return (
-      <div className="App">
+      <div className={currentEvent}>
         <Router>
-          <Navigation menuItems={sites} />
+          <Navigation menuItems={sites} currentEvent={currentEvent} />
           <Switch>
             {/* Another way is to pass render prop instaed of component prop for better performance, beacouse Home is functional component */}
             <Route
@@ -154,10 +149,8 @@ class App extends Component {
                 <Home
                   meta={this.setPageHead(sites, "")}
                   event={event}
+                  currentEvent={currentEvent}
                   months={polishMonths}
-                  organizers={organizers}
-                  introText={introText}
-                  pictures={picturesStrap}
                 />
               )}
             />
@@ -166,7 +159,7 @@ class App extends Component {
               component={() => (
                 <Agenda
                   meta={this.setPageHead(sites, "tematyka")}
-                  agenda={agenda}
+                  agenda={event.agenda}
                 />
               )}
             />
@@ -192,11 +185,7 @@ class App extends Component {
             <Route
               path="/info"
               component={() => (
-                <Info
-                  meta={this.setPageHead(sites, "info")}
-                  event={event}
-                  organizers={organizers}
-                />
+                <Info meta={this.setPageHead(sites, "info")} event={event} />
               )}
             />
             <Route
@@ -205,7 +194,6 @@ class App extends Component {
                 <Contact
                   meta={this.setPageHead(sites, "kontakt")}
                   event={event}
-                  organizers={organizers}
                 />
               )}
             />
@@ -229,6 +217,35 @@ class App extends Component {
           </Switch>
         </Router>
         <Footer mainOrganizer={mainOrganizer} />
+        <CookieConsent
+          location="bottom"
+          buttonText="OK, rozumiem"
+          cookieName="cookiesBar"
+          style={{ background: "#315ec6", color: "#ddd" }}
+          buttonStyle={{
+            color: "#ffffff",
+            background: "#f46036",
+            fontSize: "0.8rem",
+            fontWeight: "bold",
+          }}
+          expires={150}
+        >
+          Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w
+          celach statystycznych, reklamowych oraz funkcjonalnych. Każdy może
+          zaakceptować pliki cookies albo ma możliwość wyłączenia ich w
+          przeglądarce.{" "}
+          <a
+            aria-label="dowiedz się więcej o ciasteczkach"
+            role="button"
+            rel="noopener noreferrer"
+            tabindex="0"
+            class="cc-link"
+            href="http://wszystkoociasteczkach.pl/"
+            target="_blank"
+          >
+            Dowiedz się więcej.
+          </a>
+        </CookieConsent>
       </div>
     );
   }

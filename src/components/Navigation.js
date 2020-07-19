@@ -10,7 +10,8 @@ import Button from "react-bootstrap/Button";
 import { withRouter } from "react-router-dom";
 
 const Navigation = (props) => {
-  const { menuItems, location } = props;
+  const { menuItems, currentEvent, location } = props;
+
   return (
     <header className="navigation">
       <Navbar fixed="top" collapseOnSelect expand="xl" variant="light">
@@ -18,7 +19,7 @@ const Navigation = (props) => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Brand href="/">
             <img
-              src="assets/brand.png"
+              src={`assets/brand-${currentEvent}.png`}
               width="61"
               height="40"
               alt="Logo - Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych"
@@ -26,6 +27,7 @@ const Navigation = (props) => {
             <span className="sr-only">(current)</span>
           </Navbar.Brand>
           <Navbar.Collapse id="responsive-navbar-nav">
+            {/* <Nav activeKey={location.pathname} className="mr-auto"> */}
             <Nav className="mr-auto">
               {menuItems
                 .filter((item) => !!item.inMenu)
@@ -34,14 +36,14 @@ const Navigation = (props) => {
                     key={item.id}
                     href={`/${item.path}`}
                     className={` ${
-                      location.pathname === `/${item.path}` ? "active" : ""
+                      location.pathname === `/${item.path}/` ? "active" : ""
                     }`}
                   >
                     {item.displyName}
                   </Nav.Link>
                 ))}
             </Nav>
-            <Button size="sm" href="/rejestracja">
+            <Button size="sm" href="rejestracja">
               Zarejestruj się
             </Button>
           </Navbar.Collapse>

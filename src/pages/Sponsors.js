@@ -31,27 +31,29 @@ const Sponsors = (props) => {
       <Container>
         <h1>Patronat</h1>
       </Container>
-      {sortedByPriority.map((item) => (
-        <section key={item.priority} className="sponsors-list">
-          <Container>
-            <h3>{item.kind.toUpperCase()}</h3>
-            <Row className="justify-content-sm-center">
-              {item.sponsors.map((item, array) => (
-                <Col key={item.id} xs={12} sm={6} lg={4}>
-                  <div className="sponsor">
-                    <img
-                      className="mx-auto"
-                      fluid="true"
-                      src={`assets/sponsors/${item.logoFilename}`}
-                      alt={item.name}
-                    />
-                  </div>
-                </Col>
-              ))}
-            </Row>
-          </Container>
-        </section>
-      ))}
+      {sortedByPriority.map((item) =>
+        item.sponsors.length ? (
+          <section key={item.priority} className="sponsors-list">
+            <Container>
+              <h3>{item.kind.toUpperCase()}</h3>
+              <Row className="justify-content-sm-center">
+                {item.sponsors.map((item, array) => (
+                  <Col key={item.id} xs={12} sm={6} lg={4}>
+                    <div className="sponsor">
+                      <img
+                        className="mx-auto"
+                        fluid="true"
+                        src={`assets/sponsors/${item.logoFilename}`}
+                        alt={item.name}
+                      />
+                    </div>
+                  </Col>
+                ))}
+              </Row>
+            </Container>
+          </section>
+        ) : null
+      )}
     </div>
   );
 };

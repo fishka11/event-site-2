@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import "./Register.css";
 
 const Register = (props) => {
-  const { meta } = props;
+  const { meta, currentEvent } = props;
   return (
     <div className="page register">
       <Helmet>
@@ -18,7 +18,7 @@ const Register = (props) => {
       <section>
         <Container>
           <iframe
-            src="https://www.ksoin.pl/koin-rejestracja/"
+            src={`https://www.ksoin.pl/${currentEvent}-rejestracja/`}
             marginWidth="0"
             marginHeight="0"
             width="100%"

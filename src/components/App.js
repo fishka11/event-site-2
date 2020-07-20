@@ -200,7 +200,10 @@ class App extends Component {
             <Route
               path="/rejestracja"
               component={() => (
-                <Register meta={this.setPageHead(sites, "rejestracja")} />
+                <Register
+                  meta={this.setPageHead(sites, "rejestracja")}
+                  currentEvent={currentEvent}
+                />
               )}
             />
             <Route path="/admin" exact component={Admin} />

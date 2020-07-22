@@ -14,9 +14,14 @@ import "./Info.css";
 
 const Info = (props) => {
   const { meta, event } = props;
+
+  const eventDuration =
+    event.eventDate.end.getDate() - event.eventDate.start.getDate();
+
   const organizer = event.organizersList.find(
     (item) => item.mainOrganizer === true
   );
+
   let tense = "";
   if (Date.now() < event.eventDate.start) {
     tense = "Spotkamy się";
@@ -62,12 +67,16 @@ const Info = (props) => {
                     .padStart(2, "0")}
                   .{event.eventDate.start.getFullYear()} r. do godz.{" "}
                   {event.eventDate.start.getHours() - 1}.
-                  {event.eventDate.start
-                    .getMinutes()
-                    .toString()
-                    .padStart(2, "0")}
-                  . Rozpoczęcie obrad o godz.
-                  {event.eventDate.start.getHours()}.
+                  {eventDuration < 2
+                    ? (event.eventDate.start.getMinutes() + 30)
+                        .toString()
+                        .padStart(2, "0")
+                    : event.eventDate.start
+                        .getMinutes()
+                        .toString()
+                        .padStart(2, "0")}
+                  . Rozpoczęcie obrad o godz. {event.eventDate.start.getHours()}
+                  .
                   {event.eventDate.start
                     .getMinutes()
                     .toString()
@@ -76,7 +85,7 @@ const Info = (props) => {
                   {(event.eventDate.end.getMonth() + 1)
                     .toString()
                     .padStart(2, "0")}
-                  .{event.eventDate.end.getFullYear()} r. ok. godz.
+                  .{event.eventDate.end.getFullYear()} r. ok. godz.{" "}
                   {event.eventDate.end.getHours()}.
                   {event.eventDate.end.getMinutes().toString().padStart(2, "0")}
                   .

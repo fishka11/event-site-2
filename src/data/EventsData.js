@@ -287,7 +287,7 @@ const eventsList = [
       l2: "Bezpieczeństwa Narodowego i Gospodarczego",
     },
     eventDate: {
-      start: new Date(2020, 9, 19, 14, 0),
+      start: new Date(2020, 9, 19, 12, 0),
       end: new Date(2020, 9, 20, 14, 0),
     },
     eventLocation: {

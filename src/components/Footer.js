@@ -9,31 +9,32 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Footer.css";
 
 const Footer = (props) => {
-  const { mainOrganizer } = props;
+  const { mainOrganizer, helperOrganizer } = props;
+  const organizer = helperOrganizer ? helperOrganizer : mainOrganizer;
 
-  if (mainOrganizer.name) {
+  if (organizer) {
     return (
       <footer className="footer">
         <Container>
           <Row className="justify-content-sm-center">
             <Col md={4} className="organizer-logo">
-              {!!mainOrganizer.url ? (
+              {organizer.url ? (
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href={`http://${mainOrganizer.url}`}
+                  href={`http://${organizer.url}`}
                 >
                   <img
                     fluid="true"
-                    src={`assets/${mainOrganizer.logoFilename}`}
-                    alt={`logo ${mainOrganizer.name}`}
+                    src={`assets/${organizer.logoFilename}`}
+                    alt={`logo ${organizer.name}`}
                   />
                 </a>
               ) : (
                 <img
                   fluid="true"
-                  src={`assets/${mainOrganizer.logoFilename}`}
-                  alt={`logo ${mainOrganizer.name}`}
+                  src={`assets/${organizer.logoFilename}`}
+                  alt={`logo ${organizer.name}`}
                 />
               )}
             </Col>
@@ -45,18 +46,18 @@ const Footer = (props) => {
                       <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href={`http://${mainOrganizer.url}`}
+                        href={`http://${organizer.url}`}
                       >
-                        <strong>{mainOrganizer.name}</strong>
+                        <strong>{organizer.name}</strong>
                       </a>
                     </p>
 
                     <div className="address">
                       <FontAwesomeIcon icon="map-marker-alt" />
                       <p>
-                        {mainOrganizer.address}
+                        {organizer.address}
                         <br />
-                        {`${mainOrganizer.zip} ${mainOrganizer.city}`}
+                        {`${organizer.zip} ${organizer.city}`}
                       </p>
                     </div>
                   </address>
@@ -67,12 +68,12 @@ const Footer = (props) => {
                       <FontAwesomeIcon icon="at" />
                       <p>
                         e-mail:{" "}
-                        <a href={`mailto:${mainOrganizer.emails[0].email}`}>
-                          {mainOrganizer.emails[0].email}
+                        <a href={`mailto:${organizer.emails[0].email}`}>
+                          {organizer.emails[0].email}
                         </a>
                       </p>
                     </div>
-                    {mainOrganizer.phones.map((item) => (
+                    {organizer.phones.map((item) => (
                       <div key={item.id} className="address">
                         <FontAwesomeIcon icon="phone" />
                         <p>
@@ -83,7 +84,7 @@ const Footer = (props) => {
                         </p>
                       </div>
                     ))}
-                    {mainOrganizer.faxes.map((item) => (
+                    {organizer.faxes.map((item) => (
                       <div key={item.id} className="address">
                         <FontAwesomeIcon icon="fax" />
                         <p>
@@ -100,7 +101,7 @@ const Footer = (props) => {
             </Col>
           </Row>
           <hr />
-          <p>© 2018 {mainOrganizer.shortName}</p>
+          <p>© 2018 {organizer.shortName}</p>
         </Container>
       </footer>
     );

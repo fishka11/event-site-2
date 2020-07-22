@@ -419,7 +419,8 @@ const eventsList = [
     organizersList: [
       {
         id: 0,
-        mainOrganizer: true,
+        mainOrganizer: false,
+        helperOrganizer: true,
         name: "Stowarzyszenie Wspierania Bezpieczeństwa Narodowego",
         shortName: "SWBN",
         logoFilename: "logo-swbn.png",
@@ -437,7 +438,8 @@ const eventsList = [
       },
       {
         id: 1,
-        mainOrganizer: false,
+        mainOrganizer: true,
+        helperOrganizer: false,
         name: "Krajowe Stowarzyszenie Ochrony Informacji Niejawnych",
         shortName: "KSOIN",
         logoFilename: "logo-ksoin.png",
@@ -456,12 +458,14 @@ const eventsList = [
       {
         id: 2,
         mainOrganizer: false,
+        helperOrganizer: false,
         name: "Stowarzyszenie Kombatantów Misji Pokojowych ONZ",
         logoFilename: "logo-skmponz.png",
       },
       {
         id: 4,
         mainOrganizer: false,
+        helperOrganizer: false,
         name: "Komitet Bezpieczeństwa Biznesu Krajowej Izby Gospodarczej",
         logoFilename: "logo-kig-30-lat.png",
       },

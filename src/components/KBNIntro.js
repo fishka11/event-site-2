@@ -85,7 +85,7 @@ const Intro = (props) => {
           <li>
             Analiza i ocena stanu potencjalnych zagrożeń, rozpoznawanie,
             wykrywanie i zapobieganie zagrożeniom chronionej jednostki
-            organizacyjnej w tym również koronawirusem COVID-19m
+            organizacyjnej, w tym również koronawirusem COVID-19.
           </li>
           <li>
             Zapoznanie z najlepszymi praktykami i procedurami mającymi na celu

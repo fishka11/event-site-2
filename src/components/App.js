@@ -134,7 +134,12 @@ class App extends Component {
       (item) => item.eventName === currentEvent
     )[0];
     const organizers = event.organizersList;
-    const mainOrganizer = organizers.filter((item) => item.mainOrganizer)[0];
+    const mainOrganizer = organizers.filter((item) => item.mainOrganizer)
+      ? organizers.filter((item) => item.mainOrganizer)[0]
+      : null;
+    const helperOrganizer = organizers.filter((item) => item.helperOrganizer)
+      ? organizers.filter((item) => item.helperOrganizer)[0]
+      : null;
     const sites = event.sitePages;
     return (
       <div className={currentEvent}>
@@ -219,7 +224,10 @@ class App extends Component {
             <Redirect to="/404" />
           </Switch>
         </Router>
-        <Footer mainOrganizer={mainOrganizer} />
+        <Footer
+          mainOrganizer={mainOrganizer}
+          helperOrganizer={helperOrganizer}
+        />
         <CookieConsent
           location="bottom"
           buttonText="OK, rozumiem"

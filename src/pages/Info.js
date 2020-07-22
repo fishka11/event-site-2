@@ -54,37 +54,32 @@ const Info = (props) => {
             <Col xs={10} sm={11}>
               <ol>
                 <li>
-                  {`Przyjazd, rejestracja i zakwaterowanie uczestników ${
-                    event.genitiveDeclinedEventType
-                  }
-                    w dniu ${event.eventDate.start.getDate()}.${(
-                    event.eventDate.start.getMonth() + 1
-                  )
+                  Przyjazd, rejestracja i zakwaterowanie uczestników{" "}
+                  {event.genitiveDeclinedEventType} w dniu{" "}
+                  {event.eventDate.start.getDate()}.
+                  {(event.eventDate.start.getMonth() + 1)
                     .toString()
-                    .padStart(
-                      2,
-                      "0"
-                    )}.${event.eventDate.start.getFullYear()} r. do godz. ${
-                    event.eventDate.start.getHours() - 1
-                  }.${event.eventDate.start
+                    .padStart(2, "0")}
+                  .{event.eventDate.start.getFullYear()} r. do godz.{" "}
+                  {event.eventDate.start.getHours() - 1}.
+                  {event.eventDate.start
                     .getMinutes()
                     .toString()
-                    .padStart(2, "0")}.
-                    Rozpoczęcie obrad o godz. ${event.eventDate.start.getHours()}.${event.eventDate.start
+                    .padStart(2, "0")}
+                  . Rozpoczęcie obrad o godz.
+                  {event.eventDate.start.getHours()}.
+                  {event.eventDate.start
                     .getMinutes()
                     .toString()
-                    .padStart(
-                      2,
-                      "0"
-                    )}, a zakończenie ${event.eventDate.end.getDate()}.${(
-                    event.eventDate.end.getMonth() + 1
-                  )
+                    .padStart(2, "0")}
+                  , a zakończenie {event.eventDate.end.getDate()}.
+                  {(event.eventDate.end.getMonth() + 1)
                     .toString()
-                    .padStart(2, "0")}.${event.eventDate.end.getFullYear()} r.
-                    ok. godz. ${event.eventDate.end.getHours()}.${event.eventDate.end
-                    .getMinutes()
-                    .toString()
-                    .padStart(2, "0")}.`}
+                    .padStart(2, "0")}
+                  .{event.eventDate.end.getFullYear()} r. ok. godz.
+                  {event.eventDate.end.getHours()}.
+                  {event.eventDate.end.getMinutes().toString().padStart(2, "0")}
+                  .
                 </li>
                 <li>
                   <span className="font-weight-bold">
@@ -174,7 +169,7 @@ const Info = (props) => {
                   przed rozpoczęciem obrad nie zwalnia od zapłaty.
                 </li>
                 <li>
-                  Miejsce Kongresu:{" "}
+                  Miejsce {event.genitiveDeclinedEventType}:{" "}
                   <span className="font-weight-bold">
                     {event.eventLocation.name}
                   </span>

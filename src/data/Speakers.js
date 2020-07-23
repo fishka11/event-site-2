@@ -25,7 +25,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -4069,7 +4069,7 @@ export const speakers = [
     firstName: "Piotr",
     lastName: "Soroczyński",
     description:
-      "b. Podsekretarz stanu w Ministerstwie Finansów, Dyrektor Biura Polityki Gospodarczej KIG.",
+      "b. Podsekretarz stanu w Ministerstwie Finansów, Główny Ekonomista i Dyrektor Biura Polityki Gospodarczej KIG.",
     picName: "soroczynski-piotr",
     events: [
       {
@@ -4090,7 +4090,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -5057,6 +5057,177 @@ export const speakers = [
     description:
       "Adiunkt na Uniwersytecie Zielonogórskim. Autor zgłoszeń Patentowych i Patentów z obszaru Kryptologii. Laureat XVII edycji konkursu Polski Produkt Przyszłości za „System Kryptograficzny”. Członek Rady do Spraw Cyfryzacji kadencji 2016 – 2018. Kierownik merytoryczny projektu „CryptONE – bezwzględnie bezpieczny krypto procesor”.",
     picName: "jablonski-janusz",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "120",
+    title: "dr",
+    firstName: "Małgorzata",
+    lastName: "Krasnodębska-Tomkiel",
+    description:
+      "Radca prawny, b. Prezes UOKiK. Współwłaścicielka kancelarii prawnej Hansberry Tomkiel.",
+    picName: "krasnodebska-tomkiel-malgorzata",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "121",
+    title: "prof. dr hab. med.",
+    firstName: "Krzysztof",
+    lastName: "Simon",
+    description:
+      "Wojewódzki konsultant w dziedzinie chorób zakaźnych, Kierownik Kliniki Chorób Zakaźnych i Hepatologii Uniwersytet Medyczny im. Piastów Śląskich we Wrocławiu.",
+    picName: "simon-krzysztof",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "122",
+    title: "prof. dr hab.",
+    firstName: "Tomasz",
+    lastName: "Aleksandrowicz",
+    description:
+      "Członek Centrum Badań nad Terroryzmem i Instytutu Analizy Informacji Collegium Civitas, pracownik Zespołu Doradców Prezydenta RP, członek zespołu Strategicznego Przeglądu Bezpieczeństwa Narodowego.",
+    picName: "aleksandrowicz-tomasz",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "123",
+    title: "",
+    firstName: "Przemysław",
+    lastName: "Ruchlicki",
+    description: "Ekspert prawno-gospodarczy Krajowej Izby Gospodarczej.",
+    picName: "ruchlicki-przemyslaw",
     events: [
       {
         kbb: {

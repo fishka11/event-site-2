@@ -798,8 +798,8 @@ export const sponsors = [
       },
       {
         kbn: {
-          presence: false,
-          kind: "",
+          presence: true,
+          kind: "patronat medialny",
           position: 0,
         },
       },
@@ -1095,8 +1095,8 @@ export const sponsors = [
   },
   {
     id: "32",
-    name: "Ochrona Mienia i Informacji",
-    logoFilename: "ochrona-mienia-i-informacji.png",
+    name: "Sieć Badawcza Łukasiewicz – Instytut Technik Innowacyjnych EMAG",
+    logoFilename: "lukasiewicz-emag.png",
     events: [
       {
         kbb: {
@@ -1115,7 +1115,7 @@ export const sponsors = [
       {
         kbn: {
           presence: true,
-          kind: "patronat medialny",
+          kind: "patronat",
           position: 0,
         },
       },
@@ -1221,41 +1221,6 @@ export const sponsors = [
         kbn: {
           presence: true,
           kind: "patronat medialny",
-          position: 0,
-        },
-      },
-      {
-        zpo: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-    ],
-  },
-  {
-    id: "36",
-    name: "Sieć Badawcza Łukasiewicz – Instytut Technik Innowacyjnych EMAG",
-    logoFilename: "lukasiewicz-emag.png",
-    events: [
-      {
-        kbb: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        koin: {
-          presence: false,
-          kind: "",
-          position: 0,
-        },
-      },
-      {
-        kbn: {
-          presence: true,
-          kind: "patronat",
           position: 0,
         },
       },

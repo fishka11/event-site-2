@@ -1480,7 +1480,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,

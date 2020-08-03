@@ -5263,4 +5263,132 @@ export const speakers = [
       },
     ],
   },
+  {
+    id: "124",
+    title: "",
+    firstName: "Michał",
+    lastName: "Fedorowicz",
+    description: "Warszawski ratownik medyczny.",
+    picName: "fedorowicz-michal",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "125",
+    title: "dr inż.",
+    firstName: "Piotr",
+    lastName: "Krawiec",
+    description:
+      "Kierownik Techniczny w Laboratorium Oceny Bezpieczeństwa Instytutu Łączności - Państwowego Instytutu Badawczego.",
+    picName: "krawiec-piotr",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: "126",
+    title: "prof. dr hab.",
+    firstName: "Robert",
+    lastName: "Flisiak",
+    description:
+      "Kierownik Kliniki Chorób Zakaźnych i Hepatologii Uniwersytetu Medycznego w Białymstoku.",
+    picName: "flisiak-robert",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
 ];

@@ -5391,4 +5391,47 @@ export const speakers = [
       },
     ],
   },
+  {
+    id: "127",
+    title: "dr",
+    firstName: "Jan",
+    lastName: "Sarna",
+    description:
+      "Dyrektor generalny Fundacji Rozwoju Kardiochirurgii w Zabrzu.",
+    picName: "sarna-jan",
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: "speaker",
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
 ];

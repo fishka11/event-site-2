@@ -518,8 +518,8 @@ export const sponsors = [
       },
       {
         kbn: {
-          presence: false,
-          kind: "",
+          presence: true,
+          kind: "patronat",
           position: 0,
         },
       },

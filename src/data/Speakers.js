@@ -1287,8 +1287,7 @@ export const speakers = [
     title: "",
     firstName: "Andrzej",
     lastName: "Góralski",
-    description:
-      "Prezes Zarządu firmy AGTES Serwis Sp. z o.o. z Warszawy, której głównym obszarem działalności jest projektowanie i wdrażanie obiektowych technicznych systemów przeciwdziałania inwigilacji, w aplikacjach ochrony informacji niejawnych związanych z tajemnicą państwową, firmową oraz prywatną.",
+    description: "Prezes Zarządu firmy AGTES Serwis Sp. z o.o. z Warszawy.",
     picName: "goralski-andrzej",
     events: [
       {
@@ -1498,11 +1497,11 @@ export const speakers = [
   },
   {
     id: "36",
-    title: "",
+    title: "dr",
     firstName: "Krzysztof",
     lastName: "Janik",
     description:
-      "b. Minister Spraw Wewnętrznych i Administracji, w latach 1993–2005 poseł na Sejm II, III i IV kadencji.",
+      "Polityk, politolog, b. Minister Spraw Wewnętrznych i Administracji. Adiunkt na wydziale Nauk o Bezpieczeństwie w Krakowskiej Akademii im. Andrzeja Frycza Modrzewskiego.",
     picName: "janik-krzysztof",
     events: [
       {
@@ -2746,7 +2745,7 @@ export const speakers = [
     firstName: "Aleksander",
     lastName: "Nawrat",
     description:
-      "b. Zastępca Dyrektora Narodowego Centrum Badań i Rozwoju, ekspert w dziedzinie badań i rozwoju dla nauki, przemysłu zbrojeniowego oraz agencji rządowych.",
+      "Ekspert w dziedzinie badań i rozwoju dla nauki, przemysłu zbrojeniowego oraz agencji rządowych.",
     picName: "nawrat-aleksander",
     events: [
       {
@@ -2960,7 +2959,8 @@ export const speakers = [
     title: "gen. dyw. prof. dr hab.",
     firstName: "Bogusław",
     lastName: "Pacek",
-    description: "b. Rektor - Komendant Akademii Obrony Narodowej.",
+    description:
+      "b. Rektor - Komendant Akademii Obrony Narodowejb. Rektor - Komendant Akademii Obrony Narodowej. Profesor na Wydziale Studiów Międzynarodowych i Politycznych Uniwersytetu Jagiellońskiego..",
     picName: "pacek-boguslaw",
     events: [
       {
@@ -3557,7 +3557,7 @@ export const speakers = [
     firstName: "Tamara",
     lastName: "Rud",
     description:
-      "Prezes Zarządu Polsko-Izraelskiego Konsorcjum na rzecz Cyberbezpieczeństwa Polski, Europejski Instytut Cyber Intelligence, prowadzi biuro KE-LA GROUP w Warszawie. Członek Komitetu Bezpieczeństwa Biznesu Krajowej Izby Gospodarczej.",
+      "Prezes Zarządu Polsko-Izraelskiego Konsorcjum na rzecz Cyberbezpieczeństwa Polski, Europejski Instytut Cyber Intelligence.",
     picName: "rud-tamara",
     events: [
       {
@@ -3897,7 +3897,7 @@ export const speakers = [
     firstName: "Piotr",
     lastName: "Słupczyński",
     description:
-      "Pełnomocnik Prezesa Zarządu ds. Ochrony Informacji Niejawnych Prochem S.A.",
+      "Pełnomocnik Prezesa Zarządu ds. Ochrony Informacji Niejawnych Prochem S.A. Ekspert ds. bezpieczeństwa i ochrony informacji. Członek zespołu ds. wdrożenia i implementacji RODO.",
     picName: "slupczynski-piotr",
     events: [
       {
@@ -4625,7 +4625,7 @@ export const speakers = [
     firstName: "Sławomir",
     lastName: "Zalewski",
     description:
-      "Wiceprezes European Association for Security (Europejskie Stowarzyszenie Nauk o Bezpieczeństwie).",
+      "Wiceprezes European Association for Security (Europejskie Stowarzyszenie Nauk o Bezpieczeństwie). Wykładowca, szkoleniowiec w zakresie bezpieczeństwa personalnego i strukturalnego państwa.",
     picName: "zalewski-slawomir",
     events: [
       {
@@ -4797,7 +4797,7 @@ export const speakers = [
     firstName: "Ryszard",
     lastName: "Jakubczak",
     description:
-      "Współtwórca Instytutu Bezpieczeństwa Narodowego w Akademii Obrony Narodowej, ekspert Sejmowej i Senackiej Komisji Obrony Narodowej, autor ponad 500 prac naukowo-badawczych z zakresu bezpieczeństwa narodowego, obronności, terroryzmu, obrony terytorialnej, działań nieregularnych.",
+      "Współtwórca Instytutu Bezpieczeństwa Narodowego w Akademii Obrony Narodowej. Ekspert Sejmowej i Senackiej Komisji Obrony Narodowej. Autor ponad 500 prac naukowo-badawczych z zakresu bezpieczeństwa narodowego.",
     picName: "jakubczak-ryszard",
     events: [
       {
@@ -4840,7 +4840,7 @@ export const speakers = [
     firstName: "Michał",
     lastName: "Kleiber",
     description:
-      "b. minister nauki, b. prezes i aktualny członek rzeczywisty PAN, ambasador Komisji Europejskiej ds. nowej narracji europejskiej, prezydent The European Community on Computational Methods in Applied Sciences (ECCOMAS), kawaler i członek Kapituły Orderu Orła Białego.",
+      "b. minister nauki, b. prezes i aktualny członek rzeczywisty PAN. Kawaler i członek Kapituły Orderu Orła Białego.",
     picName: "kleiber-michal",
     events: [
       {
@@ -4883,7 +4883,7 @@ export const speakers = [
     firstName: "Artur",
     lastName: "Kozłowski",
     description:
-      "Dyrektor Sieci Badawczej Łukasiewicz - Instytutu Technik Innowacyjnych EMAG. Autor i współautor kilkudziesięciu artykułów opublikowanych w krajowych i zagranicznych czasopismach technicznych oraz referatów wygłoszonych na krajowych i międzynarodowych konferencjach naukowych.",
+      "Dyrektor Sieci Badawczej Łukasiewicz - Instytutu Technik Innowacyjnych EMAG.",
     picName: "kozlowski-artur",
     events: [
       {
@@ -4926,7 +4926,7 @@ export const speakers = [
     firstName: "Arwid",
     lastName: "Mednis",
     description:
-      "Starszy wykładowca w Instytucie Nauk Prawno-Administracyjnych Wydziału Prawa i Administracji Uniwersytetu Warszawskiego. Współtwórca ustaw o ochronie danych osobowych, o udostępnianiu informacji gospodarczych oraz o partnerstwie publiczno-prywatnym.",
+      "Wykładowca w Instytucie Nauk Prawno-Administracyjnych Wydziału Prawa i Administracji Uniwersytetu Warszawskiego. Ekspert ochrony danych osobowych.",
     picName: "mednis-arwid",
     events: [
       {
@@ -4969,7 +4969,7 @@ export const speakers = [
     firstName: "Janusz",
     lastName: "Onyszkiewicz",
     description:
-      "Polityk, matematyk, alpinista, himalaista i speleolog, dwukrotny minister obrony narodowej (w latach 1992–1993 i 1997–2000), od 2004 do 2007 wiceprzewodniczący PE",
+      "Polityk, b. dwukrotny minister obrony narodowej, b. wiceprzewodniczący PE",
     picName: "onyszkiewicz-janusz",
     events: [
       {
@@ -5055,7 +5055,7 @@ export const speakers = [
     firstName: "Janusz",
     lastName: "Jabłoński",
     description:
-      "Adiunkt na Uniwersytecie Zielonogórskim. Autor zgłoszeń Patentowych i Patentów z obszaru Kryptologii. Laureat XVII edycji konkursu Polski Produkt Przyszłości za „System Kryptograficzny”. Członek Rady do Spraw Cyfryzacji kadencji 2016 – 2018. Kierownik merytoryczny projektu „CryptONE – bezwzględnie bezpieczny krypto procesor”.",
+      "Adiunkt na Uniwersytecie Zielonogórskim, b. Członek Rady do Spraw Cyfryzacji.",
     picName: "jablonski-janusz",
     events: [
       {
@@ -5098,7 +5098,7 @@ export const speakers = [
     firstName: "Małgorzata",
     lastName: "Krasnodębska-Tomkiel",
     description:
-      "Radca prawny, b. Prezes UOKiK. Współwłaścicielka kancelarii prawnej Hansberry Tomkiel.",
+      "Radca prawny, współwłaścicielka kancelarii prawnej Hansberry Tomkiel.",
     picName: "krasnodebska-tomkiel-malgorzata",
     events: [
       {
@@ -5137,11 +5137,11 @@ export const speakers = [
   },
   {
     id: "121",
-    title: "prof. dr hab. med.",
+    title: "prof. dr hab. n. med.",
     firstName: "Krzysztof",
     lastName: "Simon",
     description:
-      "Wojewódzki konsultant w dziedzinie chorób zakaźnych, Kierownik Kliniki Chorób Zakaźnych i Hepatologii Uniwersytet Medyczny im. Piastów Śląskich we Wrocławiu.",
+      "Kierownik Kliniki Chorób Zakaźnych i Hepatologii Uniwersytet Medyczny im. Piastów Śląskich we Wrocławiu. Ordynator 1. Oddziału Chorób Zakaźnych w Wojewódzkim Szpitalu Specjalistycznym im. J. Gromkowskiego we Wrocławiu.",
     picName: "simon-krzysztof",
     events: [
       {
@@ -5184,7 +5184,7 @@ export const speakers = [
     firstName: "Tomasz",
     lastName: "Aleksandrowicz",
     description:
-      "Członek Centrum Badań nad Terroryzmem i Instytutu Analizy Informacji Collegium Civitas, pracownik Zespołu Doradców Prezydenta RP, członek zespołu Strategicznego Przeglądu Bezpieczeństwa Narodowego.",
+      "Profesor Wyższej Szkoły Policji w Szczytnie. Ekspert zarządzania informacją z Centrum Badań nad Terroryzmem.",
     picName: "aleksandrowicz-tomasz",
     events: [
       {
@@ -5350,11 +5350,11 @@ export const speakers = [
   },
   {
     id: "126",
-    title: "prof. dr hab.",
+    title: "prof. dr hab. n. med.",
     firstName: "Robert",
     lastName: "Flisiak",
     description:
-      "Kierownik Kliniki Chorób Zakaźnych i Hepatologii Uniwersytetu Medycznego w Białymstoku.",
+      "Kierownik Kliniki Chorób Zakaźnych i Hepatologii Uniwersytetu Medycznego w Białymstoku. Prezes Polskiego Towarzystwa Epidemiologów i Lekarzy Chorób Zakaźnych.",
     picName: "flisiak-robert",
     events: [
       {
@@ -5397,7 +5397,7 @@ export const speakers = [
     firstName: "Jan",
     lastName: "Sarna",
     description:
-      "Dyrektor generalny Fundacji Rozwoju Kardiochirurgii w Zabrzu.",
+      "Dyrektor Generalny Fundacji Rozwoju Kardiochirurgii im. prof. Zbigniewa Religi w Zabrzu. Organizator i współtwórca Instytutu Protez Serca.",
     picName: "sarna-jan",
     events: [
       {

@@ -1,8 +1,8 @@
-import React, { Component, createRef } from "react";
+import React, { Component, createRef } from 'react';
 
-import { GOOGLE_MAP_API_KEY } from "../constans/Secret";
+import { GOOGLE_MAP_API_KEY } from '../constans/Secret';
 
-import "./GoogleMap.css";
+import './GoogleMap.css';
 export default class GoogleMap extends Component {
   googleMapRef = createRef();
 
@@ -16,15 +16,15 @@ export default class GoogleMap extends Component {
   createMarker = () =>
     new window.google.maps.Marker({
       position: { lat: 49.324068, lng: 20.107692 },
-      title: "Centrum Rekreacji i Biznesu GRAND Stasinda",
+      title: 'Centrum Rekreacji i Biznesu GRAND Stasinda',
       map: this.googleMap,
     });
 
   componentDidMount() {
-    const googleMapScript = document.createElement("script");
+    const googleMapScript = document.createElement('script');
     googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAP_API_KEY}&libraries=geometry,search&v=3.exp&language=pl&region=pl`;
     window.document.body.appendChild(googleMapScript);
-    googleMapScript.addEventListener("load", () => {
+    googleMapScript.addEventListener('load', () => {
       this.googleMap = this.createGoogleMap();
       this.marker = this.createMarker();
     });
@@ -32,6 +32,6 @@ export default class GoogleMap extends Component {
 
   render() {
     console.log(this.googleMapRef);
-    return <div id="google-map" ref={this.googleMapRef}></div>;
+    return <div id='google-map' ref={this.googleMapRef}></div>;
   }
 }

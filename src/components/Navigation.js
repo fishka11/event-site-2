@@ -1,34 +1,34 @@
-import React from "react";
+import React from 'react';
 
-import "./Navigation.css";
+import './Navigation.css';
 
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 
-import { withRouter } from "react-router-dom";
+import { withRouter } from 'react-router-dom';
 
 const Navigation = (props) => {
   const { menuItems, currentEvent, location } = props;
 
   return (
-    <header className="navigation">
-      <Navbar fixed="top" collapseOnSelect expand="xl" variant="light">
+    <header className='navigation'>
+      <Navbar fixed='top' collapseOnSelect expand='xl' variant='light'>
         <Container>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Brand href="/">
+          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+          <Navbar.Brand href='/'>
             <img
               src={`assets/brand-${currentEvent}.png`}
-              width="61"
-              height="40"
-              alt="Logo - Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych"
+              width='61'
+              height='40'
+              alt='Logo - Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych'
             />
-            <span className="sr-only">(current)</span>
+            <span className='sr-only'>(current)</span>
           </Navbar.Brand>
-          <Navbar.Collapse id="responsive-navbar-nav">
+          <Navbar.Collapse id='responsive-navbar-nav'>
             {/* <Nav activeKey={location.pathname} className="mr-auto"> */}
-            <Nav className="mr-auto">
+            <Nav className='mr-auto'>
               {menuItems
                 .filter((item) => !!item.inMenu)
                 .map((item) => (
@@ -36,14 +36,14 @@ const Navigation = (props) => {
                     key={item.id}
                     href={`/${item.path}`}
                     className={` ${
-                      location.pathname === `/${item.path}/` ? "active" : ""
+                      location.pathname === `/${item.path}/` ? 'active' : ''
                     }`}
                   >
                     {item.displyName}
                   </Nav.Link>
                 ))}
             </Nav>
-            <Button size="sm" href="rejestracja">
+            <Button size='sm' href='rejestracja'>
               Zarejestruj się
             </Button>
           </Navbar.Collapse>

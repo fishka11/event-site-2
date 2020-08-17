@@ -1,21 +1,21 @@
-import React from "react";
+import React from 'react';
 
-import "./Admin.css";
+import './Admin.css';
 
 function Admin() {
   return (
-    <div className="about">
-      <div className="container">
-        <div className="row align-items-center my-5">
-          <div className="col-lg-7">
+    <div className='about'>
+      <div className='container'>
+        <div className='row align-items-center my-5'>
+          <div className='col-lg-7'>
             <img
-              className="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
-              alt=""
+              className='img-fluid rounded mb-4 mb-lg-0'
+              src='http://placehold.it/900x400'
+              alt=''
             />
           </div>
-          <div className="col-lg-5">
-            <h1 className="font-weight-light">Admin</h1>
+          <div className='col-lg-5'>
+            <h1 className='font-weight-light'>Admin</h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text

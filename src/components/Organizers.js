@@ -1,53 +1,53 @@
-import React from "react";
+import React from 'react';
 
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-import "./Organizers.css";
+import './Organizers.css';
 
 const Organizers = (props) => {
   const { organizers } = props;
   const columns = Math.floor(12 / organizers.length);
   return (
-    <section className="organizers">
+    <section className='organizers'>
       <Container>
-        <h4 className="section-title text-center">
-          {organizers.length === 1 ? "Organizator" : "Organizatorzy"}
+        <h4 className='section-title text-center'>
+          {organizers.length === 1 ? 'Organizator' : 'Organizatorzy'}
         </h4>
-        <Row className="justify-content-sm-center">
+        <Row className='justify-content-sm-center'>
           {organizers.map((item) => (
             <Col
               key={item.id}
-              className="text-center"
+              className='text-center'
               xs={12}
               sm={columns >= 6 ? columns : 6}
               md={columns >= 4 ? columns : 4}
               lg={columns >= 3 ? columns : 3}
               xl={columns >= 2 ? columns : 2}
             >
-              <div className="organizer-logo">
+              <div className='organizer-logo'>
                 {!!item.url ? (
                   <a
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target='_blank'
+                    rel='noopener noreferrer'
                     href={`http://${item.url}`}
                   >
                     <img
-                      fluid="true"
+                      fluid='true'
                       src={`assets/${item.logoFilename}`}
                       alt={`logo ${item.name}`}
                     />
                   </a>
                 ) : (
                   <img
-                    fluid="true"
+                    fluid='true'
                     src={`assets/${item.logoFilename}`}
                     alt={`logo ${item.name}`}
                   />
                 )}
               </div>
-              <div className="organizer-name">
+              <div className='organizer-name'>
                 <p>{item.name}</p>
               </div>
             </Col>

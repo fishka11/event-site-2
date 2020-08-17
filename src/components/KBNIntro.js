@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import "./Intro.css";
+import './Intro.css';
 
-import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
 
-import PicturesStrap from "./PicturesStrap";
+import PicturesStrap from './PicturesStrap';
 
 const Intro = (props) => {
   const { pictures } = props;
 
   return (
-    <section className="intro">
+    <section className='intro'>
       <Container>
         <h2>
           Bezpieczeństwo Polski i Polaków to wspólna sprawa wszystkich obywateli
@@ -53,8 +53,8 @@ const Intro = (props) => {
           bezpieczeństwa i zarządzania kryzysowego.
         </p>
 
-        <div className="text-center">
-          <Button className="call-to-action" size="lg" href="/tematyka">
+        <div className='text-center'>
+          <Button className='call-to-action' size='lg' href='/tematyka'>
             Zapoznaj się
             <br />z tematyką Konferncji
           </Button>

@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import "./Counter.css";
+import './Counter.css';
 
 class Counter extends Component {
   constructor(props) {
@@ -47,40 +47,40 @@ class Counter extends Component {
     const { eventDate, days, hours, mins, secs } = this.state;
 
     return (
-      <div className="counter text-center">
+      <div className='counter text-center'>
         {this.state.eventDate.start < Date.now() ? (
-          <p className="countdown invitation">
-            Zapraszamy ponownie w {eventDate.start.getFullYear() + 1} roku{" "}
+          <p className='countdown invitation'>
+            Zapraszamy ponownie w {eventDate.start.getFullYear() + 1} roku{' '}
           </p>
         ) : (
-          <p className="countdown">
-            <span className="d-block">Już za</span>
+          <p className='countdown'>
+            <span className='d-block'>Już za</span>
             {days > 0 && (
-              <span className="days-left">
-                <span className="digit">{days}</span>
-                {days === 1 ? "dzień" : "dni"}
+              <span className='days-left'>
+                <span className='digit'>{days}</span>
+                {days === 1 ? 'dzień' : 'dni'}
               </span>
-            )}{" "}
+            )}{' '}
             {(days > 0 || hours > 0) && (
-              <span className="hours-left">
-                <span className="digit">
-                  {hours.toString().padStart(2, "0")}
+              <span className='hours-left'>
+                <span className='digit'>
+                  {hours.toString().padStart(2, '0')}
                 </span>
                 h
               </span>
-            )}{" "}
+            )}{' '}
             {(days > 0 || hours > 0 || mins > 0) && (
-              <span className="mins-left">
-                <span className="digit">
-                  {mins.toString().padStart(2, "0")}
+              <span className='mins-left'>
+                <span className='digit'>
+                  {mins.toString().padStart(2, '0')}
                 </span>
                 min
               </span>
-            )}{" "}
+            )}{' '}
             {
-              <span className="secs-left">
-                <span className="digit">
-                  {secs.toString().padStart(2, "0")}
+              <span className='secs-left'>
+                <span className='digit'>
+                  {secs.toString().padStart(2, '0')}
                 </span>
                 s
               </span>

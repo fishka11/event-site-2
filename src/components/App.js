@@ -1,40 +1,40 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-} from "react-router-dom";
+} from 'react-router-dom';
 
-import CookieConsent from "react-cookie-consent";
+import CookieConsent from 'react-cookie-consent';
 
-import Navigation from "./Navigation";
-import Footer from "./Footer";
-import Home from "../pages/Home";
-import Agenda from "../pages/Agenda";
-import Speakers from "../pages/Speakers";
-import Info from "../pages/Info";
-import Contact from "../pages/Contact";
-import Register from "../pages/Register";
-import Admin from "../pages/Admin";
-import GenericNotFound from "../pages/GenericNotFound";
+import Navigation from './Navigation';
+import Footer from './Footer';
+import Home from '../pages/Home';
+import Agenda from '../pages/Agenda';
+import Speakers from '../pages/Speakers';
+import Info from '../pages/Info';
+import Contact from '../pages/Contact';
+import Register from '../pages/Register';
+import Admin from '../pages/Admin';
+import GenericNotFound from '../pages/GenericNotFound';
 
-import { polishMonths, currentEvent } from "../data/Const";
-import eventsList from "../data/EventsData";
-import { speakers } from "../data/Speakers";
-import { eventSponsorsByKind, sponsors } from "../data/Sponsors";
+import { polishMonths, currentEvent } from '../data/Const';
+import eventsList from '../data/EventsData';
+import { speakers } from '../data/Speakers';
+import { eventSponsorsByKind, sponsors } from '../data/Sponsors';
 
-import "./App.css";
+import './App.css';
 
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faMapMarkerAlt,
   faAt,
   faPhone,
   faFax,
   faGlobe,
-} from "@fortawesome/free-solid-svg-icons";
-import Sponsors from "../pages/Sponsors";
+} from '@fortawesome/free-solid-svg-icons';
+import Sponsors from '../pages/Sponsors';
 
 library.add(faMapMarkerAlt, faAt, faPhone, faFax, faGlobe);
 
@@ -148,11 +148,11 @@ class App extends Component {
           <Switch>
             {/* Another way is to pass render prop instaed of component prop for better performance, beacouse Home is functional component */}
             <Route
-              path="/"
+              path='/'
               exact
               component={() => (
                 <Home
-                  meta={this.setPageHead(sites, "")}
+                  meta={this.setPageHead(sites, '')}
                   event={event}
                   currentEvent={currentEvent}
                   months={polishMonths}
@@ -160,68 +160,68 @@ class App extends Component {
               )}
             />
             <Route
-              path="/tematyka"
+              path='/tematyka'
               component={() => (
                 <Agenda
-                  meta={this.setPageHead(sites, "tematyka")}
+                  meta={this.setPageHead(sites, 'tematyka')}
                   agenda={event.agenda}
                 />
               )}
             />
             <Route
-              path="/prelegenci"
+              path='/prelegenci'
               component={() => (
                 <Speakers
-                  meta={this.setPageHead(sites, "prelegenci")}
+                  meta={this.setPageHead(sites, 'prelegenci')}
                   eventSpeakers={eventSpeakers}
                 />
               )}
             />
-            <Route path="/atrakcje" />
+            <Route path='/atrakcje' />
             <Route
-              path="/patronat"
+              path='/patronat'
               component={() => (
                 <Sponsors
-                  meta={this.setPageHead(sites, "patronat")}
+                  meta={this.setPageHead(sites, 'patronat')}
                   sponsorsByKinds={eventSponsorsByKind}
                 />
               )}
             />
             <Route
-              path="/info"
+              path='/info'
               component={() => (
-                <Info meta={this.setPageHead(sites, "info")} event={event} />
+                <Info meta={this.setPageHead(sites, 'info')} event={event} />
               )}
             />
             <Route
-              path="/kontakt"
+              path='/kontakt'
               component={() => (
                 <Contact
-                  meta={this.setPageHead(sites, "kontakt")}
+                  meta={this.setPageHead(sites, 'kontakt')}
                   event={event}
                 />
               )}
             />
             <Route
-              path="/rejestracja"
+              path='/rejestracja'
               component={() => (
                 <Register
-                  meta={this.setPageHead(sites, "rejestracja")}
+                  meta={this.setPageHead(sites, 'rejestracja')}
                   currentEvent={currentEvent}
                 />
               )}
             />
-            <Route path="/admin" exact component={Admin} />
+            <Route path='/admin' exact component={Admin} />
             <Route
-              path="/404"
+              path='/404'
               component={() => (
                 <GenericNotFound
-                  meta={this.setPageHead(sites, "404")}
+                  meta={this.setPageHead(sites, '404')}
                   event={event}
                 />
               )}
             />
-            <Redirect to="/404" />
+            <Redirect to='/404' />
           </Switch>
         </Router>
         <Footer
@@ -229,30 +229,30 @@ class App extends Component {
           helperOrganizer={helperOrganizer}
         />
         <CookieConsent
-          location="bottom"
-          buttonText="OK, rozumiem"
-          cookieName="cookiesBar"
-          style={{ background: "#315ec6", color: "#ddd" }}
+          location='bottom'
+          buttonText='OK, rozumiem'
+          cookieName='cookiesBar'
+          style={{ background: '#315ec6', color: '#ddd' }}
           buttonStyle={{
-            color: "#ffffff",
-            background: "#f46036",
-            fontSize: "0.8rem",
-            fontWeight: "bold",
+            color: '#ffffff',
+            background: '#f46036',
+            fontSize: '0.8rem',
+            fontWeight: 'bold',
           }}
           expires={150}
         >
           Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w
           celach statystycznych, reklamowych oraz funkcjonalnych. Każdy może
           zaakceptować pliki cookies albo ma możliwość wyłączenia ich w
-          przeglądarce.{" "}
+          przeglądarce.{' '}
           <a
-            aria-label="dowiedz się więcej o ciasteczkach"
-            role="button"
-            rel="noopener noreferrer"
-            tabindex="0"
-            class="cc-link"
-            href="http://wszystkoociasteczkach.pl/"
-            target="_blank"
+            aria-label='dowiedz się więcej o ciasteczkach'
+            role='button'
+            rel='noopener noreferrer'
+            tabindex='0'
+            class='cc-link'
+            href='http://wszystkoociasteczkach.pl/'
+            target='_blank'
           >
             Dowiedz się więcej.
           </a>

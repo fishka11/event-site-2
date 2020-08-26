@@ -56,5 +56,18 @@
     "stylelint-processor-styled-components": "^1.10.0",
     "stylelint-webpack-plugin": "^2.1.0"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --config .prettierrc --write",
+      "eslint --fix",
+      "stylellint --fix",
+      "git add"
+    ]
+  },
   "homepage": "https://kongresochronyinformacji.ksoin.pl"
 }

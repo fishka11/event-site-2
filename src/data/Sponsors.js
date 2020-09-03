@@ -80,7 +80,7 @@ export const sponsors = [
   {
     id: "3",
     name: "Krajowa Izba Gospodarcza",
-    logoFilename: "kig.png",
+    logoFilename: "kig-30-lat.png",
     events: [
       {
         kbb: {
@@ -98,8 +98,8 @@ export const sponsors = [
       },
       {
         kbn: {
-          presence: false,
-          kind: "",
+          presence: true,
+          kind: "patronat",
           position: 0,
         },
       },
@@ -133,8 +133,8 @@ export const sponsors = [
       },
       {
         kbn: {
-          presence: false,
-          kind: "",
+          presence: true,
+          kind: "patronat",
           position: 0,
         },
       },

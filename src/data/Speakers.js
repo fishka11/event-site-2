@@ -1544,7 +1544,7 @@ const speakers = [
     firstName: 'Jacek',
     lastName: 'Janiszewski',
     description:
-      'b. Minister Rolnictwa i Rozwoju Wsi, przewodniczący Rady Programowej Welconomy.',
+      'b. Minister Rolnictwa i Rozwoju Wsi., przewodniczący Rady Programowej Welconomy.',
     picName: 'janiszewski-jacek',
     events: [
       {
@@ -1758,7 +1758,7 @@ const speakers = [
     firstName: 'Aleksandra',
     lastName: 'Karnicka',
     description:
-      'Radca prawny. Prowadzi własną kancelarię i posiada długoletnie doświadczenie zawodowe.',
+      'Radca prawny. Prowadzi własną kancelarię i posiada długoletnie doświadczenie  zawodowe.',
     picName: 'karnicka-aleksandra',
     events: [
       {
@@ -2080,7 +2080,7 @@ const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2102,7 +2102,7 @@ const speakers = [
     firstName: 'Agata',
     lastName: 'Lasota-Jądrzak',
     description:
-      'Absolwentka Studiów Podyplomowych w Akademii Ekonomicznej w Poznaniu oraz na Wydziale Bezpieczeństwa Narodowego Akademii Obrony Narodowej w Warszawie na kierunku zarządzanie kryzysowe. Były Naczelnik Wydziału ds. Ochrony Informacji Niejawnych, pełni funkcję Pełnomocnika ds. OIN Komendanta Miejskiego Policji w Poznaniu.',
+      'Absolwentka Studiów Podyplomowych w Akademii Ekonomicznej w Poznaniu oraz na Wydziale Bezpieczeństwa Narodowego Akademii Obrony Narodowej w Warszawie na kierunku zarządzanie kryzysowe.  Były Naczelnik Wydziału ds. Ochrony Informacji Niejawnych, pełni funkcję Pełnomocnika ds. OIN Komendanta Miejskiego Policji w Poznaniu.',
     picName: 'lasota-jedrzak-agata',
     events: [
       {
@@ -2914,7 +2914,7 @@ const speakers = [
   {
     id: '69',
     title: 'dr',
-    firstName: 'Kornelia',
+    firstName: 'Kornela',
     lastName: 'Oblińska',
     description:
       'Doktor w dziedzinie nauk społecznych, b. zastępca dyrektora Gabinetu Komendanta Głównego Policji ds. komunikacji, wizerunku oraz tradycji i historii Policji.',
@@ -2960,7 +2960,7 @@ const speakers = [
     firstName: 'Bogusław',
     lastName: 'Pacek',
     description:
-      'b. Rektor - Komendant Akademii Obrony Narodowejb. Rektor - Komendant Akademii Obrony Narodowej. Profesor na Wydziale Studiów Międzynarodowych i Politycznych Uniwersytetu Jagiellońskiego.',
+      'b. Rektor - Komendant Akademii Obrony Narodowejb. Rektor - Komendant Akademii Obrony Narodowej. Profesor na Wydziale Studiów Międzynarodowych i Politycznych Uniwersytetu Jagiellońskiego..',
     picName: 'pacek-boguslaw',
     events: [
       {
@@ -5399,6 +5399,48 @@ const speakers = [
     description:
       'Dyrektor Generalny Fundacji Rozwoju Kardiochirurgii im. prof. Zbigniewa Religi w Zabrzu. Organizator i współtwórca Instytutu Protez Serca.',
     picName: 'sarna-jan',
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: '128',
+    title: '',
+    firstName: 'Marek',
+    lastName: 'Posobkiewicz',
+    description: 'p.o. Głównego Inspektora Sanitarnego.',
+    picName: 'posobkiewicz-marek',
     events: [
       {
         kbb: {

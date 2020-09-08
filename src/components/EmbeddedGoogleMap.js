@@ -1,33 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const GoogleMap = ({ location, title }) => {
+const GoogleMap = (props) => {
+  const { event } = props;
   return (
-    <div className="google-map-code">
+    <div className='google-map-code'>
       <iframe
-        src={location.googleMapsCode}
-        width="100%"
-        height="400"
-        frameBorder="0"
+        src={event.eventLocation.googleMapSrc}
+        width='100%'
+        height='400'
+        frameBorder='0'
         style={{ border: 0 }}
-        allowFullScreen=""
-        aria-hidden="false"
-        title={title}
-      />
+        allowFullScreen=''
+        aria-hidden='false'
+        tabIndex='0'
+        title={event.name}
+      ></iframe>
     </div>
   );
 };
-
-GoogleMap.propTypes = {
-  location: PropTypes.shape({
-    googleMapsCode: PropTypes.string,
-  }),
-  title: PropTypes.string,
-};
-
-GoogleMap.defaultProps = {
-  location: {},
-  title: '',
-};
-
 export default GoogleMap;

@@ -1,16 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
+import { Helmet } from 'react-helmet';
 import Container from 'react-bootstrap/Container';
-
-import Meta from '../components/Meta';
 
 import './Register.css';
 
-const Register = ({ eventSiteMenu, currentEvent, path }) => {
+const Register = (props) => {
+  const { meta, currentEvent } = props;
   return (
-    <div className="page register">
-      <Meta eventSiteMenu={eventSiteMenu} path={path} />
+    <div className='page register'>
+      <Helmet>
+        <title>{meta.title}</title>
+        <meta name='description' content={meta.description}></meta>
+      </Helmet>
       <Container>
         <h1>Zarejestruj się</h1>
       </Container>
@@ -18,33 +19,17 @@ const Register = ({ eventSiteMenu, currentEvent, path }) => {
         <Container>
           <iframe
             src={`https://www.ksoin.pl/${currentEvent}-rejestracja/`}
-            marginWidth="0"
-            marginHeight="0"
-            width="100%"
-            height="2500px"
-            frameBorder="0"
-            title="Formularz rejestracyjny"
-          />
+            marginWidth='0'
+            marginHeight='0'
+            width='100%'
+            height='2500px'
+            frameBorder='0'
+            title='Formularz rejestracyjny'
+          ></iframe>
         </Container>
       </section>
     </div>
   );
-};
-
-Register.propTypes = {
-  eventSiteMenu: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string,
-      description: PropTypes.string,
-    })
-  ),
-  path: PropTypes.string.isRequired,
-  currentEvent: PropTypes.string,
-};
-
-Register.defaultProps = {
-  eventSiteMenu: [],
-  currentEvent: '',
 };
 
 export default Register;

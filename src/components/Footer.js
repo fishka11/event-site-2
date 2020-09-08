@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { MAIN_ORGANIZER, HELPER_ORGANIZER } from '../data/Const';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { MAIN_ORGANIZER, HELPER_ORGANIZER } from '../data/Const';
 
 import './Footer.css';
 
@@ -19,7 +19,7 @@ const Footer = ({ organizers }) => {
     (organizers &&
       organizers.find((i) => i.organizerType === HELPER_ORGANIZER)) ||
     {};
-  const organizer = helperOrganizer ? helperOrganizer : mainOrganizer;
+  const organizer = helperOrganizer || mainOrganizer;
 
   if (organizer) {
     return (

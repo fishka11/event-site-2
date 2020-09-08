@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-snapshot",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -57,5 +57,8 @@
     "stylelint-processor-styled-components": "^1.10.0",
     "stylelint-webpack-plugin": "^2.1.0"
   },
-  "homepage": "https://kongresochronyinformacji.ksoin.pl"
+  "homepage": "https://kongresochronyinformacji.ksoin.pl",
+  "reactSnapshot": {
+    "snapshotDelay": 3000
+  }
 }

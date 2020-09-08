@@ -9,28 +9,26 @@ import Button from 'react-bootstrap/Button';
 
 import { withRouter } from 'react-router-dom';
 
-const Navigation = (props) => {
-  const { menuItems, currentEvent, location } = props;
-
+const Navigation = ({ menuItems, currentEvent, eventFullName, location }) => {
   return (
-    <header className='navigation'>
-      <Navbar fixed='top' collapseOnSelect expand='xl' variant='light'>
+    <header className="navigation">
+      <Navbar fixed="top" collapseOnSelect expand="xl" variant="light">
         <Container>
-          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-          <Navbar.Brand href='/'>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Brand href="/">
             <img
               src={`assets/brand-${currentEvent}.png`}
-              width='61'
-              height='40'
-              alt='Logo - Kongres Ochrony Informacji Niejawnych, Biznesowych i Danych Osobowych'
+              width="61"
+              height="40"
+              alt={`Logo - ${eventFullName}`}
             />
-            <span className='sr-only'>(current)</span>
+            <span className="sr-only">(current)</span>
           </Navbar.Brand>
-          <Navbar.Collapse id='responsive-navbar-nav'>
+          <Navbar.Collapse id="responsive-navbar-nav">
             {/* <Nav activeKey={location.pathname} className="mr-auto"> */}
-            <Nav className='mr-auto'>
+            <Nav className="mr-auto">
               {menuItems
-                .filter((item) => !!item.inMenu)
+                .filter((item) => !!item.visibleInMenu)
                 .map((item) => (
                   <Nav.Link
                     key={item.id}
@@ -39,11 +37,11 @@ const Navigation = (props) => {
                       location.pathname === `/${item.path}/` ? 'active' : ''
                     }`}
                   >
-                    {item.displyName}
+                    {item.displayName}
                   </Nav.Link>
                 ))}
             </Nav>
-            <Button size='sm' href='rejestracja'>
+            <Button size="sm" href="rejestracja">
               Zarejestruj się
             </Button>
           </Navbar.Collapse>

@@ -1,40 +1,44 @@
-import React, { Component } from "react";
+/* eslint-disable no-underscore-dangle */
+import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
-} from "react-router-dom";
+} from 'react-router-dom';
 
-import CookieConsent from "react-cookie-consent";
+import CookieConsent from 'react-cookie-consent';
 
-import { library } from "@fortawesome/fontawesome-svg-core";
+import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faMapMarkerAlt,
   faAt,
   faPhone,
   faFax,
   faGlobe,
-} from "@fortawesome/free-solid-svg-icons";
-import Navigation from "./Navigation";
-import Footer from "./Footer";
-import Home from "../pages/Home";
-import Agenda from "../pages/Agenda";
-import Speakers from "../pages/Speakers";
-import Info from "../pages/Info";
-import Contact from "../pages/Contact";
-import Register from "../pages/Register";
-import Admin from "../pages/Admin";
-import GenericNotFound from "../pages/GenericNotFound";
+} from '@fortawesome/free-solid-svg-icons';
+import Navigation from './Navigation';
+import Footer from './Footer';
+import Home from '../pages/Home';
+import Agenda from '../pages/Agenda';
+import Speakers from '../pages/Speakers';
+import Info from '../pages/Info';
+import Contact from '../pages/Contact';
+import Register from '../pages/Register';
+import Admin from '../pages/Admin';
+import GenericNotFound from '../pages/GenericNotFound';
 
-import { polishMonths, currentEvent } from "../data/Const";
-import eventsList from "../data/EventsData";
-import { speakers } from "../data/Speakers";
-import { eventSponsorsByKind, sponsors } from "../data/Sponsors";
+import {
+  POLISH_MONTHS,
+  CURRENT_EVENT,
+  PATRONS_ROLE_PRIORITY,
+  GRAPHCMS_ENDPOINT,
+} from '../data/Const';
+import { GRAPHCMS_TOKEN } from '../data/Secret';
 
-import "./App.css";
+import './App.css';
 
-import Sponsors from "../pages/Sponsors";
+import Sponsors from '../pages/Sponsors';
 
 library.add(faMapMarkerAlt, faAt, faPhone, faFax, faGlobe);
 
@@ -44,111 +48,185 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentEvent,
-      eventsList,
-      polishMonths,
-      eventSpeakers: [],
-      sponsors,
-      eventSponsorsByKind,
+      eventData: null,
     };
 
-    this.fetchEventSpeakers = this.fetchEventSpeakers.bind(this);
-    this.setEventSpeakers = this.setEventSpeakers.bind(this);
-    this.setPageHead = this.setPageHead.bind(this);
-    this.fetchEventSponsorsByKind = this.fetchEventSponsorsByKind.bind(this);
+    this.groupPatronsByKind = this.groupPatronsByKind.bind(this);
+    this.setEventData = this.setEventData.bind(this);
+    this.fetchEventData = this.fetchEventData.bind(this);
   }
 
   componentDidMount() {
     this._isMounted = true;
-    this.fetchEventSpeakers(currentEvent);
-    this.fetchEventSponsorsByKind(sponsors, currentEvent);
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.state.eventData !== prevProps.eventData) {
-      this.fetchData(this.props.userID);
-    }
+    this.fetchEventData();
   }
 
   componentWillUnmount() {
     this._isMounted = false;
   }
 
-  setEventSpeakers(filteredSpeakers) {
-    this.setState({ eventSpeakers: filteredSpeakers });
+  setEventData(results) {
+    this.setState({ eventData: results });
   }
 
-  setPageHead(sites, destinationPath) {
-    const pageMeta = sites.filter((item) => item.path === destinationPath)[0];
-    return pageMeta;
-  }
-
-  setEventSponsorsByKind(filteredSponsers) {
-    this.setState({ eventSponsorsByKind: filteredSponsers });
-  }
-
-  fetchEventSpeakers(eventName) {
-    const filteredSpeakers = speakers.filter((item) =>
-      item.events
-        .filter((item) => Object.keys(item).toString() === eventName.toString())
-        .find((item) => item[eventName].presence === true)
-    );
+  groupPatronsByKind(data) {
+    const newData = data;
+    const goupedPatrons = [];
+    data.patrons.forEach((item) => {
+      const currentEventKey = `role${CURRENT_EVENT}`;
+      if (!goupedPatrons.find((i) => i.name === item[currentEventKey])) {
+        const patronsGroup = {};
+        const related = PATRONS_ROLE_PRIORITY.find(
+          (i) => i.name === item[currentEventKey]
+        );
+        patronsGroup.name = item[currentEventKey];
+        patronsGroup.list = [item];
+        patronsGroup.priority = related.priority;
+        patronsGroup.header = related.polishName;
+        goupedPatrons.push(patronsGroup);
+      } else {
+        goupedPatrons
+          .find((i) => i.name === item[currentEventKey])
+          .list.push(item);
+      }
+    });
+    newData.patrons = [...goupedPatrons];
     if (this._isMounted) {
-      this.setEventSpeakers(filteredSpeakers);
+      this.setEventData(newData);
     }
   }
 
-  fetchEventSponsorsByKind(sponsors, eventName) {
-    const filteredSponsers = sponsors.filter((item) =>
-      item.events
-        .filter((item) => Object.keys(item).toString() === eventName.toString())
-        .find((item) => item[eventName].presence === true)
-    );
-
-    eventSponsorsByKind.forEach((item) => {
-      const currentKind = item.kind;
-      const currentGroup = filteredSponsers.filter((item) =>
-        item.events
-          .filter(
-            (item) => Object.keys(item).toString() === eventName.toString()
-          )
-          .find(
-            (item) =>
-              item[eventName].kind.toLowerCase() === currentKind.toLowerCase()
-          )
-      );
-      item.sponsors = currentGroup;
-    });
-
-    if (this._isMounted) {
-      this.setEventSponsorsByKind(eventSponsorsByKind);
+  async fetchEventData() {
+    const response = await fetch(GRAPHCMS_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${GRAPHCMS_TOKEN}`,
+      },
+      body: JSON.stringify({
+        query: `{
+          conferees(where: {events_contains_some: KBN}) {
+            firstName
+            description
+            lastName
+            title
+            photo {
+              url
+            }
+            id
+          }
+          events(where: {eventName: KBN}) {
+            agenda
+            cite
+            citeAuthor
+            eventEndDate
+            eventFullName
+            eventName
+            eventStartDate
+            eventType
+            genitiveEventType
+            id
+            locativeEventType
+            singleRoomPrice
+            doubleRoomPrice
+            eventLocation {
+              address
+              city
+              googleMapsCode
+              id
+              name
+              postalCode
+              webSite
+            }
+            eventSiteMenu {
+              description
+              displayName
+              id
+              title
+              visibleInMenu
+              path
+            }
+            organizers {
+              address
+              bankAccount
+              bankName
+              city
+              eMail
+              fax
+              id
+              name
+              nip
+              organizerType
+              phone
+              postalCode
+              regon
+              shortName
+              webSite
+              logo {
+                id
+                url
+              }
+            }
+            picturesStrap {
+              id
+              url
+            }
+          }
+          patrons(where: {events_contains_some: KBN}) {
+            id
+            name
+            roleKBB
+            roleKBN
+            roleKOIN
+            roleZPO
+            logo {
+              fileName
+              height
+              id
+              mimeType
+              size
+              url
+              width
+            }
+          }
+          eventDiscounts {
+            discount
+            id
+            name
+          }
+      }
+      `,
+      }),
+    }).catch((error) => error);
+    if (response instanceof Error) {
+      console.log(`Błąd pobierania danych z serwera GraphCMS: ${response}`);
+    } else {
+      const { data } = await response.json();
+      this.groupPatronsByKind(data);
     }
   }
 
   render() {
-    const {
-      currentEvent,
-      eventsList,
-      polishMonths,
-      eventSpeakers,
-      eventSponsorsByKind,
-    } = this.state;
+    const { eventData } = this.state;
+    const eventSpeakers = (eventData && eventData.conferees) || [];
+    const event =
+      (eventData &&
+        eventData.events &&
+        eventData.events.find((i) => i.eventName === CURRENT_EVENT)) ||
+      {};
+    const organizers = (event && event.organizers) || [];
+    const siteMenuItems = (event && event.eventSiteMenu) || [];
+    const patrons = (eventData && eventData.patrons) || [];
+    const discounts = (eventData && eventData.eventDiscounts) || [];
 
-    const event = eventsList.filter(
-      (item) => item.eventName === currentEvent
-    )[0];
-    const organizers = event.organizersList;
-    const mainOrganizer = organizers.filter((item) => item.mainOrganizer)
-      ? organizers.filter((item) => item.mainOrganizer)[0]
-      : null;
-    const helperOrganizer = organizers.filter((item) => item.helperOrganizer)
-      ? organizers.filter((item) => item.helperOrganizer)[0]
-      : null;
-    const sites = event.sitePages;
     return (
-      <div className={currentEvent}>
+      <div className={CURRENT_EVENT.toLowerCase()}>
         <Router>
-          <Navigation menuItems={sites} currentEvent={currentEvent} />
+          <Navigation
+            menuItems={siteMenuItems}
+            currentEvent={CURRENT_EVENT}
+            eventFullName={event.eventFullName}
+          />
           <Switch>
             {/* Another way is to pass render prop instaed of component prop for better performance, beacouse Home is functional component */}
             <Route
@@ -156,10 +234,10 @@ class App extends Component {
               exact
               component={() => (
                 <Home
-                  meta={this.setPageHead(sites, "")}
+                  path="null"
                   event={event}
-                  currentEvent={currentEvent}
-                  months={polishMonths}
+                  currentEvent={CURRENT_EVENT}
+                  months={POLISH_MONTHS}
                 />
               )}
             />
@@ -167,7 +245,8 @@ class App extends Component {
               path="/tematyka"
               component={() => (
                 <Agenda
-                  meta={this.setPageHead(sites, "tematyka")}
+                  path="tematyka"
+                  eventSiteMenu={event.eventSiteMenu}
                   agenda={event.agenda}
                 />
               )}
@@ -176,7 +255,8 @@ class App extends Component {
               path="/prelegenci"
               component={() => (
                 <Speakers
-                  meta={this.setPageHead(sites, "prelegenci")}
+                  path="prelegenci"
+                  eventSiteMenu={event.eventSiteMenu}
                   eventSpeakers={eventSpeakers}
                 />
               )}
@@ -186,22 +266,29 @@ class App extends Component {
               path="/patronat"
               component={() => (
                 <Sponsors
-                  meta={this.setPageHead(sites, "patronat")}
-                  sponsorsByKinds={eventSponsorsByKind}
+                  path="atrakcje"
+                  eventSiteMenu={event.eventSiteMenu}
+                  patrons={patrons}
                 />
               )}
             />
             <Route
               path="/info"
               component={() => (
-                <Info meta={this.setPageHead(sites, "info")} event={event} />
+                <Info
+                  path="info"
+                  event={event}
+                  eventSiteMenu={event.eventSiteMenu}
+                  discounts={discounts}
+                />
               )}
             />
             <Route
               path="/kontakt"
               component={() => (
                 <Contact
-                  meta={this.setPageHead(sites, "kontakt")}
+                  path="kontakt"
+                  eventSiteMenu={event.eventSiteMenu}
                   event={event}
                 />
               )}
@@ -210,8 +297,9 @@ class App extends Component {
               path="/rejestracja"
               component={() => (
                 <Register
-                  meta={this.setPageHead(sites, "rejestracja")}
-                  currentEvent={currentEvent}
+                  path="rejestracja"
+                  eventSiteMenu={event.eventSiteMenu}
+                  currentEvent={CURRENT_EVENT}
                 />
               )}
             />
@@ -220,7 +308,8 @@ class App extends Component {
               path="/404"
               component={() => (
                 <GenericNotFound
-                  meta={this.setPageHead(sites, "404")}
+                  path="404"
+                  eventSiteMenu={event.eventSiteMenu}
                   event={event}
                 />
               )}
@@ -228,27 +317,24 @@ class App extends Component {
             <Redirect to="/404" />
           </Switch>
         </Router>
-        <Footer
-          mainOrganizer={mainOrganizer}
-          helperOrganizer={helperOrganizer}
-        />
+        <Footer organizers={organizers} />
         <CookieConsent
           location="bottom"
           buttonText="OK, rozumiem"
           cookieName="cookiesBar"
-          style={{ background: "#315ec6", color: "#ddd" }}
+          style={{ background: '#315ec6', color: '#ddd' }}
           buttonStyle={{
-            color: "#ffffff",
-            background: "#f46036",
-            fontSize: "0.8rem",
-            fontWeight: "bold",
+            color: '#ffffff',
+            background: '#f46036',
+            fontSize: '0.8rem',
+            fontWeight: 'bold',
           }}
           expires={150}
         >
           Nasza strona internetowa używa plików cookies (tzw. ciasteczka) w
           celach statystycznych, reklamowych oraz funkcjonalnych. Każdy może
           zaakceptować pliki cookies albo ma możliwość wyłączenia ich w
-          przeglądarce.{" "}
+          przeglądarce.{' '}
           <a
             aria-label="dowiedz się więcej o ciasteczkach"
             role="button"

@@ -5,15 +5,13 @@ import Col from 'react-bootstrap/Col';
 
 import './PicturesStrap.css';
 
-const PicturesStrap = (props) => {
-  const { pictures } = props;
-
+const PicturesStrap = ({ pictures }) => {
   return (
-    <div className='pictures-strap'>
-      <Row className='justify-content-sm-center' noGutters>
+    <div className="pictures-strap">
+      <Row className="justify-content-sm-center" noGutters>
         {pictures.map((item) => (
           <Col key={item.id} xs={4} md={2}>
-            <img src={`assets/${item.picName}`} alt={item.picDesc} />
+            <img src={item.url} alt="Zdjęcie dekoracyjne" />
           </Col>
         ))}
       </Row>

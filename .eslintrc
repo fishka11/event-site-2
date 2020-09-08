@@ -11,5 +11,6 @@
   "settings": {
     "import/resolver": { "node": { "paths": ["./src"], "extensions": [".js"] } }
   },
-  "rules": { "react/jsx-filename-extension": 0 }
+  "rules": { "react/jsx-filename-extension": 0 },
+  "env": { "browser": true }
 }

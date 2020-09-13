@@ -1672,7 +1672,7 @@ export const speakers = [
     firstName: "Maciej",
     lastName: "Jędrzejewski",
     description:
-      "Ekspert bezpieczeństwa systemów teleinformatycznych, Od 2004 roku ekspert Komitetu Technicznego nr 182 ds. Ochrony Informacji w Systemach Teleinformatycznych Polskiego Komitetu Normalizacyjnego. Prowadził liczne szkolenia techniczne z dziedziny bezpieczeństwa systemów teleinformatycznych.",
+      "Ekspert bezpieczeństwa systemów teleinformatycznych. Od 2004 ekspert Komitetu Technicznego ds. Ochrony Informacji w Systemach Teleinformatycznych Polskiego Komitetu Normalizacyjnego.",
     picName: "jedrzejewski-maciej",
     events: [
       {
@@ -1693,7 +1693,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -2981,7 +2981,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -3578,7 +3578,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: "speaker",
           position: 0,
           featPosition: 0,
@@ -4947,7 +4947,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: "speaker",
           position: 0,
           featPosition: 0,

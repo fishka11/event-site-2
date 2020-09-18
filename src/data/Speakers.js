@@ -5524,7 +5524,7 @@ export const speakers = [
     title: 'dr n. med.',
     firstName: 'Andrzej',
     lastName: 'Sośnierz',
-    description: 'b. prezes Narodowego Funduszu Zdrowia.',
+    description: 'Poseł, b. prezes Narodowego Funduszu Zdrowia.',
     picName: 'sosnierz-andrzej',
     events: [
       {

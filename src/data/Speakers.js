@@ -753,7 +753,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1308,7 +1308,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2809,7 +2809,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3152,7 +3152,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -4861,7 +4861,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -5033,7 +5033,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -5205,7 +5205,7 @@ export const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -5439,7 +5439,7 @@ export const speakers = [
     title: '',
     firstName: 'Marek',
     lastName: 'Posobkiewicz',
-    description: 'p.o. Głównego Inspektora Sanitarnego MSWiA.',
+    description: 'b. Główny Inspektor Sanitarny.',
     picName: 'posobkiewicz-marek',
     events: [
       {

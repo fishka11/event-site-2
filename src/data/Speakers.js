@@ -90,7 +90,7 @@ export const speakers = [
     firstName: 'Marek',
     lastName: 'Anzel',
     description:
-      'Specjalista do spraw ochrony informacji niejawnych i systemów teleinformatycznych. Wykładowca i konsultant cyklicznych szkoleń pracowników pionów ochrony informacji niejawnych.',
+      'Specjalista do spraw ochrony informacji niejawnych i systemów teleinformatycznych.',
     picName: 'anzel-marek',
     events: [
       {
@@ -232,7 +232,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -391,7 +391,7 @@ export const speakers = [
     firstName: 'Elżbieta',
     lastName: 'Bińczyk',
     description:
-      'Posiada bogate doświadczenie zawodowe, od 20 lat Pełnomocnik Zarządu ds. Ochrony Informacji Niejawnych. Wieloletni doświadczony trener i dydaktyk. Wykładowca na specjalistycznych studiach podyplomowych o kierunkach związanych z bezpieczeństwem informacji prawnie chronionych.',
+      'Pełnomocnik Zarządu ds. Ochrony Informacji Niejawnych.',
     picName: 'binczyk-elzbieta',
     events: [
       {
@@ -647,7 +647,7 @@ export const speakers = [
     firstName: 'Andrzej',
     lastName: 'Chłopecki',
     description:
-      'Emerytowany oficer Wojsk Rakietowych Obrony Powietrznej. Specjalista ochrony informacji niejawnych, zadań obronnych i obrony cywilnej.',
+      'Specjalista ochrony informacji niejawnych, zadań obronnych i obrony cywilnej.',
     picName: 'chlopecki-andrzej',
     events: [
       {
@@ -703,7 +703,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -874,7 +874,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1002,7 +1002,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1088,7 +1088,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1130,7 +1130,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1343,7 +1343,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1471,7 +1471,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1771,7 +1771,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2102,7 +2102,7 @@ export const speakers = [
     firstName: 'Agata',
     lastName: 'Lasota-Jądrzak',
     description:
-      'Absolwentka Studiów Podyplomowych w Akademii Ekonomicznej w Poznaniu oraz na Wydziale Bezpieczeństwa Narodowego Akademii Obrony Narodowej w Warszawie na kierunku zarządzanie kryzysowe.  Były Naczelnik Wydziału ds. Ochrony Informacji Niejawnych, pełni funkcję Pełnomocnika ds. OIN Komendanta Miejskiego Policji w Poznaniu.',
+      'Naczelnik Wydziału ds. Ochrony Informacji Niejawnych Komendy Miejskiej Policji w Poznaniu.',
     picName: 'lasota-jedrzak-agata',
     events: [
       {
@@ -2230,7 +2230,7 @@ export const speakers = [
     firstName: 'Wiesław',
     lastName: 'Linowski',
     description:
-      'Ochroną informacji niejawnych zajmuje się zawodowo od 1982 roku, prowadzi zajęcia specjalistyczne w zakresie ochrony informacji niejawnych na rzecz Sił Zbrojnych RP, Krajowego Stowarzyszenia Ochrony Informacji Niejawnych w Katowicach.',
+      'Ekspert ochrony informacji niejawnych.',
     picName: 'linowski-wieslaw',
     events: [
       {
@@ -2544,7 +2544,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2587,7 +2587,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2715,7 +2715,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2831,7 +2831,7 @@ export const speakers = [
     firstName: 'Anna Katarzyna',
     lastName: 'Nietyksza',
     description:
-      'Prezes Cloud Community Europe Polska. Międzynarodowy ekspert ds. funduszy i regulacji UE, gospodarki cyfrowej w tym Cloud Computing, Cyberbezpieczeństwa, Big Data i Telekomunikacji oraz inteligentnej energetyki.',
+      'Prezes Cloud Community Europe Polska. Międzynarodowy ekspert ds. funduszy i regulacji UE oraz gospodarki cyfrowej.',
     picName: 'nietyszka-anna-katarzyna',
     events: [
       {
@@ -2844,7 +2844,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2960,7 +2960,7 @@ export const speakers = [
     firstName: 'Bogusław',
     lastName: 'Pacek',
     description:
-      'b. Rektor - Komendant Akademii Obrony Narodowejb. Rektor - Komendant Akademii Obrony Narodowej. Profesor na Wydziale Studiów Międzynarodowych i Politycznych Uniwersytetu Jagiellońskiego..',
+      'b. Rektor - Komendant Akademii Obrony Narodowej.',
     picName: 'pacek-boguslaw',
     events: [
       {
@@ -2973,7 +2973,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3485,7 +3485,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3527,7 +3527,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3557,7 +3557,7 @@ export const speakers = [
     firstName: 'Tamara',
     lastName: 'Rud',
     description:
-      'Prezes Zarządu Polsko-Izraelskiego Konsorcjum na rzecz Cyberbezpieczeństwa Polski, Europejski Instytut Cyber Intelligence.',
+      'Prezes Zarządu Polsko-Izraelskiego Konsorcjum na rzecz Cyberbezpieczeństwa Polski, Europejski Instytut Cyber Intelligence, prowadzi biuro KE-LA GROUP w Warszawie. Członek Komitetu Bezpieczeństwa Biznesu Krajowej Izby Gospodarczej.',
     picName: 'rud-tamara',
     events: [
       {
@@ -3570,7 +3570,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3612,7 +3612,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3811,7 +3811,7 @@ export const speakers = [
     title: 'płk',
     firstName: 'Dariusz',
     lastName: 'Siwek',
-    description: 'Były Dyrektor Delegatury ABW w Katowicach i Opolu.',
+    description: 'b. Dyrektor Delegatury ABW w Katowicach i Opolu.',
     picName: 'siwek-dariusz',
     events: [
       {
@@ -3897,7 +3897,7 @@ export const speakers = [
     firstName: 'Piotr',
     lastName: 'Słupczyński',
     description:
-      'Pełnomocnik Prezesa Zarządu ds. Ochrony Informacji Niejawnych Prochem S.A. Ekspert ds. bezpieczeństwa i ochrony informacji. Członek zespołu ds. wdrożenia i implementacji RODO.',
+      'Pełnomocnik Prezesa Zarządu ds. Ochrony Informacji Niejawnych Prochem S.A.',
     picName: 'slupczynski-piotr',
     events: [
       {
@@ -3910,7 +3910,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3953,7 +3953,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3996,7 +3996,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -4026,7 +4026,7 @@ export const speakers = [
     firstName: 'Robert',
     lastName: 'Solga',
     description:
-      'Radca prawny, pomaga bezpiecznie prowadzić biznes, rozwijać się, wygrywać przetargi, prowadzić spory sądowe i chronić przewagę konkurencyjną.',
+      'Radca prawny, kancelaria prawna Robert Solga i Wspólnicy.',
     picName: 'solga-robert',
     events: [
       {
@@ -4112,7 +4112,7 @@ export const speakers = [
     firstName: 'Marzanna',
     lastName: 'Szkuta',
     description:
-      '„Dziewczyna z lasu”, specjalista ochrony środowiska, artysta plastyk, tworzy unikatowe dzieła łącząc naukę ze sztuką dla ochrony piękna i wartości, w tym kolekcję patriotyczną.',
+      'Ekolog, specjalista ochrony środowiska, artystka, plastyk.',
     picName: 'szkuta-marzanna',
     events: [
       {
@@ -4125,7 +4125,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -4197,7 +4197,7 @@ export const speakers = [
     firstName: 'Kazimierz',
     lastName: 'Ślusarczyk',
     description:
-      'Były Dyrektor Delegatury ABW W Katowicach. Ekspert z zakresu tajemnic prawnie chronionych i tajemnicy przedsiębiorstwa.',
+      'b. Dyrektor Delegatury ABW W Katowicach.',
     picName: 'slusarczyk-kazimierz',
     events: [
       {
@@ -4510,7 +4510,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -4625,7 +4625,7 @@ export const speakers = [
     firstName: 'Sławomir',
     lastName: 'Zalewski',
     description:
-      'Wiceprezes European Association for Security (Europejskie Stowarzyszenie Nauk o Bezpieczeństwie). Wykładowca, szkoleniowiec w zakresie bezpieczeństwa personalnego i strukturalnego państwa.',
+      'Wiceprezes European Association for Security (Europejskie Stowarzyszenie Nauk o Bezpieczeństwie).',
     picName: 'zalewski-slawomir',
     events: [
       {
@@ -5111,7 +5111,7 @@ export const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -5581,6 +5581,135 @@ export const speakers = [
       {
         koin: {
           presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: '132',
+    title: '',
+    firstName: 'Piotr',
+    lastName: 'Niemczyk',
+    description:
+      'Ekspert z zakresu bezpieczeństwa, były funkcjonariusz UOP i wiceminister gospodarki.',
+    picName: 'niemczyk-piotr',
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: '133',
+    title: '',
+    firstName: 'Aleksander',
+    lastName: 'Odrzywolski',
+    description:
+      'b. Pełnomocnik ochrony informacji niejawnych Tauron Wytwarzanie S.A.',
+    picName: 'odrzywolski-aleksander',
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: '134',
+    title: '',
+    firstName: 'Agnieszka',
+    lastName: 'Giersberg',
+    description:
+      'Właścicielka firmy Premium Fiananse.',
+    picName: 'giersberg-agnieszka',
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,

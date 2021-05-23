@@ -12,4 +12,4 @@ export const polishMonths = [
   'listopad',
   'grudzień',
 ];
-export const currentEvent = 'kbn';
+export const currentEvent = 'koin';

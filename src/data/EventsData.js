@@ -8,8 +8,8 @@ const eventsList = [
       l3: 'Biznesowych i Danych Osobowych',
     },
     eventDate: {
-      start: new Date(2020, 5, 23, 14, 0),
-      end: new Date(2020, 5, 25, 14, 0),
+      start: new Date(2021, 5, 14, 14, 0),
+      end: new Date(2021, 5, 16, 14, 0),
     },
     eventLocation: {
       name: 'Centrum Rekreacji i Biznesu Grand Stasinda',
@@ -23,8 +23,8 @@ const eventsList = [
         'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d83215.81730633657!2d20.107676!3d49.32386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xea667193922ad434!2sCentrum%20Rekreacji%20I%20Biznesu%20GRAND%20Stasinda!5e0!3m2!1spl!2spl!4v1594747002600!5m2!1spl!2spl',
     },
     eventPrices: {
-      singleRoomPrice: 2100,
-      doubleRoomPrice: 1900,
+      singleRoomPrice: 2150,
+      doubleRoomPrice: 1990,
     },
     eventDiscounts: [
       { id: 0, name: 'członkowie KSOIN', discount: '5%' },
@@ -61,7 +61,7 @@ const eventsList = [
       },
       {
         id: 2,
-        inMenu: true,
+        inMenu: false,
         path: 'prelegenci',
         displyName: 'Prelegenci',
         title:
@@ -177,11 +177,11 @@ const eventsList = [
       },
     ],
     agenda: [
-      {
-        id: 0,
-        title:
-          '21 lat Polski w NATO i nowych regulacji prawnych ochrony informacji niejawnych.',
-      },
+      // {
+      //   id: 0,
+      //   title:
+      //     '21 lat Polski w NATO i nowych regulacji prawnych ochrony informacji niejawnych.',
+      // },
       {
         id: 1,
         title:
@@ -190,7 +190,7 @@ const eventsList = [
       {
         id: 2,
         title:
-          'Dlaczego jesteśmy podsłuchiwani/inwigilowani? Czy jesteśmy mniej czy bardziej bezpieczni?',
+          'Dlaczego jesteśmy podsłuchiwani / inwigilowani? Czy jesteśmy mniej czy bardziej bezpieczni?',
       },
       {
         id: 3,
@@ -212,11 +212,11 @@ const eventsList = [
         title:
           'Debata na temat aktualnych i przyszłych zagrożeń ochrony informacji i danych osobowych.',
       },
-      {
-        id: 7,
-        title:
-          'Dyrektywa Parlamentu Europejskiego i Rady (UE) ws.  zwalczanie nieuczciwej konkurencji w gospodarce rynkowej.',
-      },
+      // {
+      //   id: 7,
+      //   title:
+      //     'Dyrektywa Parlamentu Europejskiego i Rady (UE) ws.  zwalczanie nieuczciwej konkurencji w gospodarce rynkowej.',
+      // },
       {
         id: 8,
         title:
@@ -225,7 +225,7 @@ const eventsList = [
       {
         id: 9,
         title:
-          'Sesja tematyczna: Jak wdrożyliśmy/wdrażamy RODO w urzędach, instytucjach, firmach i organizacjach – podpowiedzi, uwagi i pierwsze doświadczenia.',
+          'Sesja tematyczna: Funkcjonowanie RODO w urzędach, instytucjach, firmach i organizacjach – podpowiedzi, uwagi i zalecenia.',
       },
       {
         id: 10,
@@ -235,7 +235,7 @@ const eventsList = [
       {
         id: 11,
         title:
-          'Czas po „światowym krachu gospodarczym” w kontekście zapewnienia bezpieczeństwa biznesu.',
+          'Funkcjonowanie gospodarki w czasie światowej pandemii w kontekście zapewnienia bezpieczeństwa biznesu.'
       },
       {
         id: 12,
@@ -260,12 +260,12 @@ const eventsList = [
       {
         id: 16,
         title:
-          'Wojna w cyberprzestrzeni - jej reperkusje dla bezpieczeństwa narodowego i  gospodarczego kraju. Budowanie świadomości bezpieczeństwa cybernetycznego.',
+          'Wojna w cyberprzestrzeni - jej reperkusje dla bezpieczeństwa narodowego i gospodarczego kraju. Budowanie świadomości bezpieczeństwa cybernetycznego.',
       },
       {
         id: 17,
         title:
-          'Czy zagroził nam Blackout? Możliwy scenariusz chaosu społeczno- gospodarczego.',
+          'Piętno Lockdown na stan bezpieczeństwa państwa i obywateli.',
       },
       {
         id: 18,
@@ -276,6 +276,11 @@ const eventsList = [
         id: 19,
         title:
           'Światowe i krajowe zagrożenia terrorystyczne. Ekozagrożenia bezpieczeństwa biznesu i terroryzm ekologiczny.',
+      },
+      {
+        id: 20,
+        title:
+          'Sygnalista w przedsiębiorstwie / organizacji – nowość dla zapewnienia bezpieczeństwa.',
       },
     ],
   },

@@ -21,7 +21,7 @@ export const sponsors = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           kind: 'patronat główny',
           position: 0,
         },
@@ -441,7 +441,7 @@ export const sponsors = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           kind: 'partnerzy',
           position: 0,
         },
@@ -476,7 +476,7 @@ export const sponsors = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           kind: 'partnerzy',
           position: 0,
         },
@@ -546,7 +546,7 @@ export const sponsors = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           kind: 'partnerzy',
           position: 0,
         },

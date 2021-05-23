@@ -10,6 +10,7 @@ import KOINIntro from '../components/KOINIntro';
 import KBNIntro from '../components/KBNIntro';
 import Independence from '../components/Indepenence';
 import Organizers from '../components/Organizers';
+import InfoBox from '../components/InfoBox';
 
 import './Home.css';
 
@@ -33,6 +34,7 @@ const Home = (props) => {
         <title>{meta.title}</title>
         <meta name='description' content={meta.description}></meta>
       </Helmet>
+      <InfoBox />
       <section className='top'>
         <Jumbotron fluid>
           <Container>

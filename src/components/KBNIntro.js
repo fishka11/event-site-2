@@ -7,9 +7,11 @@ import Button from 'react-bootstrap/Button';
 
 import PicturesStrap from './PicturesStrap';
 
-const Intro = ({ pictures }) => {
+const Intro = (props) => {
+  const { pictures } = props;
+
   return (
-    <section className="intro">
+    <section className='intro'>
       <Container>
         <h2>
           Bezpieczeństwo Polski i Polaków to wspólna sprawa wszystkich obywateli
@@ -51,8 +53,8 @@ const Intro = ({ pictures }) => {
           bezpieczeństwa i zarządzania kryzysowego.
         </p>
 
-        <div className="text-center">
-          <Button className="call-to-action" size="lg" href="/tematyka">
+        <div className='text-center'>
+          <Button className='call-to-action' size='lg' href='/tematyka'>
             Zapoznaj się
             <br />z tematyką Konferncji
           </Button>

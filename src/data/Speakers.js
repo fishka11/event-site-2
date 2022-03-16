@@ -1,4 +1,4 @@
-const speakers = [
+export const speakers = [
   {
     id: '1',
     title: '',
@@ -90,7 +90,7 @@ const speakers = [
     firstName: 'Marek',
     lastName: 'Anzel',
     description:
-      'Specjalista do spraw ochrony informacji niejawnych i systemów teleinformatycznych. Wykładowca i konsultant cyklicznych szkoleń pracowników pionów ochrony informacji niejawnych.',
+      'Specjalista do spraw ochrony informacji niejawnych i systemów teleinformatycznych.',
     picName: 'anzel-marek',
     events: [
       {
@@ -232,7 +232,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -390,8 +390,7 @@ const speakers = [
     title: '',
     firstName: 'Elżbieta',
     lastName: 'Bińczyk',
-    description:
-      'Posiada bogate doświadczenie zawodowe, od 20 lat Pełnomocnik Zarządu ds. Ochrony Informacji Niejawnych. Wieloletni doświadczony trener i dydaktyk. Wykładowca na specjalistycznych studiach podyplomowych o kierunkach związanych z bezpieczeństwem informacji prawnie chronionych.',
+    description: 'Pełnomocnik Zarządu ds. Ochrony Informacji Niejawnych.',
     picName: 'binczyk-elzbieta',
     events: [
       {
@@ -647,7 +646,7 @@ const speakers = [
     firstName: 'Andrzej',
     lastName: 'Chłopecki',
     description:
-      'Emerytowany oficer Wojsk Rakietowych Obrony Powietrznej. Specjalista ochrony informacji niejawnych, zadań obronnych i obrony cywilnej.',
+      'Specjalista ochrony informacji niejawnych, zadań obronnych i obrony cywilnej.',
     picName: 'chlopecki-andrzej',
     events: [
       {
@@ -703,7 +702,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -753,7 +752,7 @@ const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -874,7 +873,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1002,7 +1001,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1088,7 +1087,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1130,7 +1129,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1308,7 +1307,7 @@ const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1343,7 +1342,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1471,7 +1470,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1672,7 +1671,7 @@ const speakers = [
     firstName: 'Maciej',
     lastName: 'Jędrzejewski',
     description:
-      'Ekspert bezpieczeństwa systemów teleinformatycznych, Od 2004 roku ekspert Komitetu Technicznego nr 182 ds. Ochrony Informacji w Systemach Teleinformatycznych Polskiego Komitetu Normalizacyjnego. Prowadził liczne szkolenia techniczne z dziedziny bezpieczeństwa systemów teleinformatycznych.',
+      'Ekspert bezpieczeństwa systemów teleinformatycznych. Od 2004 ekspert Komitetu Technicznego ds. Ochrony Informacji w Systemach Teleinformatycznych Polskiego Komitetu Normalizacyjnego.',
     picName: 'jedrzejewski-maciej',
     events: [
       {
@@ -1693,7 +1692,7 @@ const speakers = [
       },
       {
         kbn: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -1771,7 +1770,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2102,7 +2101,7 @@ const speakers = [
     firstName: 'Agata',
     lastName: 'Lasota-Jądrzak',
     description:
-      'Absolwentka Studiów Podyplomowych w Akademii Ekonomicznej w Poznaniu oraz na Wydziale Bezpieczeństwa Narodowego Akademii Obrony Narodowej w Warszawie na kierunku zarządzanie kryzysowe.  Były Naczelnik Wydziału ds. Ochrony Informacji Niejawnych, pełni funkcję Pełnomocnika ds. OIN Komendanta Miejskiego Policji w Poznaniu.',
+      'Naczelnik Wydziału ds. Ochrony Informacji Niejawnych Komendy Miejskiej Policji w Poznaniu.',
     picName: 'lasota-jedrzak-agata',
     events: [
       {
@@ -2229,8 +2228,7 @@ const speakers = [
     title: '',
     firstName: 'Wiesław',
     lastName: 'Linowski',
-    description:
-      'Ochroną informacji niejawnych zajmuje się zawodowo od 1982 roku, prowadzi zajęcia specjalistyczne w zakresie ochrony informacji niejawnych na rzecz Sił Zbrojnych RP, Krajowego Stowarzyszenia Ochrony Informacji Niejawnych w Katowicach.',
+    description: 'Ekspert ochrony informacji niejawnych.',
     picName: 'linowski-wieslaw',
     events: [
       {
@@ -2544,7 +2542,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2587,7 +2585,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2715,7 +2713,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2809,7 +2807,7 @@ const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2831,7 +2829,7 @@ const speakers = [
     firstName: 'Anna Katarzyna',
     lastName: 'Nietyksza',
     description:
-      'Prezes Cloud Community Europe Polska. Międzynarodowy ekspert ds. funduszy i regulacji UE, gospodarki cyfrowej w tym Cloud Computing, Cyberbezpieczeństwa, Big Data i Telekomunikacji oraz inteligentnej energetyki.',
+      'Prezes Cloud Community Europe Polska. Międzynarodowy ekspert ds. funduszy i regulacji UE oraz gospodarki cyfrowej.',
     picName: 'nietyszka-anna-katarzyna',
     events: [
       {
@@ -2844,7 +2842,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2959,8 +2957,7 @@ const speakers = [
     title: 'gen. dyw. prof. dr hab.',
     firstName: 'Bogusław',
     lastName: 'Pacek',
-    description:
-      'b. Rektor - Komendant Akademii Obrony Narodowejb. Rektor - Komendant Akademii Obrony Narodowej. Profesor na Wydziale Studiów Międzynarodowych i Politycznych Uniwersytetu Jagiellońskiego..',
+    description: 'b. Rektor - Komendant Akademii Obrony Narodowej.',
     picName: 'pacek-boguslaw',
     events: [
       {
@@ -2973,7 +2970,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -2981,7 +2978,7 @@ const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3152,7 +3149,7 @@ const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3485,7 +3482,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3527,7 +3524,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3557,7 +3554,7 @@ const speakers = [
     firstName: 'Tamara',
     lastName: 'Rud',
     description:
-      'Prezes Zarządu Polsko-Izraelskiego Konsorcjum na rzecz Cyberbezpieczeństwa Polski, Europejski Instytut Cyber Intelligence.',
+      'Prezes Zarządu Polsko-Izraelskiego Konsorcjum na rzecz Cyberbezpieczeństwa Polski, Europejski Instytut Cyber Intelligence, prowadzi biuro KE-LA GROUP w Warszawie. Członek Komitetu Bezpieczeństwa Biznesu Krajowej Izby Gospodarczej.',
     picName: 'rud-tamara',
     events: [
       {
@@ -3570,7 +3567,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3578,7 +3575,7 @@ const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3612,7 +3609,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3811,7 +3808,7 @@ const speakers = [
     title: 'płk',
     firstName: 'Dariusz',
     lastName: 'Siwek',
-    description: 'Były Dyrektor Delegatury ABW w Katowicach i Opolu.',
+    description: 'b. Dyrektor Delegatury ABW w Katowicach i Opolu.',
     picName: 'siwek-dariusz',
     events: [
       {
@@ -3897,7 +3894,7 @@ const speakers = [
     firstName: 'Piotr',
     lastName: 'Słupczyński',
     description:
-      'Pełnomocnik Prezesa Zarządu ds. Ochrony Informacji Niejawnych Prochem S.A. Ekspert ds. bezpieczeństwa i ochrony informacji. Członek zespołu ds. wdrożenia i implementacji RODO.',
+      'Pełnomocnik Prezesa Zarządu ds. Ochrony Informacji Niejawnych Prochem S.A.',
     picName: 'slupczynski-piotr',
     events: [
       {
@@ -3910,7 +3907,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3953,7 +3950,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -3996,7 +3993,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -4025,8 +4022,7 @@ const speakers = [
     title: 'mec.',
     firstName: 'Robert',
     lastName: 'Solga',
-    description:
-      'Radca prawny, pomaga bezpiecznie prowadzić biznes, rozwijać się, wygrywać przetargi, prowadzić spory sądowe i chronić przewagę konkurencyjną.',
+    description: 'Radca prawny, kancelaria prawna Robert Solga i Wspólnicy.',
     picName: 'solga-robert',
     events: [
       {
@@ -4111,8 +4107,7 @@ const speakers = [
     title: '',
     firstName: 'Marzanna',
     lastName: 'Szkuta',
-    description:
-      '„Dziewczyna z lasu”, specjalista ochrony środowiska, artysta plastyk, tworzy unikatowe dzieła łącząc naukę ze sztuką dla ochrony piękna i wartości, w tym kolekcję patriotyczną.',
+    description: 'Ekolog, specjalista ochrony środowiska, artystka, plastyk.',
     picName: 'szkuta-marzanna',
     events: [
       {
@@ -4125,7 +4120,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -4196,8 +4191,7 @@ const speakers = [
     title: 'płk',
     firstName: 'Kazimierz',
     lastName: 'Ślusarczyk',
-    description:
-      'Były Dyrektor Delegatury ABW W Katowicach. Ekspert z zakresu tajemnic prawnie chronionych i tajemnicy przedsiębiorstwa.',
+    description: 'b. Dyrektor Delegatury ABW W Katowicach.',
     picName: 'slusarczyk-kazimierz',
     events: [
       {
@@ -4510,7 +4504,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -4625,7 +4619,7 @@ const speakers = [
     firstName: 'Sławomir',
     lastName: 'Zalewski',
     description:
-      'Wiceprezes European Association for Security (Europejskie Stowarzyszenie Nauk o Bezpieczeństwie). Wykładowca, szkoleniowiec w zakresie bezpieczeństwa personalnego i strukturalnego państwa.',
+      'Wiceprezes European Association for Security (Europejskie Stowarzyszenie Nauk o Bezpieczeństwie).',
     picName: 'zalewski-slawomir',
     events: [
       {
@@ -4861,7 +4855,7 @@ const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -4947,7 +4941,7 @@ const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -5033,7 +5027,7 @@ const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -5111,7 +5105,7 @@ const speakers = [
       },
       {
         koin: {
-          presence: false,
+          presence: true,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -5205,7 +5199,7 @@ const speakers = [
       },
       {
         kbn: {
-          presence: true,
+          presence: false,
           status: 'speaker',
           position: 0,
           featPosition: 0,
@@ -5439,7 +5433,7 @@ const speakers = [
     title: '',
     firstName: 'Marek',
     lastName: 'Posobkiewicz',
-    description: 'p.o. Głównego Inspektora Sanitarnego.',
+    description: 'b. Główny Inspektor Sanitarny.',
     picName: 'posobkiewicz-marek',
     events: [
       {
@@ -5476,6 +5470,260 @@ const speakers = [
       },
     ],
   },
+  {
+    id: '129',
+    title: 'dr hab. n. med.',
+    firstName: 'Jarosław',
+    lastName: 'Pinkas',
+    description:
+      'Główny Inspektor Sanitarny, konsultant krajowy w dziedzinie zdrowia publicznego.',
+    picName: 'pinkas-jaroslaw',
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: '130',
+    title: 'dr n. med.',
+    firstName: 'Andrzej',
+    lastName: 'Sośnierz',
+    description: 'Poseł, b. prezes Narodowego Funduszu Zdrowia.',
+    picName: 'sosnierz-andrzej',
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: '131',
+    title: 'prof. dr hab.',
+    firstName: 'Agnieszka',
+    lastName: 'Dobrzyń',
+    description:
+      'Kierownik Projektu SONAR Anty-CoronaVirus, Dyrektor Instytutu Biologii Doświadczalnej im. M. Nenckiego PAN, kierownik Pracowni Sygnałów Komórkowych i Zaburzeń Metabolicznych.',
+    picName: 'dobrzyn-agnieszka',
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: '132',
+    title: '',
+    firstName: 'Piotr',
+    lastName: 'Niemczyk',
+    description:
+      'Ekspert z zakresu bezpieczeństwa, były funkcjonariusz UOP i wiceminister gospodarki.',
+    picName: 'niemczyk-piotr',
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: '133',
+    title: '',
+    firstName: 'Aleksander',
+    lastName: 'Odrzywolski',
+    description:
+      'b. Pełnomocnik ochrony informacji niejawnych Tauron Wytwarzanie S.A.',
+    picName: 'odrzywolski-aleksander',
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
+  {
+    id: '134',
+    title: '',
+    firstName: 'Agnieszka',
+    lastName: 'Giersberg',
+    description: 'Właścicielka firmy Premium Fiananse.',
+    picName: 'giersberg-agnieszka',
+    events: [
+      {
+        kbb: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        koin: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        kbn: {
+          presence: true,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+      {
+        zpo: {
+          presence: false,
+          status: 'speaker',
+          position: 0,
+          featPosition: 0,
+        },
+      },
+    ],
+  },
 ];
-
-export default speakers;

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { Helmet } from 'react-helmet';
 
 import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
@@ -10,28 +10,19 @@ import KOINIntro from '../components/KOINIntro';
 import KBNIntro from '../components/KBNIntro';
 import Independence from '../components/Indepenence';
 import Organizers from '../components/Organizers';
-import Meta from '../components/Meta';
+// import InfoBox from '../components/InfoBox';
 
 import './Home.css';
 
-const Home = ({ event, months, currentEvent, path }) => {
-  const eventFullName =
-    (event && event.eventFullName && event.eventFullName) || '';
-  const multilineTitle = eventFullName.split('\n');
-  const eventLocation = (event && event.eventLocation) || {};
-  const eventStartDate =
-    (event && new Date(event.eventStartDate)) || new Date();
-  const eventEndDate = (event && new Date(event.eventEndDate)) || new Date();
-  const pictures = (event && event.picturesStrap) || [];
-  const organizers = (event && event.organizers) || [];
-  const eventSiteMenu = (event && event.eventSiteMenu) || [];
+const Home = (props) => {
+  const { meta, event, months, currentEvent } = props;
 
   const eventSwitch = () => {
     switch (currentEvent) {
-      case 'KOIN':
-        return <KOINIntro pictures={pictures} />;
-      case 'KBN':
-        return <KBNIntro pictures={pictures} />;
+      case 'koin':
+        return <KOINIntro pictures={event.picturesStrap} />;
+      case 'kbn':
+        return <KBNIntro pictures={event.picturesStrap} />;
       default:
         return null;
     }
@@ -39,47 +30,45 @@ const Home = ({ event, months, currentEvent, path }) => {
 
   return (
     <div className="home">
-      <Meta eventSiteMenu={eventSiteMenu} path={path} />
+      <Helmet>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description}></meta>
+      </Helmet>
+      {/* <InfoBox /> */}
       <section className="top">
         <Jumbotron fluid>
           <Container>
             <div className="what-where-when">
               {event.cite ? (
                 <p className="cite">
-                  &bdquo;
-                  {event.cite}
-                  &rdquo;
+                  "Ojczyzna to wielki zbiorowy obowiązek"
                   <br />
-                  <span className="author">{event.citeAuthor}</span>
+                  <span className="author">Cyprian Kamil Norwid</span>
                 </p>
               ) : null}
 
               <h1 className="text-uppercase text-center">
-                {multilineTitle.map((item) => (
-                  <span
-                    key={multilineTitle.indexOf(item)}
-                    className={
-                      multilineTitle.indexOf(item) === 0
-                        ? 'd-block display-1'
-                        : 'd-block'
-                    }
-                  >
-                    {item}
-                  </span>
-                ))}
+                <span className="d-block display-1">
+                  {event.eventFullName.l1}
+                </span>
+                <span className="d-block">{event.eventFullName.l2}</span>
+                <span className="d-block">{event.eventFullName.l3}</span>
               </h1>
-              <p className="text-center location">{eventLocation.city}</p>
+              <p className="text-center location">
+                {event.eventLocation.address.city}
+              </p>
               <p className="text-center date">
-                {`${eventStartDate.getDate()} ${
-                  eventStartDate.getMonth() !== eventEndDate.getMonth()
-                    ? months[eventStartDate.getMonth()]
+                {`${event.eventDate.start.getDate()} ${
+                  event.eventDate.start.getMonth() !==
+                  event.eventDate.end.getMonth()
+                    ? months[event.eventDate.start.getMonth()]
                     : ''
-                } - ${eventEndDate.getDate()} ${
-                  months[eventEndDate.getMonth()]
-                } ${eventEndDate.getFullYear()}`}
+                } - ${event.eventDate.end.getDate()} ${
+                  months[event.eventDate.end.getMonth()]
+                } ${event.eventDate.end.getFullYear()}`}
               </p>
             </div>
-            <Counter eventStartDate={eventStartDate} />
+            <Counter eventDate={event.eventDate} />
             <Independence />
             <div className="register-btn text-center">
               <Button size="lg" href="/rejestracja">
@@ -89,28 +78,10 @@ const Home = ({ event, months, currentEvent, path }) => {
           </Container>
         </Jumbotron>
       </section>
-      <Organizers organizers={organizers} />
+      <Organizers organizers={event.organizersList} />
       {eventSwitch()}
     </div>
   );
-};
-
-Home.propTypes = {
-  event: PropTypes.shape({
-    id: PropTypes.string,
-    cite: PropTypes.string,
-    citeAuthor: PropTypes.string,
-    eventLocation: PropTypes.shape({ city: PropTypes.string }),
-    eventStartDate: PropTypes.string,
-    eventEndDate: PropTypes.string,
-    eventFullName: PropTypes.string,
-    picturesStrap: PropTypes.arrayOf(PropTypes.shape()),
-    organizers: PropTypes.arrayOf(PropTypes.shape()),
-    eventSiteMenu: PropTypes.arrayOf(PropTypes.shape()),
-  }).isRequired,
-  months: PropTypes.arrayOf(PropTypes.string).isRequired,
-  currentEvent: PropTypes.string.isRequired,
-  path: PropTypes.string.isRequired,
 };
 
 export default Home;

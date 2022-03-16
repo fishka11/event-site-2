@@ -21,7 +21,7 @@ export const sponsors = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           kind: 'patronat główny',
           position: 0,
         },
@@ -63,8 +63,8 @@ export const sponsors = [
       },
       {
         kbn: {
-          presence: false,
-          kind: '',
+          presence: true,
+          kind: 'partnerzy',
           position: 0,
         },
       },
@@ -441,7 +441,7 @@ export const sponsors = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           kind: 'partnerzy',
           position: 0,
         },
@@ -476,7 +476,7 @@ export const sponsors = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           kind: 'partnerzy',
           position: 0,
         },
@@ -546,7 +546,7 @@ export const sponsors = [
       },
       {
         koin: {
-          presence: true,
+          presence: false,
           kind: 'partnerzy',
           position: 0,
         },
@@ -763,8 +763,8 @@ export const sponsors = [
       },
       {
         kbn: {
-          presence: false,
-          kind: '',
+          presence: true,
+          kind: 'patronat medialny',
           position: 0,
         },
       },

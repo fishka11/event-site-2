@@ -1,0 +1,13 @@
+.independance p {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+@media (max-width: 992px) {
+  .independance p {
+    margin-top: 1rem;
+  }
+  .independance {
+    text-align: center;
+  }
+}

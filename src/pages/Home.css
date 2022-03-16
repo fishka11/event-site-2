@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Unica+One&display=swap");
+
+.home {
+  padding-top: 50px;
+}
+.koin .home .jumbotron {
+  background: url("/assets/top-koin-bg.jpg") top center no-repeat;
+}
+.kbn .home .jumbotron {
+  background: url("/assets/top-kbn-bg.jpg") top center no-repeat;
+}
+.home .jumbotron {
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0;
+}
+.home .cite {
+  font-weight: lighter;
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+.home .cite .author {
+  font-size: 1rem;
+  font-style: normal;
+}
+.kbn .home .cite {
+  color: #fff;
+}
+.home h1 {
+  font-family: "Unica One", serif;
+  color: #fff;
+  margin-bottom: 4rem;
+  text-shadow: 0 0 0.125rem #000;
+}
+@media (max-width: 992px) {
+  .home h1 {
+    font-size: calc(1.2rem + 1.2vw);
+    margin-bottom: 2rem;
+  }
+  .home .display-1 {
+    font-size: calc(3.2rem + 1.2vw);
+  }
+}
+.home h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #ca1818;
+}
+.home .location {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.koin .home .location {
+  color: #f93e0a;
+  text-shadow: 0 0 0.125rem rgb(224, 224, 224);
+}
+.kbn .home .location {
+  font-size: 1.9rem;
+  color: #fff;
+  text-shadow: 0 0 0.125rem #000;
+}
+.home .date {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 0.125rem #000;
+}
+.home .register-btn {
+  margin-top: 4rem;
+}
+.home .btn-primary {
+  text-transform: uppercase;
+}
+.kbn .home .jumbotron .btn-primary {
+  background-color: #ca1818;
+  border: 1px solid #bf1111;
+}
+.kbn .home .jumbotron .btn-primary:hover {
+  background-color: #bd1616;
+  border: 1px solid #bf1111;
+}

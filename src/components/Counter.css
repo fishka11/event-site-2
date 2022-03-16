@@ -1,0 +1,24 @@
+.counter {
+  color: #ffffff;
+  text-shadow: 0 0 0.125rem #000;
+  margin-bottom: 3rem;
+}
+.counter .countdown {
+  padding: 2.9rem 1rem 2.8rem;
+}
+.koin .counter .countdown {
+  background: url(/assets/ribbon-big-koin.png) top center no-repeat;
+}
+.kbn .counter .countdown {
+  background: url(/assets/ribbon-big-kbn.png) top center no-repeat;
+}
+.counter .digit {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: 0.1rem;
+}
+.counter .invitation {
+  font-size: 1.45rem;
+  padding-top: 3.9rem;
+  padding-bottom: 3.4rem;
+}

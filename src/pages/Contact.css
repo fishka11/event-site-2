@@ -1,0 +1,25 @@
+@media all and (min-width: 992px) {
+  .contact .left {
+    border-right: 1px solid grey;
+  }
+}
+.contact .left,
+.contact .right {
+  margin-bottom: 2rem;
+}
+.contact h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.contact .address {
+  display: flex;
+}
+.contact .address svg {
+  margin-right: 1.5rem;
+  margin-top: 0.4rem;
+  color: grey;
+}
+.contact .address p {
+  margin-bottom: 0.5rem;
+}

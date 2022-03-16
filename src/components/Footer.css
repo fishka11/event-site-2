@@ -1,0 +1,25 @@
+.footer {
+  background-color: rgb(42, 81, 171);
+  padding: 5rem 0 3rem;
+  text-shadow: 0 0 0.125rem #000;
+}
+.footer .organizer-logo {
+  margin-bottom: 2rem;
+}
+.footer,
+.footer a {
+  color: #eee;
+}
+.footer address {
+  margin-bottom: 0;
+}
+.footer .address {
+  display: flex;
+}
+.footer .address svg {
+  margin-right: 1rem;
+  margin-top: 0.4rem;
+}
+.footer hr {
+  background-color: #fff;
+}

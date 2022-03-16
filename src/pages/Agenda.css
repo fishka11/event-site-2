@@ -1,0 +1,21 @@
+.agenda .agenda-item {
+  margin-bottom: 1.3rem;
+}
+.agenda .agenda-item-title {
+  padding: 0.5rem 1rem;
+}
+.agenda .agenda-item:nth-child(odd) .agenda-item-title {
+  background-color: rgb(230, 230, 230);
+  border-bottom: 1px solid lightgrey;
+}
+.agenda .agenda-item:nth-child(even) .agenda-item-title {
+  background-color: rgb(239, 239, 239);
+  border-bottom: 1px solid lightgrey;
+}
+.agenda .agenda-item img {
+  display: block;
+  max-width: 100%;
+}
+.agenda .agenda-item h3 {
+  font-size: 1.3rem;
+}

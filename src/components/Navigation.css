@@ -1,0 +1,36 @@
+.navigation .navbar {
+  padding: 0;
+  text-transform: uppercase;
+}
+.koin .navigation .navbar {
+  background-color: #315ec6;
+  border-bottom: 1px solid #2a51ab;
+}
+.kbn .navigation .navbar {
+  background-color: #ca1818;
+  border-bottom: 1px solid #bf1111;
+}
+.navigation .navbar-light .navbar-nav .nav-link {
+  color: #f5f3f5;
+}
+.kbn .navigation .navbar-light .navbar-nav .nav-link {
+  position: relative;
+}
+.kbn .navigation .navbar-light .navbar-nav .nav-link::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  bottom: 4px;
+  left: 0.5rem;
+  background-color: #fff;
+  transition: all 0.15s ease-in-out;
+}
+.koin .navigation .navbar-light .navbar-nav .nav-link:hover {
+  color: #f7b267;
+}
+.kbn .navigation .navbar-light .navbar-nav .nav-link:hover::before,
+.kbn .navigation .navbar-light .navbar-nav .nav-link.active::before {
+  width: calc(100% - 1rem);
+}

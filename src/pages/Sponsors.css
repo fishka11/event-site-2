@@ -1,0 +1,25 @@
+.sponsors .sponsor {
+  padding: 2rem 0;
+}
+.sponsors h3 {
+  font-size: 1.6rem;
+  color: #2a51ab;
+  text-align: center;
+  position: relative;
+  margin-top: 1.5rem;
+}
+.sponsors h3::after {
+  position: absolute;
+  content: "";
+  background: gray;
+  width: 40%;
+  height: 1px;
+  bottom: -8px;
+  left: 30%;
+}
+.sponsors .sponsor img {
+  display: block;
+  max-width: 100%;
+  border: solid 0.8rem white;
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1);
+}
